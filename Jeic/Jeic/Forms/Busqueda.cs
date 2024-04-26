@@ -469,7 +469,7 @@ namespace Refracciones.Forms
         private void logcontrolDeCambiosToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Log log = new Log();
-            log.ShowDialog();
+            log.Show();
         }
 
         private void btnEliminarFechaEntrega_Click(object sender, EventArgs e)

@@ -264,8 +264,8 @@ namespace Refracciones.Forms
                                 oper.Registrar_Entrega(cve_siniestro, cve_pedido, cve_pieza, cantidad, fecha, cantidadD, cve_venta, fecha_asignacion, lblUsuario.Text.Substring(9, lblUsuario.Text.Length - 9), cvePedidoIdentity);
                                 string usuario = lblUsuario.Text.Substring(9, lblUsuario.Text.Length - 9);
                                 string idPedido = cve_pedido;
-                                string descripcionLog = "El usuario: " + usuario + " registro una entrega del pedido: " + idPedido + " de la pieza: " + nombrePieza + " el día: " + DateTime.Now.ToString();
-                                oper.Log(usuario, idPedido, descripcionLog, "5");
+                                string descripcionLog = "El usuario: " + usuario + " registro una baja del pedido: " + idPedido + " de la pieza: " + nombrePieza + " el día: " + DateTime.Now.ToString();
+                                oper.Log(usuario, idPedido, descripcionLog, "11");
                                 cmbCantidad.Items.Clear();
                             //}
                             //else
@@ -386,8 +386,8 @@ namespace Refracciones.Forms
                         oper.Registrar_Entrega(cve_siniestro, cve_pedido, cve_pieza, cantidad, fecha, (cantidad - pzas_entregadas), cve_venta, fecha_asignacion, lblUsuario.Text.Substring(9, lblUsuario.Text.Length - 9), cvePedidoIdentity);
                         string usuario = lblUsuario.Text.Substring(9, lblUsuario.Text.Length - 9);
                         string idPedido = cve_pedido;
-                        string descripcionLog = "El usuario: " + usuario + " registro una entrega del pedido: " + idPedido + " de la pieza: " + nombrePieza + " el día: " + DateTime.Now.ToString();
-                        oper.Log(usuario, idPedido, descripcionLog, "5");
+                        string descripcionLog = "El usuario: " + usuario + " registro una baja del pedido: " + idPedido + " de la pieza: " + nombrePieza + " el día: " + DateTime.Now.ToString();
+                        oper.Log(usuario, idPedido, descripcionLog, "11");
                         x = 1;
                     }
                     else

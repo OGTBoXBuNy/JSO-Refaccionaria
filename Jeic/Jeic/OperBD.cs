@@ -7495,7 +7495,7 @@ namespace Refracciones
                 if (clienteNombre == "GNP")
                     responsableCorreoCopia = "colisionjeic.admon1@hotmail.com";
                 else if (clienteNombre == "HDI SEGUROS")
-                    responsableCorreoCopia = "jeic.ja@hotmail.com";
+                    responsableCorreoCopia = "jeic.gvg@gmail.com";
 
                 string IsraCorreoCopia = "jeiccotizaciones@hotmail.com";
 
@@ -7581,7 +7581,7 @@ namespace Refracciones
                 if (clienteNombre == "GNP")
                     responsableCorreoCopia = "colisionjeic.admon1@hotmail.com";
                 else if (clienteNombre == "HDI SEGUROS")
-                    responsableCorreoCopia = "jeic.ja@hotmail.com";
+                    responsableCorreoCopia = "jeic.gvg@gmail.com";
 
                 string IsraCorreoCopia = "jeiccotizaciones@hotmail.com";
 
@@ -7714,14 +7714,16 @@ namespace Refracciones
         }
 
         //----------------LLENAR TABLA LOG BUSCAR----------------------------------
-        public void LogBuscar(DataGridView dtgv, string cvePedido, string usuario, string tipo, string fechaInicial, string fechaFinal)
+        public void LogBuscar(DataGridView dtgv, string cvePedido, string usuario, string tipo)
         {
             try
             {
                 using (SqlConnection nuevacon = Conexion.conexion())
                 {
-                    da = new SqlDataAdapter(string.Format("SELECT l.cveLog AS 'ID DE CAMBIO',l.descripcion AS 'DESCRIPCIÓN',l.cve_pedido AS 'PEDIDO', us.usuario AS 'USUARIO', clog.tipo AS 'TIPO DE MOVIMIENTO',l.fecha AS 'FECHA' FROM LOG l LEFT OUTER JOIN USUARIOS us ON us.cve_Administrador = l.cve_Administrador LEFT OUTER JOIN CAMBIOSLOG clog ON clog.cveCambio = l.cveCambio WHERE l.cve_pedido LIKE '%{0}%' AND us.usuario LIKE '%{1}%' AND clog.tipo = '{2}' AND fecha BETWEEN '{3}' AND '{4}';", cvePedido, usuario, tipo, fechaInicial, fechaFinal), nuevacon);
-
+                    if(tipo != "Mostrar Todo")
+                        da = new SqlDataAdapter(string.Format("SELECT l.cveLog AS 'ID DE CAMBIO',l.descripcion AS 'DESCRIPCIÓN',l.cve_pedido AS 'PEDIDO', us.usuario AS 'USUARIO', clog.tipo AS 'TIPO DE MOVIMIENTO',l.fecha AS 'FECHA' FROM LOG l LEFT OUTER JOIN USUARIOS us ON us.cve_Administrador = l.cve_Administrador LEFT OUTER JOIN CAMBIOSLOG clog ON clog.cveCambio = l.cveCambio WHERE l.cve_pedido LIKE '%{0}%' AND us.usuario LIKE '%{1}%' AND clog.tipo = '{2}';", cvePedido, usuario, tipo), nuevacon);
+                    else
+                        da = new SqlDataAdapter(string.Format("SELECT l.cveLog AS 'ID DE CAMBIO',l.descripcion AS 'DESCRIPCIÓN',l.cve_pedido AS 'PEDIDO', us.usuario AS 'USUARIO', clog.tipo AS 'TIPO DE MOVIMIENTO',l.fecha AS 'FECHA' FROM LOG l LEFT OUTER JOIN USUARIOS us ON us.cve_Administrador = l.cve_Administrador LEFT OUTER JOIN CAMBIOSLOG clog ON clog.cveCambio = l.cveCambio WHERE l.cve_pedido LIKE '%{0}%' AND us.usuario LIKE '%{1}%';", cvePedido, usuario), nuevacon);
                     nuevacon.Open();
                     dt = new DataTable();
                     da.Fill(dt);
@@ -7735,7 +7737,31 @@ namespace Refracciones
             }
         }
 
-       
+        //----------------LLENAR TABLA LOG BUSCAR POR RANGO DE FECHAS----------------------------------
+        public void LogBuscar(DataGridView dtgv, string cvePedido, string usuario, string tipo, string fechaInicial, string fechaFinal)
+        {
+            try
+            {
+                using (SqlConnection nuevacon = Conexion.conexion())
+                {
+                    if(tipo != "Mostrar Todo")
+                        da = new SqlDataAdapter(string.Format("SELECT l.cveLog AS 'ID DE CAMBIO',l.descripcion AS 'DESCRIPCIÓN',l.cve_pedido AS 'PEDIDO', us.usuario AS 'USUARIO', clog.tipo AS 'TIPO DE MOVIMIENTO',l.fecha AS 'FECHA' FROM LOG l LEFT OUTER JOIN USUARIOS us ON us.cve_Administrador = l.cve_Administrador LEFT OUTER JOIN CAMBIOSLOG clog ON clog.cveCambio = l.cveCambio WHERE l.cve_pedido LIKE '%{0}%' AND us.usuario LIKE '%{1}%' AND clog.tipo = '{2}' AND fecha BETWEEN '{3}' AND '{4}';", cvePedido, usuario, tipo, fechaInicial, fechaFinal), nuevacon);
+                    else
+                        da = new SqlDataAdapter(string.Format("SELECT l.cveLog AS 'ID DE CAMBIO',l.descripcion AS 'DESCRIPCIÓN',l.cve_pedido AS 'PEDIDO', us.usuario AS 'USUARIO', clog.tipo AS 'TIPO DE MOVIMIENTO',l.fecha AS 'FECHA' FROM LOG l LEFT OUTER JOIN USUARIOS us ON us.cve_Administrador = l.cve_Administrador LEFT OUTER JOIN CAMBIOSLOG clog ON clog.cveCambio = l.cveCambio WHERE l.cve_pedido LIKE '%{0}%' AND us.usuario LIKE '%{1}%' AND fecha BETWEEN '{2}' AND '{3}';", cvePedido, usuario, fechaInicial, fechaFinal), nuevacon);
+                    nuevacon.Open();
+                    dt = new DataTable();
+                    da.Fill(dt);
+                    dtgv.DataSource = dt;
+                    nuevacon.Close();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+        }
+
+
 
         //---------------- NOMBRES DE LOS CAMBIOS LOG (TIPO)
         public DataSet cLogTipo()

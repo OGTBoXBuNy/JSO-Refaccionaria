@@ -1241,7 +1241,7 @@ namespace Refracciones.Forms
                                             string idPedido = txtClavePedido.Text.Trim();
                                             string descripcionLog = "El usuario: " + usuario + " realizó/registró cambios en la entrega a la pieza: " + piezaNombre + " del pedido: " + idPedido + " el día: " + DateTime.Now.ToString() + "opción 1";
 
-                                            operacion.Log(usuario, idPedido, descripcionLog, "11");
+                                            operacion.Log(usuario, idPedido, descripcionLog, "5");
                                         }
                                     }
                                 }
@@ -1260,7 +1260,7 @@ namespace Refracciones.Forms
                                         string idPedido = txtClavePedido.Text.Trim();
                                         string descripcionLog = "El usuario: " + usuario + " realizó/registró cambios en la entrega a la pieza: " + piezaNombre + " del pedido: " + idPedido + " el día: " + DateTime.Now.ToString() + "opción 1";
 
-                                        operacion.Log(usuario, idPedido, descripcionLog, "11");
+                                        operacion.Log(usuario, idPedido, descripcionLog, "5");
                                         //De esta forma se desabilita el botón cuando ya se ha registrado la fecha de baja
                                         //SetDGVButtonColumnEnable(false);
 

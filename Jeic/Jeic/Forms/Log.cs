@@ -91,5 +91,10 @@ namespace Jeic.Forms
 
             Consulta.LogBuscar(dgvLog, pedido, usuario, tipo, fechaInicial, fechaFinal);
         }
+
+        private void pbMinimize_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
     }
 }
