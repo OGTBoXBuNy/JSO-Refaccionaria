@@ -421,7 +421,7 @@ namespace Refracciones.Forms
             // cambio del día 21/ene/2023
             if (txtClaveSiniestro.Text != "")
             {
-                if (!Regex.IsMatch(txtClaveSiniestro.Text, @"^(([a-zA-z0-9.\-_\s])+)$"))
+                if (!Regex.IsMatch(txtClaveSiniestro.Text, @"^(([a-zA-z0-9.\/-_\s])+)|[\/]$"))
                 {
                     MessageBOX.SHowDialog(2, "Valor ingresado no válido");
                     txtClaveSiniestro.Text = "";

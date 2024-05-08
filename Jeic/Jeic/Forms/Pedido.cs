@@ -2340,7 +2340,7 @@ namespace Refracciones.Forms
 
         private void txtClavePedido_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!Regex.IsMatch(e.KeyChar.ToString(), @"^(([a-zA-z0-9.\-_\s])+)$") && (e.KeyChar != (char)Keys.Back) && (22 != ((short)e.KeyChar) && (3 != ((short)e.KeyChar))))// cambio del día 21/ene/2023
+            if (!Regex.IsMatch(e.KeyChar.ToString(), @"^(([a-zA-z0-9.\-_\s])+)|[\/]$") && (e.KeyChar != (char)Keys.Back) && (22 != ((short)e.KeyChar) && (3 != ((short)e.KeyChar))))// cambio del día 21/ene/2023
             {
                 MessageBOX.SHowDialog(2,"Carácter no permitido");
                 e.Handled = true;
@@ -2353,7 +2353,7 @@ namespace Refracciones.Forms
             // cambio del día 21/ene/2023
             if (txtClavePedido.Text != "")
             {
-                if (!Regex.IsMatch(txtClavePedido.Text, @"^(([a-zA-z0-9.\-_\s])+)$"))
+                if (!Regex.IsMatch(txtClavePedido.Text, @"^(([a-zA-z0-9.\-_\s])+)|[\/]$"))
                 {
                     MessageBOX.SHowDialog(2, "Valor ingresado no válido");
                     txtClavePedido.Text = "";
