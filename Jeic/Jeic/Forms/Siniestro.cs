@@ -6,6 +6,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -411,6 +412,20 @@ namespace Refracciones.Forms
                 {
                     e.Cancel = false;
                     errorProvider1.SetError(cbVehiculo, null);
+                }
+            }
+        }
+
+        private void txtClaveSiniestro_TextChanged(object sender, EventArgs e)
+        {
+            // cambio del día 21/ene/2023
+            if (txtClaveSiniestro.Text != "")
+            {
+                if (!Regex.IsMatch(txtClaveSiniestro.Text, @"^(([a-zA-z0-9.\-_\s])+)$"))
+                {
+                    MessageBOX.SHowDialog(2, "Valor ingresado no válido");
+                    txtClaveSiniestro.Text = "";
+                    return;
                 }
             }
         }

@@ -131,6 +131,7 @@
             this.txtClaveSiniestro.Size = new System.Drawing.Size(169, 22);
             this.txtClaveSiniestro.TabIndex = 0;
             this.txtClaveSiniestro.Text = "Escriba clave del siniestro";
+            this.txtClaveSiniestro.TextChanged += new System.EventHandler(this.txtClaveSiniestro_TextChanged);
             this.txtClaveSiniestro.Enter += new System.EventHandler(this.txtClaveSiniestro_Enter);
             this.txtClaveSiniestro.Leave += new System.EventHandler(this.txtClaveSiniestro_Leave);
             this.txtClaveSiniestro.Validating += new System.ComponentModel.CancelEventHandler(this.txtClaveSiniestro_Validating);
