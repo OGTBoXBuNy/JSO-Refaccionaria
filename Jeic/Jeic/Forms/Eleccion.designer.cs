@@ -64,7 +64,7 @@
             this.btnModificarDatosPedido.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnModificarDatosPedido.ForeColor = System.Drawing.Color.White;
             this.btnModificarDatosPedido.Location = new System.Drawing.Point(16, 59);
-            this.btnModificarDatosPedido.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnModificarDatosPedido.Margin = new System.Windows.Forms.Padding(4);
             this.btnModificarDatosPedido.Name = "btnModificarDatosPedido";
             this.btnModificarDatosPedido.Size = new System.Drawing.Size(207, 49);
             this.btnModificarDatosPedido.TabIndex = 0;
@@ -80,7 +80,7 @@
             this.btnFactura.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnFactura.ForeColor = System.Drawing.Color.White;
             this.btnFactura.Location = new System.Drawing.Point(16, 116);
-            this.btnFactura.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnFactura.Margin = new System.Windows.Forms.Padding(4);
             this.btnFactura.Name = "btnFactura";
             this.btnFactura.Size = new System.Drawing.Size(207, 43);
             this.btnFactura.TabIndex = 1;
@@ -96,7 +96,7 @@
             this.btnDevolucionEntrega.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDevolucionEntrega.ForeColor = System.Drawing.Color.White;
             this.btnDevolucionEntrega.Location = new System.Drawing.Point(16, 220);
-            this.btnDevolucionEntrega.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnDevolucionEntrega.Margin = new System.Windows.Forms.Padding(4);
             this.btnDevolucionEntrega.Name = "btnDevolucionEntrega";
             this.btnDevolucionEntrega.Size = new System.Drawing.Size(207, 54);
             this.btnDevolucionEntrega.TabIndex = 2;
@@ -125,12 +125,13 @@
             this.btnRefactura.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRefactura.ForeColor = System.Drawing.Color.White;
             this.btnRefactura.Location = new System.Drawing.Point(16, 166);
-            this.btnRefactura.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnRefactura.Margin = new System.Windows.Forms.Padding(4);
             this.btnRefactura.Name = "btnRefactura";
             this.btnRefactura.Size = new System.Drawing.Size(207, 47);
             this.btnRefactura.TabIndex = 4;
             this.btnRefactura.Text = "Refacturar";
             this.btnRefactura.UseVisualStyleBackColor = false;
+            this.btnRefactura.Visible = false;
             this.btnRefactura.Click += new System.EventHandler(this.btnRefactura_Click);
             // 
             // btnChecarPedDev
@@ -141,7 +142,7 @@
             this.btnChecarPedDev.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnChecarPedDev.ForeColor = System.Drawing.Color.White;
             this.btnChecarPedDev.Location = new System.Drawing.Point(16, 284);
-            this.btnChecarPedDev.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnChecarPedDev.Margin = new System.Windows.Forms.Padding(4);
             this.btnChecarPedDev.Name = "btnChecarPedDev";
             this.btnChecarPedDev.Size = new System.Drawing.Size(207, 54);
             this.btnChecarPedDev.TabIndex = 5;
@@ -196,7 +197,7 @@
             this.btnPDF.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPDF.ForeColor = System.Drawing.Color.Linen;
             this.btnPDF.Location = new System.Drawing.Point(16, 346);
-            this.btnPDF.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnPDF.Margin = new System.Windows.Forms.Padding(4);
             this.btnPDF.Name = "btnPDF";
             this.btnPDF.Size = new System.Drawing.Size(207, 54);
             this.btnPDF.TabIndex = 9;
@@ -211,7 +212,7 @@
             this.dgvDatosPDF.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvDatosPDF.Enabled = false;
             this.dgvDatosPDF.Location = new System.Drawing.Point(91, 412);
-            this.dgvDatosPDF.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dgvDatosPDF.Margin = new System.Windows.Forms.Padding(4);
             this.dgvDatosPDF.Name = "dgvDatosPDF";
             this.dgvDatosPDF.ReadOnly = true;
             this.dgvDatosPDF.RowHeadersWidth = 51;
@@ -248,7 +249,7 @@
             this.bunifuGradientPanel1.GradientTopLeft = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
             this.bunifuGradientPanel1.GradientTopRight = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
             this.bunifuGradientPanel1.Location = new System.Drawing.Point(0, -1);
-            this.bunifuGradientPanel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bunifuGradientPanel1.Margin = new System.Windows.Forms.Padding(4);
             this.bunifuGradientPanel1.Name = "bunifuGradientPanel1";
             this.bunifuGradientPanel1.Quality = 10;
             this.bunifuGradientPanel1.Size = new System.Drawing.Size(241, 426);
@@ -336,7 +337,7 @@
             this.Controls.Add(this.btnModificarDatosPedido);
             this.Controls.Add(this.bunifuGradientPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Eleccion";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Submenu";

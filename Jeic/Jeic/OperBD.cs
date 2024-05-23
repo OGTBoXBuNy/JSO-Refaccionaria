@@ -1247,7 +1247,7 @@ namespace Refracciones
         //-----------------------------------------------------------------------------------------------------
 
         //--------------------ACTUALIZAR FACTURA (UPDATE)--------------------
-        public string Actualizar_Factura(string cve_factura, int cve_estado, decimal fact_sinIVA, decimal descuento, decimal fact_neto, DateTime fecha_ingreso, DateTime fecha_revision, DateTime fecha_pago, string nombre_factura, byte[] archivo, string nombre_xml, byte[] archivo_xml, string comentario, string realizo)
+        public string Actualizar_Factura(string cve_factura, int cve_estado, decimal fact_sinIVA, decimal descuento, decimal fact_neto, DateTime fecha_ingreso, DateTime fecha_revision, DateTime fecha_pago, string nombre_factura, byte[] archivo, string nombre_xml, byte[] archivo_xml, string comentario, string realizo, string cve_facturaOld)
         {
             string mensaje = "Se Actualizo Correctamente";
             using (SqlConnection nuevaConexion = Conexion.conexion())
@@ -1255,8 +1255,9 @@ namespace Refracciones
                 nuevaConexion.Open();
                 if (archivo == null && archivo_xml == null)
                 {
-                    Comando = new SqlCommand("UPDATE FACTURA SET cve_estado = @cve_estado,fact_sinIVA = @fact_sinIVA,descuento = @descuento,fact_neto = @fact_neto,fecha_ingreso = @fecha_ingreso,fecha_revision = @fecha_revision,fecha_pago = @fecha_pago,comentario = @comentario,realizo = @realizo WHERE cve_factura = @cve_factura", nuevaConexion);
+                    Comando = new SqlCommand("UPDATE FACTURA SET cve_factura = @cve_factura, cve_estado = @cve_estado,fact_sinIVA = @fact_sinIVA,descuento = @descuento,fact_neto = @fact_neto,fecha_ingreso = @fecha_ingreso,fecha_revision = @fecha_revision,fecha_pago = @fecha_pago,comentario = @comentario,realizo = @realizo WHERE cve_factura = @cve_facturaOld", nuevaConexion);
                     Comando.Parameters.Add("@cve_factura", SqlDbType.NVarChar, 50);
+                    Comando.Parameters.Add("@cve_facturaOld", SqlDbType.NVarChar, 50);
                     Comando.Parameters.Add("@cve_estado", SqlDbType.Int);
                     Comando.Parameters.Add("@fact_sinIVA", SqlDbType.Decimal);
                     Comando.Parameters.Add("@descuento", SqlDbType.Decimal);
@@ -1266,7 +1267,9 @@ namespace Refracciones
                     Comando.Parameters.Add("@fecha_pago", SqlDbType.Date);
                     Comando.Parameters.Add("@comentario", SqlDbType.NVarChar, 100);
                     Comando.Parameters.Add("@realizo", SqlDbType.NVarChar, 50);
+
                     Comando.Parameters["@cve_factura"].Value = cve_factura;
+                    Comando.Parameters["@cve_facturaOld"].Value = cve_facturaOld;
                     Comando.Parameters["@cve_estado"].Value = cve_estado;
                     Comando.Parameters["@fact_sinIVA"].Value = fact_sinIVA;
                     Comando.Parameters["@descuento"].Value = descuento;

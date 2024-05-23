@@ -11,6 +11,7 @@ using System.IO;
 using System.Diagnostics;
 using System.Globalization;
 using Jeic.Properties;
+using System.Text.RegularExpressions;
 
 namespace Refracciones.Forms
 {
@@ -44,7 +45,17 @@ namespace Refracciones.Forms
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
-            if (txtCve_Factura.Text.Trim() == "")
+            //letras de la A a la Z, mayusculas y minusculas
+            Regex letras = new Regex(@"^[A-Za-z][0-9]*");
+
+            if (!letras.IsMatch(txtCve_Factura.Text.Trim()))
+            {
+                errorP.SetError(txtCve_Factura, "Debe iniciar con una letra");
+                txtCve_Factura.Focus();
+                btnGuardar.Enabled = false;
+            }
+
+            else if (txtCve_Factura.Text.Trim() == "")
             {
                 errorP.SetError(txtCve_Factura, "Introduce un número de factura");
                 txtCve_Factura.Focus();
@@ -138,7 +149,8 @@ namespace Refracciones.Forms
                 }
                 else if (btnGuardar.Text == "Actualizar")
                 {
-                    oper.Actualizar_Factura(cve_factura, cve_estado, fact_sinIVA, descuento, fact_neto, fecha_ingreso, fecha_revision, fecha_pago, nombre_factura, file, nombre_xml, xml_file, comentario, lblUsuario.Text.Substring(9, lblUsuario.Text.Length - 9));
+                    string cve_facturaOld = dataGridView1.Rows[0].Cells[0].Value.ToString();
+                    oper.Actualizar_Factura(cve_factura, cve_estado, fact_sinIVA, descuento, fact_neto, fecha_ingreso, fecha_revision, fecha_pago, nombre_factura, file, nombre_xml, xml_file, comentario, lblUsuario.Text.Substring(9, lblUsuario.Text.Length - 9), cve_facturaOld);
                     string usuario = lblUsuario.Text.Substring(9, lblUsuario.Text.Length - 9);
                     string idPedido = cve_pedido;
                     string descripcionLog = "El usuario: " + usuario + " actualizó la factura para el pedido: " + idPedido + " el día: " + DateTime.Now.ToString();
@@ -215,7 +227,10 @@ namespace Refracciones.Forms
                     dtpFechaPago.Value = DateTime.Parse(dataGridView1.Rows[0].Cells[10].Value.ToString());
                      }
                     txtComentario.Text = dataGridView1.Rows[0].Cells[11].Value.ToString();
-                    txtCve_Factura.ReadOnly = true;
+                    txtCve_Factura.ReadOnly = false;
+                    txtFacturasinIVA.ReadOnly = true;
+                    txtDescuento.ReadOnly = true;
+                    txtFacturaconIVA.ReadOnly = true;
                     btnGuardar.Text = "Actualizar";
                 }
                 else
@@ -388,6 +403,11 @@ namespace Refracciones.Forms
             {
                 dtpFechaPago.Enabled = false;
             }
+        }
+
+        private void btnGuardar_ClientSizeChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
