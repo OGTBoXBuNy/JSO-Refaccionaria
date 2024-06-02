@@ -113,7 +113,7 @@ namespace Refracciones
                     Alertas alerta = new Alertas();
                     alerta.Show();
                 }*/
-
+                Operacion.valeLiberado();
                 string descripcionLog = "El usuario " + txtUsuario.Text + " Inicio sesión al sistema el día: " + DateTime.Now.ToString();
                 Operacion.Log(txtUsuario.Text, "", descripcionLog, "1");
                 txtUsuario.Text = "";

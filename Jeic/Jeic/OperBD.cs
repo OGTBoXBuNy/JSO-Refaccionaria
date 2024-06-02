@@ -7836,7 +7836,24 @@ namespace Refracciones
                 MessageBox.Show("Error al eliminar fecha entrega: " + EX.Message);
             }
         }
-
+        //----------------------------------REGISTAR CAMBIO LOG ----------------------------------------------
+        public void valeLiberado()
+        {
+            try
+            {
+                using (SqlConnection nuevacon = Conexion.conexion())
+                {
+                    nuevacon.Open();
+                    this.Comando = new SqlCommand("UPDATE ped SET ped.vale_liberado = 1 FROM PEDIDO ped LEFT OUTER JOIN VENTAS ven ON ven.cve_venta = ped.cve_venta WHERE ped.fecha_baja is not null AND ped.fecha_entrega is not null AND ped.vale_liberado != 1 AND ped.cve_factura is not null AND ped.estado = 6 AND ven.fecha_asignacion BETWEEN '2024-01-01' AND '2024-12-31';", nuevacon);
+                    this.Comando.ExecuteNonQuery();   
+                    nuevacon.Close();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
 
         //ENVIAR CORREO END
 
