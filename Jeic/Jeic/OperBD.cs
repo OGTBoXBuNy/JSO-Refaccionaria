@@ -7507,9 +7507,11 @@ namespace Refracciones
                 string responsableCorreoCopia = "";
 
                 if (clienteNombre == "GNP")
-                    responsableCorreoCopia = "colisionjeic.admon1@hotmail.com";
+                    responsableCorreoCopia = "jeic.admon4@gmail.com";//"colisionjeic.admon1@hotmail.com";
                 else if (clienteNombre == "HDI SEGUROS")
                     responsableCorreoCopia = "jeic.gvg@gmail.com";
+                else if (clienteNombre == "AXA SEGUROS")
+                    responsableCorreoCopia = "jeic.admon3@hotmail.com";
 
                 string IsraCorreoCopia = "jeiccotizaciones@hotmail.com";
 
