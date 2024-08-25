@@ -111,7 +111,8 @@ namespace Refracciones.Forms
                 btnAceptar.Text = "ENTREGA";
                 cmbCantidad.Items.Clear();
                 cmbCantidad.Visible = true;
-                for (int i = 1; i <= (cantidad - pzas_entregadas); i++)
+                //SE DEJA SOLAMENTE CANTIDAD PORQUE SE PIDIO QUITAR EL CANDADO, ES DECIR SE PUEDE DAR DE BAAJ ENTREGAR Y DEVOLVER SIN TENER ANTES UNA CONDICIÓN 25/08/2024
+                for (int i = 1; i <= (cantidad); i++)//for (int i = 1; i <= (cantidad - pzas_entregadas); i++)
                 {
                     cmbCantidad.Items.Add(i.ToString());
                 }
@@ -149,7 +150,8 @@ namespace Refracciones.Forms
                 lbl2.Text = "Cantidad a Devolver";
                 btnAceptar.Text = "DEVOLUCIÓN";
                 cmbCantidad.Items.Clear();
-                for (int i = 1; i <= pzas_entregadas - pzas_devolucion; i++)
+                //SE DEJA SOLAMENTE CANTIDAD PORQUE SE PIDIO QUITAR EL CANDADO, ES DECIR SE PUEDE DAR DE BAAJ ENTREGAR Y DEVOLVER SIN TENER ANTES UNA CONDICIÓN 25/08/2024 ISRAEL
+                for (int i = 1; i <= cantidad; i++)//for (int i = 1; i <= pzas_entregadas - pzas_devolucion; i++)
                 {
                     cmbCantidad.Items.Add(i.ToString());
                 }

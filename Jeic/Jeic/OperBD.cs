@@ -6805,7 +6805,7 @@ namespace Refracciones
                     Comando = new SqlCommand("UPDATE p SET p.cve_guia = @cveGuia, p.fechaRegNumGuia = @fechaRegNumGuia FROM PEDIDO p  WHERE p.cve_pedido = @cve_pedidoIdentity", nuevaConexion);
                     Comando.Parameters.AddWithValue("@cve_pedidoIdentity", cvePedido);
                     Comando.Parameters.AddWithValue("@cveGuia", cveGuia);
-                    Comando.Parameters.AddWithValue("@fechaRegNumGuia", fechaRegNumGuiaAnte + "," +  DateTime.Now.ToString("yyyy-MM-dd"));
+                    Comando.Parameters.AddWithValue("@fechaRegNumGuia", fechaRegNumGuiaAnte + " " +  DateTime.Now.ToString("yyyy-MM-dd"));
                     Comando.ExecuteNonQuery();
                     nuevaConexion.Close();
                 }
@@ -7485,6 +7485,43 @@ namespace Refracciones
             return nombreTaller;
         }
 
+
+        //OBTENER LAS CLAVES (numeros) DE GUIA QUE SE TIENEN EN EL PEDIDO 
+        public List<string> numerosGuia(string cvePedido)
+        {
+            List<string> guia = new List<string>();
+            List<string> guiaDistinct = new List<string>();
+
+            try
+            {
+                using (SqlConnection nuevacon = Conexion.conexion())
+                {
+                    this.Comando = new SqlCommand(string.Format("SELECT DISTINCT p.cve_guia FROM PEDIDO p LEFT OUTER JOIN VENTAS ven ON ven.cve_venta = p.cve_venta LEFT OUTER JOIN ORIGEN_PIEZA o ON o.cve_origen = p.cve_origen LEFT OUTER JOIN PIEZA pi ON p.cve_pieza = pi.cve_pieza LEFT OUTER JOIN PROVEEDOR pro ON p.cve_proveedor = pro.cve_proveedor LEFT OUTER JOIN VALUADOR v ON v.cve_valuador = ven.cve_valuador LEFT OUTER JOIN CLIENTE c ON c.cve_nombre = v.cve_cliente LEFT OUTER JOIN PORTAL po ON po.cve_portal = p.cve_portal LEFT OUTER JOIN TALLER t ON t.cve_taller = ven.cve_taller  LEFT OUTER JOIN FACTURA fa ON fa.cve_factura = p.cve_factura LEFT OUTER JOIN ESTADO_FACTURA es ON es.cve_estado = fa.cve_estado LEFT OUTER JOIN ENTREGA ent ON ent.cve_entrega = p.cve_entrega LEFT OUTER JOIN SINIESTRO s ON s.cve_siniestro = ven.cve_siniestro LEFT OUTER JOIN Estado_Siniestro ess ON ess.cve_estado = p.estado LEFT OUTER JOIN VEHICULO vh ON s.cve_vehiculo = vh.cve_vehiculo LEFT OUTER JOIN MARCA ma ON vh.cve_marca = ma.cve_marca LEFT OUTER JOIN VENDEDOR vend ON vend.cve_vendedor = ven.cve_vendedor LEFT OUTER JOIN CORREOS cor ON t.cve_taller = cor.cve_taller WHERE ven.cve_pedido = '{0}';", cvePedido), nuevacon);
+                    nuevacon.Open();
+                    Lector = Comando.ExecuteReader();
+                    while (Lector.Read())
+                    {
+
+                        guia.Add(Lector["cve_guia"].ToString());
+
+
+                    }
+                    guiaDistinct = removeDuplicates(guia);
+                    Lector.Close();
+                    nuevacon.Close();
+                }
+
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+
+            }
+
+            return guiaDistinct;
+        }
+
         public void enviaCorreo(string clienteNombre, string cvepedido, string siniestro)
         {
 
@@ -7494,6 +7531,19 @@ namespace Refracciones
             //Primero revisamos que existan correos a los cuales enviar
             if (correosCliente.Count != 0)
             {
+
+                //REVISAMOS SI TENEMOS NUMEROS DE GUIA PARA ANEXAR
+                List<string> numerosGuia = this.numerosGuia(cvepedido);
+                string numGuias = "";
+                if(numerosGuia.Count != 0)
+                {
+                    foreach (string guia in numerosGuia)
+                    {
+                        numGuias += ", " + guia;
+                    }
+                }
+                //END NUMEROS DE GUIA
+
                 List<string> piezas = piezasCorreo(cvepedido);
                 if (piezas.Count == 0)
                     return;
@@ -7558,6 +7608,8 @@ namespace Refracciones
                             piezasEntregadas +
                             "\r\n\r\nGracias" +
                             "\r\n\r\nSaludos" +
+                            "\r\nCon el siguiente número de guía podras darle el seguimiento a tu envío: " + numGuias +
+                            "\r\nRastrea tu envío: https://www.paquetexpress.com.mx/" +
                             "\r\n\r\nIMPORTANTE:" +
                             "\r\nEste correo es informativo, favor no responder a esta dirección de correo, ya que no se encuentra habilitada para recibir mensajes.\r\n"
                     };
@@ -7601,6 +7653,18 @@ namespace Refracciones
 
                 string IsraCorreoCopia = "jeiccotizaciones@hotmail.com";
 
+                //REVISAMOS SI TENEMOS NUMEROS DE GUIA PARA ANEXAR
+                List<string> numerosGuia = this.numerosGuia(cvepedido);
+                string numGuias = "";
+                if (numerosGuia.Count != 0)
+                {
+                    foreach (string guia in numerosGuia)
+                    {
+                        numGuias += ", " + guia;
+                    }
+                }
+                //END NUMEROS DE GUIA
+
                 try
                 {
 
@@ -7642,6 +7706,8 @@ namespace Refracciones
                             piezasEntregadas +
                             "\r\n\r\nGracias" +
                             "\r\n\r\nSaludos" +
+                            "\r\nCon el siguiente número de guía podras darle el seguimiento a tu envío: " + numGuias +
+                            "\r\nRastrea tu envío: https://www.paquetexpress.com.mx/" +
                             "\r\n\r\nIMPORTANTE:" +
                             "\r\nEste correo es informativo, favor no responder a esta dirección de correo, ya que no se encuentra habilitada para recibir mensajes.\r\n"
                     };
