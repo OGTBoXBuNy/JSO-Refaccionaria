@@ -156,7 +156,10 @@ namespace Refracciones.Forms
                     ubicacion = "-";
 
                 lblcvePedido.Text = lblcvePedido.Text.Substring(0, 9) + " " + dgvDatos.Rows[0].Cells[0].Value.ToString();
+                txtCvePedido.Text = lblcvePedido.Text;
                 lblcveSiniestro.Text = lblcveSiniestro.Text.Substring(0, 12) + " " + dgvDatos.Rows[0].Cells[1].Value.ToString();
+                txtCveSiniestro.Text = lblcveSiniestro.Text;
+                
                 lblPieza.Text = lblPieza.Text.Substring(0, 6) + " " + dgvDatos.Rows[0].Cells[2].Value.ToString();
                 lblCantidad.Text = lblCantidad.Text.Substring(0, 9) + " " + dgvDatos.Rows[0].Cells[3].Value.ToString();
                 lblVendedor.Text = lblVendedor.Text.Substring(0, 9) + " " + dgvDatos.Rows[0].Cells[4].Value.ToString();
@@ -367,7 +370,10 @@ namespace Refracciones.Forms
                     ubicacion = "-";
 
                 lblcvePedido.Text = lblcvePedido.Text.Substring(0, 9) + " " + dgvDatos.Rows[0].Cells[0].Value.ToString();
+                txtCvePedido.Text = lblcvePedido.Text;
                 lblcveSiniestro.Text = lblcveSiniestro.Text.Substring(0, 12) + " " + dgvDatos.Rows[0].Cells[1].Value.ToString();
+                txtCveSiniestro.Text = lblcveSiniestro.Text;
+
                 lblPieza.Text = lblPieza.Text.Substring(0, 6) + " " + dgvDatos.Rows[0].Cells[2].Value.ToString();
                 lblCantidad.Text = lblCantidad.Text.Substring(0, 9) + " " + dgvDatos.Rows[0].Cells[3].Value.ToString();
                 lblVendedor.Text = lblVendedor.Text.Substring(0, 9) + " " + dgvDatos.Rows[0].Cells[4].Value.ToString();
