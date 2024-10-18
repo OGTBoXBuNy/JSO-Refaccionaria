@@ -7934,6 +7934,40 @@ namespace Refracciones
             }
         }
 
+        //---------------------------LLENAR DATOS EN DGV PARA ELEGIR PIEZAS A DAR DE BAJA--------------------
+        public void productosBajaSinCodBarras(DataGridView dgv, string clave)
+        {
+
+            try
+            {
+                using (SqlConnection nuevacon = Conexion.conexion())
+                {
+                    
+                    da = new SqlDataAdapter(string.Format("SELECT ven.cve_pedido AS 'PEDIDO', ven.cve_siniestro AS 'SINIESTRO', pie.nombre AS 'PIEZA', val.cve_cliente AS 'CLIENTE',estSin.estado AS 'ESTATUS ACTUAL', ped.cve_pedido AS 'CVE PEDIDO', ped.cve_venta AS 'CVE VENTA', ped.cve_pieza AS 'CVE PIEZA', ped.cantidad AS 'CANTIDAD', ven.fecha_asignacion AS 'FECHA ASIG'  FROM PEDIDO ped JOIN PIEZA pie ON ped.cve_pieza = pie.cve_pieza JOIN VENTAS ven ON ped.cve_venta = ven.cve_venta JOIN VALUADOR val ON ven.cve_valuador = val.cve_valuador JOIN ESTADO_SINIESTRO estSin ON ped.estado = estSin.cve_estado WHERE ped.fecha_entrega is null AND ven.cve_siniestro = '{0}' OR ven.cve_pedido = '{1}';", clave,clave), nuevacon);
+                    nuevacon.Open();
+                    dt = new DataTable();
+                    da.Fill(dt);
+                    dgv.DataSource = dt;
+                    nuevacon.Close();
+                }
+                //Add a CheckBox Column to the DataGridView at the first position.
+                DataGridViewCheckBoxColumn checkBoxColumn = new DataGridViewCheckBoxColumn();
+                checkBoxColumn.HeaderText = "";
+                checkBoxColumn.Width = 30;
+                checkBoxColumn.Name = "checkBoxColumn";
+                dgv.Columns.Insert(0, checkBoxColumn);
+                dgv.Columns["CVE VENTA"].Visible = false;
+                dgv.Columns["CVE PEDIDO"].Visible = false;
+                dgv.Columns["PIEZA"].ReadOnly = true;
+                dgv.Columns["SINIESTRO"].Visible = true;
+                dgv.Columns["PEDIDO"].Visible = true;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+        }
+
         //ENVIAR CORREO END
 
         /*

@@ -193,5 +193,10 @@ namespace Jeic.Forms
                 MessageBOX.SHowDialog(3, "Datos registrados correctamente!");
             //}
         }
+
+        private void txtCodigo_ImeModeChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

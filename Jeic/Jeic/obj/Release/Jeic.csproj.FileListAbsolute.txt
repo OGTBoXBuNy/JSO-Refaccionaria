@@ -331,3 +331,4 @@ C:\Users\boxbu\source\repos\Axdrox\proyectoJeic\Jeic\Jeic\obj\Release\Jeic.appli
 C:\Users\boxbu\source\repos\Axdrox\proyectoJeic\Jeic\Jeic\obj\Release\Jeic.csproj.Up2Date
 C:\Users\boxbu\source\repos\Axdrox\proyectoJeic\Jeic\Jeic\obj\Release\Jeic.exe
 C:\Users\boxbu\source\repos\Axdrox\proyectoJeic\Jeic\Jeic\obj\Release\Jeic.pdb
+C:\Users\boxbu\source\repos\Axdrox\proyectoJeic\Jeic\Jeic\obj\Release\Jeic.bajasMultiplesSinCodBarras.resources

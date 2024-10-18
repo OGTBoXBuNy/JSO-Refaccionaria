@@ -27,7 +27,7 @@
     <InstallUrl>https://raw.githubusercontent.com/Axdrox/proyectoJeic/development/published/</InstallUrl>
     <CreateWebPageOnPublish>true</CreateWebPageOnPublish>
     <WebPage>publish.htm</WebPage>
-    <ApplicationRevision>29</ApplicationRevision>
+    <ApplicationRevision>30</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <CreateDesktopShortcut>true</CreateDesktopShortcut>
@@ -207,6 +207,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="bajasMultiplesSinCodBarras.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="bajasMultiplesSinCodBarras.Designer.cs">
+      <DependentUpon>bajasMultiplesSinCodBarras.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Administrar.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -379,6 +385,9 @@
     </Compile>
     <Compile Include="ReporteVentas.cs" />
     <Compile Include="Utilidades\ConvertirBitmap.cs" />
+    <EmbeddedResource Include="bajasMultiplesSinCodBarras.resx">
+      <DependentUpon>bajasMultiplesSinCodBarras.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\Administrar.resx">
       <DependentUpon>Administrar.cs</DependentUpon>
     </EmbeddedResource>

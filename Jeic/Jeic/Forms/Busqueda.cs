@@ -1,4 +1,5 @@
-﻿using Jeic.Forms;
+﻿using Jeic;
+using Jeic.Forms;
 using Jeic.Properties;
 using System;
 using System.Collections.Generic;
@@ -124,7 +125,11 @@ namespace Refracciones.Forms
                 cambioGuiasToolStripMenuItem.Enabled = true;
 
             if (permisos.Contains("regBajas"))
+            {
                 registroBajasToolStripMenuItem.Enabled = true;
+                registroBajas2ToolStripMenuItem.Enabled = true;
+            }
+                
 
             if (permisos.Contains("buscarFact"))
                 buscarFacturasToolStripMenuItem.Enabled = true;
@@ -494,6 +499,13 @@ namespace Refracciones.Forms
             {
                 llenar.eliminarFechaEntrega(cvePedido);
             }
+        }
+
+        private void registroBajas2ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            bajasMultiplesSinCodBarras regBajMul = new bajasMultiplesSinCodBarras();
+            regBajMul.lblUsuario.Text = Usuario.Text;
+            regBajMul.ShowDialog();
         }
     }
 }

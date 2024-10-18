@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Busqueda));
             this.label1 = new System.Windows.Forms.Label();
             this.TxtClaveSin = new System.Windows.Forms.TextBox();
@@ -41,6 +41,8 @@
             this.label3 = new System.Windows.Forms.Label();
             this.Fecha_in = new System.Windows.Forms.DateTimePicker();
             this.Panelinfo = new System.Windows.Forms.Panel();
+            this.txtCvePedido = new System.Windows.Forms.TextBox();
+            this.txtCveSiniestro = new System.Windows.Forms.TextBox();
             this.btnEliminarFechaBaja = new System.Windows.Forms.Button();
             this.btnEliminarFechaEntrega = new System.Windows.Forms.Button();
             this.lblvaleLiberado = new System.Windows.Forms.Label();
@@ -105,13 +107,12 @@
             this.administrarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.minimizarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cerrarSesionToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.registroBajas2ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.Usuario = new System.Windows.Forms.ToolStripMenuItem();
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.bunifuGradientPanel1 = new Bunifu.Framework.UI.BunifuGradientPanel();
             this.lblcvePe = new System.Windows.Forms.Label();
             this.moverFormulario = new Bunifu.Framework.UI.BunifuDragControl(this.components);
-            this.txtCveSiniestro = new System.Windows.Forms.TextBox();
-            this.txtCvePedido = new System.Windows.Forms.TextBox();
             this.Panelinfo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbFactura)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dvgPedido)).BeginInit();
@@ -248,6 +249,36 @@
             this.Panelinfo.Name = "Panelinfo";
             this.Panelinfo.Size = new System.Drawing.Size(425, 589);
             this.Panelinfo.TabIndex = 6;
+            // 
+            // txtCvePedido
+            // 
+            this.txtCvePedido.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(45)))), ((int)(((byte)(59)))));
+            this.txtCvePedido.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtCvePedido.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold);
+            this.txtCvePedido.ForeColor = System.Drawing.Color.White;
+            this.txtCvePedido.Location = new System.Drawing.Point(2, 32);
+            this.txtCvePedido.Margin = new System.Windows.Forms.Padding(4);
+            this.txtCvePedido.MaxLength = 100;
+            this.txtCvePedido.Name = "txtCvePedido";
+            this.txtCvePedido.ReadOnly = true;
+            this.txtCvePedido.Size = new System.Drawing.Size(220, 20);
+            this.txtCvePedido.TabIndex = 49;
+            this.txtCvePedido.Text = "# Pedido:";
+            // 
+            // txtCveSiniestro
+            // 
+            this.txtCveSiniestro.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(45)))), ((int)(((byte)(59)))));
+            this.txtCveSiniestro.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtCveSiniestro.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold);
+            this.txtCveSiniestro.ForeColor = System.Drawing.Color.White;
+            this.txtCveSiniestro.Location = new System.Drawing.Point(2, 54);
+            this.txtCveSiniestro.Margin = new System.Windows.Forms.Padding(4);
+            this.txtCveSiniestro.MaxLength = 100;
+            this.txtCveSiniestro.Name = "txtCveSiniestro";
+            this.txtCveSiniestro.ReadOnly = true;
+            this.txtCveSiniestro.Size = new System.Drawing.Size(220, 20);
+            this.txtCveSiniestro.TabIndex = 48;
+            this.txtCveSiniestro.Text = "# Siniestro:";
             // 
             // btnEliminarFechaBaja
             // 
@@ -760,24 +791,24 @@
             this.dvgPedido.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dvgPedido.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.dvgPedido.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(28)))), ((int)(((byte)(27)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(52)))), ((int)(((byte)(68)))));
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dvgPedido.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(28)))), ((int)(((byte)(27)))));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(52)))), ((int)(((byte)(68)))));
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dvgPedido.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.dvgPedido.ColumnHeadersHeight = 22;
             this.dvgPedido.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dvgPedido.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dvgPedido.DefaultCellStyle = dataGridViewCellStyle6;
             this.dvgPedido.EnableHeadersVisualStyles = false;
             this.dvgPedido.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(51)))), ((int)(((byte)(65)))));
             this.dvgPedido.Location = new System.Drawing.Point(424, 185);
@@ -785,21 +816,21 @@
             this.dvgPedido.Name = "dvgPedido";
             this.dvgPedido.ReadOnly = true;
             this.dvgPedido.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(37)))), ((int)(((byte)(50)))));
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(125)))), ((int)(((byte)(184)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dvgPedido.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(37)))), ((int)(((byte)(50)))));
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(125)))), ((int)(((byte)(184)))));
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dvgPedido.RowHeadersDefaultCellStyle = dataGridViewCellStyle7;
             this.dvgPedido.RowHeadersWidth = 51;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(64)))), ((int)(((byte)(88)))));
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.White;
-            this.dvgPedido.RowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(64)))), ((int)(((byte)(88)))));
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.White;
+            this.dvgPedido.RowsDefaultCellStyle = dataGridViewCellStyle8;
             this.dvgPedido.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dvgPedido.Size = new System.Drawing.Size(1041, 591);
             this.dvgPedido.TabIndex = 7;
@@ -921,6 +952,7 @@
             this.cambioEstadoToolStripMenuItem,
             this.cambioGuiasToolStripMenuItem,
             this.registroBajasToolStripMenuItem,
+            this.registroBajas2ToolStripMenuItem,
             this.notificacionesToolStripMenuItem,
             this.buscarFacturasToolStripMenuItem,
             this.talleresToolStripMenuItem,
@@ -1035,6 +1067,14 @@
             this.cerrarSesionToolStripMenuItem1.Text = "Cerrar Sesión";
             this.cerrarSesionToolStripMenuItem1.Click += new System.EventHandler(this.cerrarSesionToolStripMenuItem1_Click);
             // 
+            // registroBajas2ToolStripMenuItem
+            // 
+            this.registroBajas2ToolStripMenuItem.Enabled = false;
+            this.registroBajas2ToolStripMenuItem.Name = "registroBajas2ToolStripMenuItem";
+            this.registroBajas2ToolStripMenuItem.Size = new System.Drawing.Size(241, 26);
+            this.registroBajas2ToolStripMenuItem.Text = "Registro Bajas 2";
+            this.registroBajas2ToolStripMenuItem.Click += new System.EventHandler(this.registroBajas2ToolStripMenuItem_Click);
+            // 
             // Usuario
             // 
             this.Usuario.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
@@ -1098,36 +1138,6 @@
             this.moverFormulario.Horizontal = true;
             this.moverFormulario.TargetControl = this.bunifuGradientPanel1;
             this.moverFormulario.Vertical = true;
-            // 
-            // txtCveSiniestro
-            // 
-            this.txtCveSiniestro.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(45)))), ((int)(((byte)(59)))));
-            this.txtCveSiniestro.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtCveSiniestro.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold);
-            this.txtCveSiniestro.ForeColor = System.Drawing.Color.White;
-            this.txtCveSiniestro.Location = new System.Drawing.Point(2, 54);
-            this.txtCveSiniestro.Margin = new System.Windows.Forms.Padding(4);
-            this.txtCveSiniestro.MaxLength = 100;
-            this.txtCveSiniestro.Name = "txtCveSiniestro";
-            this.txtCveSiniestro.ReadOnly = true;
-            this.txtCveSiniestro.Size = new System.Drawing.Size(220, 20);
-            this.txtCveSiniestro.TabIndex = 48;
-            this.txtCveSiniestro.Text = "# Siniestro:";
-            // 
-            // txtCvePedido
-            // 
-            this.txtCvePedido.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(45)))), ((int)(((byte)(59)))));
-            this.txtCvePedido.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtCvePedido.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold);
-            this.txtCvePedido.ForeColor = System.Drawing.Color.White;
-            this.txtCvePedido.Location = new System.Drawing.Point(2, 32);
-            this.txtCvePedido.Margin = new System.Windows.Forms.Padding(4);
-            this.txtCvePedido.MaxLength = 100;
-            this.txtCvePedido.Name = "txtCvePedido";
-            this.txtCvePedido.ReadOnly = true;
-            this.txtCvePedido.Size = new System.Drawing.Size(220, 20);
-            this.txtCvePedido.TabIndex = 49;
-            this.txtCvePedido.Text = "# Pedido:";
             // 
             // Busqueda
             // 
@@ -1239,5 +1249,6 @@
         private System.Windows.Forms.Button btnEliminarFechaBaja;
         private System.Windows.Forms.TextBox txtCveSiniestro;
         private System.Windows.Forms.TextBox txtCvePedido;
+        private System.Windows.Forms.ToolStripMenuItem registroBajas2ToolStripMenuItem;
     }
 }

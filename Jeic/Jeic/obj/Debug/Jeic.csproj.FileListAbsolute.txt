@@ -599,3 +599,4 @@ C:\Users\boxbu\source\repos\Axdrox\proyectoJeic\Jeic\Jeic\obj\Debug\Jeic.applica
 C:\Users\boxbu\source\repos\Axdrox\proyectoJeic\Jeic\Jeic\obj\Debug\Jeic.csproj.Up2Date
 C:\Users\boxbu\source\repos\Axdrox\proyectoJeic\Jeic\Jeic\obj\Debug\Jeic.exe
 C:\Users\boxbu\source\repos\Axdrox\proyectoJeic\Jeic\Jeic\obj\Debug\Jeic.pdb
+C:\Users\boxbu\source\repos\Axdrox\proyectoJeic\Jeic\Jeic\obj\Debug\Jeic.bajasMultiplesSinCodBarras.resources
