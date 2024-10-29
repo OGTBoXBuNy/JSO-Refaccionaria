@@ -137,11 +137,21 @@ namespace Refracciones.Forms
             if (permisos.Contains("eliminarFechaBaja"))
                 btnEliminarFechaBaja.Visible = true;
 
-            if (permisos.Contains("eliminarFechaEntrega"))
+            if (permisos.Contains("eliminarFechaEntrega") && (userName == "Daniel.71" || userName == "JEICJ" || userName == "JEICI"))
                 btnEliminarFechaEntrega.Visible = true;
 
-            if (permisos.Contains("cambiosLog"))
+            if (permisos.Contains("cambiosLog") && (userName == "Daniel.71" || userName == "JEICJ" || userName == "JEICI"))
                 logcontrolDeCambiosToolStripMenuItem.Enabled = true;
+
+            if(userName == "YaelC.05" || userName == "AbigailA.05") 
+            {
+                logcontrolDeCambiosToolStripMenuItem.Enabled = false;
+                btnEliminarFechaBaja.Enabled = false;
+                btnEliminarFechaBaja.Visible = false;
+                btnEliminarFechaEntrega.Enabled = false;
+                btnEliminarFechaEntrega.Visible = false;
+            }
+            
 
         }
 

@@ -7542,6 +7542,16 @@ namespace Refracciones
                         numGuias += ", " + guia;
                     }
                 }
+
+                string linkPaqueteria = "";
+                if (numGuias.StartsWith("MEX01")) 
+                {
+                    linkPaqueteria = "https://www.paquetexpress.com.mx/rastreo";
+                }
+                else if (numGuias.StartsWith("77"))
+                {
+                    linkPaqueteria = "https://www.fedex.com/es-mx/home.html#";
+                }
                 //END NUMEROS DE GUIA
 
                 List<string> piezas = piezasCorreo(cvepedido);
@@ -7609,7 +7619,7 @@ namespace Refracciones
                             "\r\n\r\nGracias" +
                             "\r\n\r\nSaludos" +
                             "\r\nCon el siguiente número de guía podras darle el seguimiento a tu envío: " + numGuias +
-                            "\r\nRastrea tu envío: https://www.paquetexpress.com.mx/" +
+                            "\r\nRastrea tu envío: " + linkPaqueteria +
                             "\r\n\r\nIMPORTANTE:" +
                             "\r\nEste correo es informativo, favor no responder a esta dirección de correo, ya que no se encuentra habilitada para recibir mensajes.\r\n"
                     };
@@ -7663,6 +7673,15 @@ namespace Refracciones
                         numGuias += ", " + guia;
                     }
                 }
+                string linkPaqueteria = "";
+                if (numGuias.StartsWith("MEX01"))
+                {
+                    linkPaqueteria = "https://www.paquetexpress.com.mx/rastreo";
+                }
+                else if (numGuias.StartsWith("77"))
+                {
+                    linkPaqueteria = "https://www.fedex.com/es-mx/home.html#";
+                }
                 //END NUMEROS DE GUIA
 
                 try
@@ -7707,7 +7726,7 @@ namespace Refracciones
                             "\r\n\r\nGracias" +
                             "\r\n\r\nSaludos" +
                             "\r\nCon el siguiente número de guía podras darle el seguimiento a tu envío: " + numGuias +
-                            "\r\nRastrea tu envío: https://www.paquetexpress.com.mx/" +
+                            "\r\nRastrea tu envío: " + linkPaqueteria +
                             "\r\n\r\nIMPORTANTE:" +
                             "\r\nEste correo es informativo, favor no responder a esta dirección de correo, ya que no se encuentra habilitada para recibir mensajes.\r\n"
                     };
