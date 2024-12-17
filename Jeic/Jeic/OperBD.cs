@@ -6805,7 +6805,7 @@ namespace Refracciones
                     Comando = new SqlCommand("UPDATE p SET p.cve_guia = @cveGuia, p.fechaRegNumGuia = @fechaRegNumGuia FROM PEDIDO p  WHERE p.cve_pedido = @cve_pedidoIdentity", nuevaConexion);
                     Comando.Parameters.AddWithValue("@cve_pedidoIdentity", cvePedido);
                     Comando.Parameters.AddWithValue("@cveGuia", cveGuia);
-                    Comando.Parameters.AddWithValue("@fechaRegNumGuia", fechaRegNumGuiaAnte + " " +  DateTime.Now.ToString("yyyy-MM-dd"));
+                    Comando.Parameters.AddWithValue("@fechaRegNumGuia", fechaRegNumGuiaAnte + " " +  DateTime.Now.ToString("dd-MM-yyyy"));
                     Comando.ExecuteNonQuery();
                     nuevaConexion.Close();
                 }

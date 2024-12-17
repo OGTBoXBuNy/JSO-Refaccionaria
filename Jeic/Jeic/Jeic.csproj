@@ -64,10 +64,10 @@
     <ApplicationIcon>Jeic.ico</ApplicationIcon>
   </PropertyGroup>
   <PropertyGroup>
-    <ManifestCertificateThumbprint>32C4D4DB903B48602893E458EE681A9D9DD3ED48</ManifestCertificateThumbprint>
+    <ManifestCertificateThumbprint>A708E06F518D713D29ED7E10263F20F392F595D9</ManifestCertificateThumbprint>
   </PropertyGroup>
   <PropertyGroup>
-    <ManifestKeyFile>Jeic_TemporaryKey.pfx</ManifestKeyFile>
+    <ManifestKeyFile>Jeic_1_TemporaryKey.pfx</ManifestKeyFile>
   </PropertyGroup>
   <PropertyGroup>
     <GenerateManifests>true</GenerateManifests>
@@ -471,6 +471,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="Jeic_1_TemporaryKey.pfx" />
     <None Include="Resources\VALE JEIC.pdf" />
   </ItemGroup>
   <ItemGroup>
