@@ -234,15 +234,15 @@ namespace Refracciones.Forms
                     //txtFacturaconIVA.ReadOnly = true;
                     btnGuardar.Text = "Actualizar";
 
-                    usuariosAutorizados.Add("Usuario: JEICI");
-                    usuariosAutorizados.Add("Usuario: Daniel.71");
-                    if (usuariosAutorizados.Contains(lblUsuario.Text))
-                    {
+                    //usuariosAutorizados.Add("Usuario: JEICI");
+                    //usuariosAutorizados.Add("Usuario: Daniel.71");
+                    //if (usuariosAutorizados.Contains(lblUsuario.Text))
+                    //{
                     txtCve_Factura.ReadOnly = false;
                     txtFacturasinIVA.ReadOnly = false;
                     txtDescuento.ReadOnly = false;
                     txtFacturaconIVA.ReadOnly = false;
-                    }
+                    //}
             }
                 else
                 { }

@@ -117,7 +117,6 @@
             this.txtCve_Factura.Location = new System.Drawing.Point(141, 71);
             this.txtCve_Factura.Margin = new System.Windows.Forms.Padding(4);
             this.txtCve_Factura.Name = "txtCve_Factura";
-            this.txtCve_Factura.ReadOnly = true;
             this.txtCve_Factura.Size = new System.Drawing.Size(187, 22);
             this.txtCve_Factura.TabIndex = 0;
             this.txtCve_Factura.TextChanged += new System.EventHandler(this.txtCve_Factura_TextChanged);
@@ -188,7 +187,6 @@
             this.txtFacturasinIVA.Location = new System.Drawing.Point(141, 116);
             this.txtFacturasinIVA.Margin = new System.Windows.Forms.Padding(4);
             this.txtFacturasinIVA.Name = "txtFacturasinIVA";
-            this.txtFacturasinIVA.ReadOnly = true;
             this.txtFacturasinIVA.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.txtFacturasinIVA.Size = new System.Drawing.Size(187, 22);
             this.txtFacturasinIVA.TabIndex = 1;
@@ -214,7 +212,6 @@
             this.txtFacturaconIVA.Location = new System.Drawing.Point(143, 196);
             this.txtFacturaconIVA.Margin = new System.Windows.Forms.Padding(4);
             this.txtFacturaconIVA.Name = "txtFacturaconIVA";
-            this.txtFacturaconIVA.ReadOnly = true;
             this.txtFacturaconIVA.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.txtFacturaconIVA.Size = new System.Drawing.Size(187, 22);
             this.txtFacturaconIVA.TabIndex = 3;
@@ -596,7 +593,6 @@
             this.txtDescuento.Location = new System.Drawing.Point(143, 155);
             this.txtDescuento.Margin = new System.Windows.Forms.Padding(4);
             this.txtDescuento.Name = "txtDescuento";
-            this.txtDescuento.ReadOnly = true;
             this.txtDescuento.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.txtDescuento.Size = new System.Drawing.Size(187, 22);
             this.txtDescuento.TabIndex = 2;
