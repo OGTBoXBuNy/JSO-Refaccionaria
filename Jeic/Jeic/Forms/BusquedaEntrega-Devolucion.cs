@@ -15,6 +15,7 @@ namespace Refracciones.Forms
     {
         OperBD oper = new OperBD();
         DataTable dt = new DataTable();
+        List<string> usuariosAutorizados = new List<string>();
         //string cve_factura = "";
         int cve_venta = 0;
         public BusquedaEntrega_Devolucion()
@@ -33,6 +34,9 @@ namespace Refracciones.Forms
             cve_venta = Int32.Parse(lblcve_venta.Text);
             dataGridView1.DataSource = oper.Tabla_Entrega(cve_venta);
             //dato3.Text =dato3.Text + " " + cve_factura;
+            
+            usuariosAutorizados.Add("Usuario: JEICI");
+            usuariosAutorizados.Add("Usuario: Daniel.71");
         }
 
         private void rbtnEntregas_CheckedChanged(object sender, EventArgs e)
@@ -75,6 +79,24 @@ namespace Refracciones.Forms
             this.WindowState = FormWindowState.Minimized;
         }
 
-        
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex == -1)
+            { }
+            else if (e.ColumnIndex == -1)
+            { }
+            else if (rbtnDev.Checked && usuariosAutorizados.Contains(lblUsuario.Text))
+            {
+                int fila = Int32.Parse(e.RowIndex.ToString());
+                string cve_pedido = dataGridView1.Rows[fila].Cells[7].Value.ToString();
+
+                MessageBOX mes = new MessageBOX(4, "¿Seguro que deseas cancelar la devolución?");
+                if (mes.ShowDialog() == DialogResult.OK)
+                {
+                    oper.cancelarDevolucion(cve_pedido);
+                }
+
+            }
+        }
     }
 }

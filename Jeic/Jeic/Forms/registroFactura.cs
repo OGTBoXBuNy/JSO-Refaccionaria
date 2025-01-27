@@ -24,6 +24,7 @@ namespace Refracciones.Forms
         string cve_siniestro;
         string cve_pedido;
         public string[] dat;
+        List<string> usuariosAutorizados = new List<string>();
         public registroFactura()
         {
             InitializeComponent();
@@ -227,12 +228,22 @@ namespace Refracciones.Forms
                     dtpFechaPago.Value = DateTime.Parse(dataGridView1.Rows[0].Cells[10].Value.ToString());
                      }
                     txtComentario.Text = dataGridView1.Rows[0].Cells[11].Value.ToString();
-                    txtCve_Factura.ReadOnly = false;
-                    txtFacturasinIVA.ReadOnly = true;
-                    txtDescuento.ReadOnly = true;
-                    txtFacturaconIVA.ReadOnly = true;
+                    //txtCve_Factura.ReadOnly = false;
+                    //txtFacturasinIVA.ReadOnly = true;
+                    //txtDescuento.ReadOnly = true;
+                    //txtFacturaconIVA.ReadOnly = true;
                     btnGuardar.Text = "Actualizar";
-                }
+
+                    usuariosAutorizados.Add("Usuario: JEICI");
+                    usuariosAutorizados.Add("Usuario: Daniel.71");
+                    if (usuariosAutorizados.Contains(lblUsuario.Text))
+                    {
+                    txtCve_Factura.ReadOnly = false;
+                    txtFacturasinIVA.ReadOnly = false;
+                    txtDescuento.ReadOnly = false;
+                    txtFacturaconIVA.ReadOnly = false;
+                    }
+            }
                 else
                 { }
 

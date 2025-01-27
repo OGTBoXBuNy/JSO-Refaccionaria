@@ -21,6 +21,7 @@ namespace Refracciones.Forms
         string cve_siniestro;
         string cve_pedido;
         public string[] dat;
+        List<string> usuariosAutorizados = new List<string>();
         public registrarRefactura()
         {
             InitializeComponent();
@@ -211,6 +212,16 @@ namespace Refracciones.Forms
                     txtComentario.Text = dataGridView1.Rows[0].Cells[11].Value.ToString();
                     txtCve_Factura.ReadOnly = true;
                     btnGuardar.Text = "Actualizar";
+
+                    usuariosAutorizados.Add("Usuario: JEICI");
+                    usuariosAutorizados.Add("Usuario: Daniel.71");
+                    if (usuariosAutorizados.Contains(lblUsuario.Text))
+                    {
+                        txtCve_Factura.ReadOnly = false;
+                        txtFacturasinIVA.ReadOnly = false;
+                        txtDescuento.ReadOnly = false;
+                        txtFacturaconIVA.ReadOnly = false;
+                    }
                 }
                 catch (Exception ex)
                 {

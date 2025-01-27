@@ -70,6 +70,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.errorP = new System.Windows.Forms.ErrorProvider(this.components);
             this.bunifuGradientPanel1 = new Bunifu.Framework.UI.BunifuGradientPanel();
+            this.chkFP = new System.Windows.Forms.CheckBox();
             this.lblcvePedidoidentity = new System.Windows.Forms.Label();
             this.lblPieza = new System.Windows.Forms.Label();
             this.lblUsuario = new System.Windows.Forms.Label();
@@ -80,7 +81,6 @@
             this.lblDescuento = new System.Windows.Forms.Label();
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.moverFormulario = new Bunifu.Framework.UI.BunifuDragControl(this.components);
-            this.chkFP = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorP)).BeginInit();
             this.bunifuGradientPanel1.SuspendLayout();
@@ -101,9 +101,10 @@
             "PENDIENTE",
             "PAGADA",
             "CANCELADA"});
-            this.cmbEstadoFactura.Location = new System.Drawing.Point(138, 351);
+            this.cmbEstadoFactura.Location = new System.Drawing.Point(184, 432);
+            this.cmbEstadoFactura.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cmbEstadoFactura.Name = "cmbEstadoFactura";
-            this.cmbEstadoFactura.Size = new System.Drawing.Size(121, 23);
+            this.cmbEstadoFactura.Size = new System.Drawing.Size(160, 26);
             this.cmbEstadoFactura.TabIndex = 8;
             // 
             // lblEstadoFactura
@@ -112,9 +113,10 @@
             this.lblEstadoFactura.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(70)))), ((int)(((byte)(122)))));
             this.lblEstadoFactura.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblEstadoFactura.ForeColor = System.Drawing.Color.White;
-            this.lblEstadoFactura.Location = new System.Drawing.Point(14, 354);
+            this.lblEstadoFactura.Location = new System.Drawing.Point(19, 436);
+            this.lblEstadoFactura.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblEstadoFactura.Name = "lblEstadoFactura";
-            this.lblEstadoFactura.Size = new System.Drawing.Size(118, 14);
+            this.lblEstadoFactura.Size = new System.Drawing.Size(130, 18);
             this.lblEstadoFactura.TabIndex = 27;
             this.lblEstadoFactura.Text = "Estado de la Factura";
             // 
@@ -124,9 +126,10 @@
             this.lblComentarios.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(54)))), ((int)(((byte)(88)))));
             this.lblComentarios.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblComentarios.ForeColor = System.Drawing.Color.White;
-            this.lblComentarios.Location = new System.Drawing.Point(318, 209);
+            this.lblComentarios.Location = new System.Drawing.Point(424, 257);
+            this.lblComentarios.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblComentarios.Name = "lblComentarios";
-            this.lblComentarios.Size = new System.Drawing.Size(76, 14);
+            this.lblComentarios.Size = new System.Drawing.Size(87, 18);
             this.lblComentarios.TabIndex = 36;
             this.lblComentarios.Text = "Comentarios";
             // 
@@ -135,11 +138,12 @@
             this.txtComentario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
             this.txtComentario.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtComentario.ForeColor = System.Drawing.Color.White;
-            this.txtComentario.Location = new System.Drawing.Point(321, 234);
+            this.txtComentario.Location = new System.Drawing.Point(428, 288);
+            this.txtComentario.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtComentario.MaxLength = 100;
             this.txtComentario.Multiline = true;
             this.txtComentario.Name = "txtComentario";
-            this.txtComentario.Size = new System.Drawing.Size(227, 105);
+            this.txtComentario.Size = new System.Drawing.Size(302, 129);
             this.txtComentario.TabIndex = 13;
             // 
             // btnBuscarXml
@@ -148,9 +152,10 @@
             this.btnBuscarXml.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnBuscarXml.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnBuscarXml.ForeColor = System.Drawing.Color.White;
-            this.btnBuscarXml.Location = new System.Drawing.Point(251, 322);
+            this.btnBuscarXml.Location = new System.Drawing.Point(335, 396);
+            this.btnBuscarXml.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnBuscarXml.Name = "btnBuscarXml";
-            this.btnBuscarXml.Size = new System.Drawing.Size(45, 20);
+            this.btnBuscarXml.Size = new System.Drawing.Size(60, 25);
             this.btnBuscarXml.TabIndex = 7;
             this.btnBuscarXml.Text = "...";
             this.btnBuscarXml.UseVisualStyleBackColor = false;
@@ -161,10 +166,11 @@
             this.txtRutaXml.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
             this.txtRutaXml.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtRutaXml.ForeColor = System.Drawing.Color.White;
-            this.txtRutaXml.Location = new System.Drawing.Point(17, 322);
+            this.txtRutaXml.Location = new System.Drawing.Point(23, 396);
+            this.txtRutaXml.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtRutaXml.Name = "txtRutaXml";
             this.txtRutaXml.ReadOnly = true;
-            this.txtRutaXml.Size = new System.Drawing.Size(228, 20);
+            this.txtRutaXml.Size = new System.Drawing.Size(303, 22);
             this.txtRutaXml.TabIndex = 16;
             this.txtRutaXml.TextChanged += new System.EventHandler(this.txtRutaXml_TextChanged);
             // 
@@ -174,9 +180,10 @@
             this.lblXml.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(64)))), ((int)(((byte)(108)))));
             this.lblXml.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblXml.ForeColor = System.Drawing.Color.White;
-            this.lblXml.Location = new System.Drawing.Point(14, 306);
+            this.lblXml.Location = new System.Drawing.Point(19, 377);
+            this.lblXml.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblXml.Name = "lblXml";
-            this.lblXml.Size = new System.Drawing.Size(27, 14);
+            this.lblXml.Size = new System.Drawing.Size(32, 18);
             this.lblXml.TabIndex = 26;
             this.lblXml.Text = "Xml";
             // 
@@ -186,9 +193,10 @@
             this.lblFechaPago.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(49)))), ((int)(((byte)(76)))));
             this.lblFechaPago.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblFechaPago.ForeColor = System.Drawing.Color.White;
-            this.lblFechaPago.Location = new System.Drawing.Point(222, 166);
+            this.lblFechaPago.Location = new System.Drawing.Point(296, 204);
+            this.lblFechaPago.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblFechaPago.Name = "lblFechaPago";
-            this.lblFechaPago.Size = new System.Drawing.Size(85, 14);
+            this.lblFechaPago.Size = new System.Drawing.Size(96, 18);
             this.lblFechaPago.TabIndex = 35;
             this.lblFechaPago.Text = "Fecha de Pago";
             // 
@@ -198,9 +206,10 @@
             this.lblFechaRevision.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(44)))), ((int)(((byte)(65)))));
             this.lblFechaRevision.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblFechaRevision.ForeColor = System.Drawing.Color.White;
-            this.lblFechaRevision.Location = new System.Drawing.Point(222, 129);
+            this.lblFechaRevision.Location = new System.Drawing.Point(296, 159);
+            this.lblFechaRevision.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblFechaRevision.Name = "lblFechaRevision";
-            this.lblFechaRevision.Size = new System.Drawing.Size(106, 14);
+            this.lblFechaRevision.Size = new System.Drawing.Size(119, 18);
             this.lblFechaRevision.TabIndex = 34;
             this.lblFechaRevision.Text = "Fecha de Revisión";
             // 
@@ -208,17 +217,19 @@
             // 
             this.dtpFechaPago.Cursor = System.Windows.Forms.Cursors.Hand;
             this.dtpFechaPago.Enabled = false;
-            this.dtpFechaPago.Location = new System.Drawing.Point(355, 163);
+            this.dtpFechaPago.Location = new System.Drawing.Point(473, 201);
+            this.dtpFechaPago.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dtpFechaPago.Name = "dtpFechaPago";
-            this.dtpFechaPago.Size = new System.Drawing.Size(200, 20);
+            this.dtpFechaPago.Size = new System.Drawing.Size(265, 22);
             this.dtpFechaPago.TabIndex = 12;
             // 
             // dtpFechaRevision
             // 
             this.dtpFechaRevision.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.dtpFechaRevision.Location = new System.Drawing.Point(355, 126);
+            this.dtpFechaRevision.Location = new System.Drawing.Point(473, 155);
+            this.dtpFechaRevision.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dtpFechaRevision.Name = "dtpFechaRevision";
-            this.dtpFechaRevision.Size = new System.Drawing.Size(200, 20);
+            this.dtpFechaRevision.Size = new System.Drawing.Size(265, 22);
             this.dtpFechaRevision.TabIndex = 11;
             // 
             // lblFechaIngreso
@@ -227,18 +238,20 @@
             this.lblFechaIngreso.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(38)))), ((int)(((byte)(54)))));
             this.lblFechaIngreso.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblFechaIngreso.ForeColor = System.Drawing.Color.White;
-            this.lblFechaIngreso.Location = new System.Drawing.Point(222, 91);
+            this.lblFechaIngreso.Location = new System.Drawing.Point(296, 112);
+            this.lblFechaIngreso.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblFechaIngreso.Name = "lblFechaIngreso";
-            this.lblFechaIngreso.Size = new System.Drawing.Size(100, 14);
+            this.lblFechaIngreso.Size = new System.Drawing.Size(112, 18);
             this.lblFechaIngreso.TabIndex = 33;
             this.lblFechaIngreso.Text = "Fecha de Ingreso";
             // 
             // dtpFechaIngreso
             // 
             this.dtpFechaIngreso.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.dtpFechaIngreso.Location = new System.Drawing.Point(355, 85);
+            this.dtpFechaIngreso.Location = new System.Drawing.Point(473, 105);
+            this.dtpFechaIngreso.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dtpFechaIngreso.Name = "dtpFechaIngreso";
-            this.dtpFechaIngreso.Size = new System.Drawing.Size(200, 20);
+            this.dtpFechaIngreso.Size = new System.Drawing.Size(265, 22);
             this.dtpFechaIngreso.TabIndex = 10;
             this.dtpFechaIngreso.ValueChanged += new System.EventHandler(this.dtpFechaIngreso_ValueChanged);
             // 
@@ -248,9 +261,10 @@
             this.lblFacturaConIVA.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(49)))), ((int)(((byte)(76)))));
             this.lblFacturaConIVA.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblFacturaConIVA.ForeColor = System.Drawing.Color.White;
-            this.lblFacturaConIVA.Location = new System.Drawing.Point(14, 199);
+            this.lblFacturaConIVA.Location = new System.Drawing.Point(19, 245);
+            this.lblFacturaConIVA.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblFacturaConIVA.Name = "lblFacturaConIVA";
-            this.lblFacturaConIVA.Size = new System.Drawing.Size(89, 14);
+            this.lblFacturaConIVA.Size = new System.Drawing.Size(102, 18);
             this.lblFacturaConIVA.TabIndex = 23;
             this.lblFacturaConIVA.Text = "Factura con IVA";
             // 
@@ -259,10 +273,11 @@
             this.txtFacturasinIVA.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
             this.txtFacturasinIVA.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtFacturasinIVA.ForeColor = System.Drawing.Color.White;
-            this.txtFacturasinIVA.Location = new System.Drawing.Point(109, 126);
+            this.txtFacturasinIVA.Location = new System.Drawing.Point(145, 155);
+            this.txtFacturasinIVA.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtFacturasinIVA.Name = "txtFacturasinIVA";
             this.txtFacturasinIVA.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.txtFacturasinIVA.Size = new System.Drawing.Size(100, 20);
+            this.txtFacturasinIVA.Size = new System.Drawing.Size(133, 22);
             this.txtFacturasinIVA.TabIndex = 2;
             this.txtFacturasinIVA.TextChanged += new System.EventHandler(this.txtFacturasinIVA_TextChanged);
             this.txtFacturasinIVA.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtFacturasinIVA_KeyPress);
@@ -274,9 +289,10 @@
             this.txtRefactura.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtRefactura.Enabled = false;
             this.txtRefactura.ForeColor = System.Drawing.Color.White;
-            this.txtRefactura.Location = new System.Drawing.Point(109, 88);
+            this.txtRefactura.Location = new System.Drawing.Point(145, 108);
+            this.txtRefactura.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtRefactura.Name = "txtRefactura";
-            this.txtRefactura.Size = new System.Drawing.Size(100, 20);
+            this.txtRefactura.Size = new System.Drawing.Size(133, 22);
             this.txtRefactura.TabIndex = 1;
             this.txtRefactura.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtRefactura_KeyPress);
             // 
@@ -286,9 +302,10 @@
             this.lblClave_FacturaAnterior.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(33)))), ((int)(((byte)(43)))));
             this.lblClave_FacturaAnterior.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblClave_FacturaAnterior.ForeColor = System.Drawing.Color.White;
-            this.lblClave_FacturaAnterior.Location = new System.Drawing.Point(14, 55);
+            this.lblClave_FacturaAnterior.Location = new System.Drawing.Point(19, 68);
+            this.lblClave_FacturaAnterior.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblClave_FacturaAnterior.Name = "lblClave_FacturaAnterior";
-            this.lblClave_FacturaAnterior.Size = new System.Drawing.Size(68, 14);
+            this.lblClave_FacturaAnterior.Size = new System.Drawing.Size(79, 18);
             this.lblClave_FacturaAnterior.TabIndex = 19;
             this.lblClave_FacturaAnterior.Text = "Cve Factura";
             // 
@@ -301,9 +318,10 @@
             this.btnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnGuardar.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGuardar.ForeColor = System.Drawing.Color.White;
-            this.btnGuardar.Location = new System.Drawing.Point(473, 346);
+            this.btnGuardar.Location = new System.Drawing.Point(631, 426);
+            this.btnGuardar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnGuardar.Name = "btnGuardar";
-            this.btnGuardar.Size = new System.Drawing.Size(75, 23);
+            this.btnGuardar.Size = new System.Drawing.Size(100, 28);
             this.btnGuardar.TabIndex = 14;
             this.btnGuardar.Text = "Guardar";
             this.btnGuardar.UseVisualStyleBackColor = false;
@@ -315,9 +333,10 @@
             this.btnBuscarFact.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnBuscarFact.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnBuscarFact.ForeColor = System.Drawing.Color.White;
-            this.btnBuscarFact.Location = new System.Drawing.Point(251, 283);
+            this.btnBuscarFact.Location = new System.Drawing.Point(335, 348);
+            this.btnBuscarFact.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnBuscarFact.Name = "btnBuscarFact";
-            this.btnBuscarFact.Size = new System.Drawing.Size(45, 20);
+            this.btnBuscarFact.Size = new System.Drawing.Size(60, 25);
             this.btnBuscarFact.TabIndex = 6;
             this.btnBuscarFact.Text = "...";
             this.btnBuscarFact.UseVisualStyleBackColor = false;
@@ -328,10 +347,11 @@
             this.txtRutaFactura.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
             this.txtRutaFactura.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtRutaFactura.ForeColor = System.Drawing.Color.White;
-            this.txtRutaFactura.Location = new System.Drawing.Point(17, 283);
+            this.txtRutaFactura.Location = new System.Drawing.Point(23, 348);
+            this.txtRutaFactura.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtRutaFactura.Name = "txtRutaFactura";
             this.txtRutaFactura.ReadOnly = true;
-            this.txtRutaFactura.Size = new System.Drawing.Size(228, 20);
+            this.txtRutaFactura.Size = new System.Drawing.Size(303, 22);
             this.txtRutaFactura.TabIndex = 15;
             this.txtRutaFactura.TextChanged += new System.EventHandler(this.txtRutaFactura_TextChanged);
             // 
@@ -340,10 +360,11 @@
             this.txtCve_Factura.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
             this.txtCve_Factura.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtCve_Factura.ForeColor = System.Drawing.Color.White;
-            this.txtCve_Factura.Location = new System.Drawing.Point(109, 52);
+            this.txtCve_Factura.Location = new System.Drawing.Point(145, 64);
+            this.txtCve_Factura.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtCve_Factura.Name = "txtCve_Factura";
             this.txtCve_Factura.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.txtCve_Factura.Size = new System.Drawing.Size(100, 20);
+            this.txtCve_Factura.Size = new System.Drawing.Size(133, 22);
             this.txtCve_Factura.TabIndex = 0;
             this.txtCve_Factura.TextChanged += new System.EventHandler(this.txtCve_Factura_TextChanged);
             // 
@@ -353,9 +374,10 @@
             this.lblFacturaSinIVA.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(44)))), ((int)(((byte)(65)))));
             this.lblFacturaSinIVA.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblFacturaSinIVA.ForeColor = System.Drawing.Color.White;
-            this.lblFacturaSinIVA.Location = new System.Drawing.Point(13, 129);
+            this.lblFacturaSinIVA.Location = new System.Drawing.Point(17, 159);
+            this.lblFacturaSinIVA.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblFacturaSinIVA.Name = "lblFacturaSinIVA";
-            this.lblFacturaSinIVA.Size = new System.Drawing.Size(87, 14);
+            this.lblFacturaSinIVA.Size = new System.Drawing.Size(98, 18);
             this.lblFacturaSinIVA.TabIndex = 21;
             this.lblFacturaSinIVA.Text = "Factura sin IVA";
             // 
@@ -365,9 +387,10 @@
             this.lblFactura.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(58)))), ((int)(((byte)(95)))));
             this.lblFactura.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblFactura.ForeColor = System.Drawing.Color.White;
-            this.lblFactura.Location = new System.Drawing.Point(14, 267);
+            this.lblFactura.Location = new System.Drawing.Point(19, 329);
+            this.lblFactura.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblFactura.Name = "lblFactura";
-            this.lblFactura.Size = new System.Drawing.Size(47, 14);
+            this.lblFactura.Size = new System.Drawing.Size(53, 18);
             this.lblFactura.TabIndex = 25;
             this.lblFactura.Text = "Factura";
             // 
@@ -377,9 +400,10 @@
             this.lblRefactura.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(38)))), ((int)(((byte)(54)))));
             this.lblRefactura.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblRefactura.ForeColor = System.Drawing.Color.White;
-            this.lblRefactura.Location = new System.Drawing.Point(14, 91);
+            this.lblRefactura.Location = new System.Drawing.Point(19, 112);
+            this.lblRefactura.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblRefactura.Name = "lblRefactura";
-            this.lblRefactura.Size = new System.Drawing.Size(94, 14);
+            this.lblRefactura.Size = new System.Drawing.Size(108, 18);
             this.lblRefactura.TabIndex = 20;
             this.lblRefactura.Text = "Cve a Refacturar";
             // 
@@ -388,11 +412,12 @@
             this.txtFacturaconIVA.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
             this.txtFacturaconIVA.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtFacturaconIVA.ForeColor = System.Drawing.Color.White;
-            this.txtFacturaconIVA.Location = new System.Drawing.Point(109, 196);
+            this.txtFacturaconIVA.Location = new System.Drawing.Point(145, 241);
+            this.txtFacturaconIVA.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtFacturaconIVA.Name = "txtFacturaconIVA";
             this.txtFacturaconIVA.ReadOnly = true;
             this.txtFacturaconIVA.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.txtFacturaconIVA.Size = new System.Drawing.Size(100, 20);
+            this.txtFacturaconIVA.Size = new System.Drawing.Size(133, 22);
             this.txtFacturaconIVA.TabIndex = 4;
             // 
             // lblCostoRefactura
@@ -401,9 +426,10 @@
             this.lblCostoRefactura.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(54)))), ((int)(((byte)(87)))));
             this.lblCostoRefactura.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCostoRefactura.ForeColor = System.Drawing.Color.White;
-            this.lblCostoRefactura.Location = new System.Drawing.Point(14, 234);
+            this.lblCostoRefactura.Location = new System.Drawing.Point(19, 288);
+            this.lblCostoRefactura.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblCostoRefactura.Name = "lblCostoRefactura";
-            this.lblCostoRefactura.Size = new System.Drawing.Size(92, 14);
+            this.lblCostoRefactura.Size = new System.Drawing.Size(105, 18);
             this.lblCostoRefactura.TabIndex = 24;
             this.lblCostoRefactura.Text = "Costo Refactura";
             // 
@@ -412,10 +438,11 @@
             this.txtCostoRefactura.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
             this.txtCostoRefactura.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtCostoRefactura.ForeColor = System.Drawing.Color.White;
-            this.txtCostoRefactura.Location = new System.Drawing.Point(109, 231);
+            this.txtCostoRefactura.Location = new System.Drawing.Point(145, 284);
+            this.txtCostoRefactura.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtCostoRefactura.Name = "txtCostoRefactura";
             this.txtCostoRefactura.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.txtCostoRefactura.Size = new System.Drawing.Size(100, 20);
+            this.txtCostoRefactura.Size = new System.Drawing.Size(133, 22);
             this.txtCostoRefactura.TabIndex = 5;
             this.txtCostoRefactura.TextChanged += new System.EventHandler(this.txtCostoRefactura_TextChanged);
             this.txtCostoRefactura.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCostoRefactura_KeyPress);
@@ -426,18 +453,20 @@
             this.lblFechaRefacturacion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(33)))), ((int)(((byte)(43)))));
             this.lblFechaRefacturacion.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblFechaRefacturacion.ForeColor = System.Drawing.Color.White;
-            this.lblFechaRefacturacion.Location = new System.Drawing.Point(222, 55);
+            this.lblFechaRefacturacion.Location = new System.Drawing.Point(296, 68);
+            this.lblFechaRefacturacion.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblFechaRefacturacion.Name = "lblFechaRefacturacion";
-            this.lblFechaRefacturacion.Size = new System.Drawing.Size(134, 14);
+            this.lblFechaRefacturacion.Size = new System.Drawing.Size(151, 18);
             this.lblFechaRefacturacion.TabIndex = 32;
             this.lblFechaRefacturacion.Text = "Fecha de Refacturación";
             // 
             // dtpFechaRefacturacion
             // 
             this.dtpFechaRefacturacion.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.dtpFechaRefacturacion.Location = new System.Drawing.Point(355, 52);
+            this.dtpFechaRefacturacion.Location = new System.Drawing.Point(473, 64);
+            this.dtpFechaRefacturacion.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dtpFechaRefacturacion.Name = "dtpFechaRefacturacion";
-            this.dtpFechaRefacturacion.Size = new System.Drawing.Size(200, 20);
+            this.dtpFechaRefacturacion.Size = new System.Drawing.Size(265, 22);
             this.dtpFechaRefacturacion.TabIndex = 9;
             // 
             // openFileDialog1
@@ -452,9 +481,11 @@
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Enabled = false;
-            this.dataGridView1.Location = new System.Drawing.Point(61, 430);
+            this.dataGridView1.Location = new System.Drawing.Point(81, 529);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(240, 150);
+            this.dataGridView1.RowHeadersWidth = 51;
+            this.dataGridView1.Size = new System.Drawing.Size(320, 185);
             this.dataGridView1.TabIndex = 60;
             this.dataGridView1.Visible = false;
             // 
@@ -464,9 +495,10 @@
             this.dato1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(27)))), ((int)(((byte)(30)))));
             this.dato1.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dato1.ForeColor = System.Drawing.Color.White;
-            this.dato1.Location = new System.Drawing.Point(141, 9);
+            this.dato1.Location = new System.Drawing.Point(188, 11);
+            this.dato1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.dato1.Name = "dato1";
-            this.dato1.Size = new System.Drawing.Size(65, 14);
+            this.dato1.Size = new System.Drawing.Size(76, 18);
             this.dato1.TabIndex = 18;
             this.dato1.Text = "SINIESTRO:";
             // 
@@ -476,18 +508,20 @@
             this.dato2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(27)))), ((int)(((byte)(30)))));
             this.dato2.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dato2.ForeColor = System.Drawing.Color.White;
-            this.dato2.Location = new System.Drawing.Point(13, 9);
+            this.dato2.Location = new System.Drawing.Point(17, 11);
+            this.dato2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.dato2.Name = "dato2";
-            this.dato2.Size = new System.Drawing.Size(50, 14);
+            this.dato2.Size = new System.Drawing.Size(59, 18);
             this.dato2.TabIndex = 37;
             this.dato2.Text = "PEDIDO:";
             // 
             // dato3
             // 
             this.dato3.AutoSize = true;
-            this.dato3.Location = new System.Drawing.Point(513, 26);
+            this.dato3.Location = new System.Drawing.Point(684, 32);
+            this.dato3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.dato3.Name = "dato3";
-            this.dato3.Size = new System.Drawing.Size(35, 13);
+            this.dato3.Size = new System.Drawing.Size(44, 16);
             this.dato3.TabIndex = 63;
             this.dato3.Text = "label1";
             this.dato3.Visible = false;
@@ -497,9 +531,10 @@
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(111, 129);
+            this.label1.Location = new System.Drawing.Point(148, 159);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(13, 13);
+            this.label1.Size = new System.Drawing.Size(14, 16);
             this.label1.TabIndex = 28;
             this.label1.Text = "$";
             // 
@@ -508,9 +543,10 @@
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(111, 199);
+            this.label2.Location = new System.Drawing.Point(148, 245);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(13, 13);
+            this.label2.Size = new System.Drawing.Size(14, 16);
             this.label2.TabIndex = 30;
             this.label2.Text = "$";
             // 
@@ -519,9 +555,10 @@
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(111, 234);
+            this.label3.Location = new System.Drawing.Point(148, 288);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(13, 13);
+            this.label3.Size = new System.Drawing.Size(14, 16);
             this.label3.TabIndex = 31;
             this.label3.Text = "$";
             // 
@@ -546,19 +583,32 @@
             this.bunifuGradientPanel1.GradientTopLeft = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
             this.bunifuGradientPanel1.GradientTopRight = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
             this.bunifuGradientPanel1.Location = new System.Drawing.Point(0, 0);
+            this.bunifuGradientPanel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.bunifuGradientPanel1.Name = "bunifuGradientPanel1";
             this.bunifuGradientPanel1.Quality = 10;
-            this.bunifuGradientPanel1.Size = new System.Drawing.Size(592, 397);
+            this.bunifuGradientPanel1.Size = new System.Drawing.Size(789, 489);
             this.bunifuGradientPanel1.TabIndex = 38;
+            // 
+            // chkFP
+            // 
+            this.chkFP.AutoSize = true;
+            this.chkFP.Location = new System.Drawing.Point(748, 204);
+            this.chkFP.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.chkFP.Name = "chkFP";
+            this.chkFP.Size = new System.Drawing.Size(18, 17);
+            this.chkFP.TabIndex = 86;
+            this.chkFP.UseVisualStyleBackColor = true;
+            this.chkFP.CheckedChanged += new System.EventHandler(this.chkFP_CheckedChanged);
             // 
             // lblcvePedidoidentity
             // 
             this.lblcvePedidoidentity.AutoSize = true;
             this.lblcvePedidoidentity.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(30)))), ((int)(((byte)(37)))));
             this.lblcvePedidoidentity.ForeColor = System.Drawing.Color.White;
-            this.lblcvePedidoidentity.Location = new System.Drawing.Point(279, 384);
+            this.lblcvePedidoidentity.Location = new System.Drawing.Point(372, 473);
+            this.lblcvePedidoidentity.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblcvePedidoidentity.Name = "lblcvePedidoidentity";
-            this.lblcvePedidoidentity.Size = new System.Drawing.Size(91, 13);
+            this.lblcvePedidoidentity.Size = new System.Drawing.Size(115, 16);
             this.lblcvePedidoidentity.TabIndex = 85;
             this.lblcvePedidoidentity.Text = "cvePedidoidentity";
             this.lblcvePedidoidentity.Visible = false;
@@ -569,9 +619,10 @@
             this.lblPieza.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(31)))), ((int)(((byte)(39)))));
             this.lblPieza.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPieza.ForeColor = System.Drawing.Color.White;
-            this.lblPieza.Location = new System.Drawing.Point(317, 9);
+            this.lblPieza.Location = new System.Drawing.Point(423, 11);
+            this.lblPieza.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblPieza.Name = "lblPieza";
-            this.lblPieza.Size = new System.Drawing.Size(39, 14);
+            this.lblPieza.Size = new System.Drawing.Size(47, 18);
             this.lblPieza.TabIndex = 64;
             this.lblPieza.Text = "PIEZA:";
             this.lblPieza.Visible = false;
@@ -581,9 +632,10 @@
             this.lblUsuario.AutoSize = true;
             this.lblUsuario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(72)))), ((int)(((byte)(126)))));
             this.lblUsuario.ForeColor = System.Drawing.Color.White;
-            this.lblUsuario.Location = new System.Drawing.Point(12, 376);
+            this.lblUsuario.Location = new System.Drawing.Point(16, 463);
+            this.lblUsuario.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblUsuario.Name = "lblUsuario";
-            this.lblUsuario.Size = new System.Drawing.Size(46, 13);
+            this.lblUsuario.Size = new System.Drawing.Size(57, 16);
             this.lblUsuario.TabIndex = 73;
             this.lblUsuario.Text = "Usuario:";
             // 
@@ -591,10 +643,10 @@
             // 
             this.pbMinimize.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pbMinimize.Image = global::Jeic.Properties.Resources.Minimize_Window_2_48px;
-            this.pbMinimize.Location = new System.Drawing.Point(551, 2);
-            this.pbMinimize.Margin = new System.Windows.Forms.Padding(2);
+            this.pbMinimize.Location = new System.Drawing.Point(735, 2);
+            this.pbMinimize.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pbMinimize.Name = "pbMinimize";
-            this.pbMinimize.Size = new System.Drawing.Size(17, 17);
+            this.pbMinimize.Size = new System.Drawing.Size(23, 21);
             this.pbMinimize.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbMinimize.TabIndex = 69;
             this.pbMinimize.TabStop = false;
@@ -604,10 +656,10 @@
             // 
             this.pbClose.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pbClose.Image = global::Jeic.Properties.Resources.Close_Window__2_48px;
-            this.pbClose.Location = new System.Drawing.Point(572, 2);
-            this.pbClose.Margin = new System.Windows.Forms.Padding(2);
+            this.pbClose.Location = new System.Drawing.Point(763, 2);
+            this.pbClose.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pbClose.Name = "pbClose";
-            this.pbClose.Size = new System.Drawing.Size(17, 17);
+            this.pbClose.Size = new System.Drawing.Size(23, 21);
             this.pbClose.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbClose.TabIndex = 68;
             this.pbClose.TabStop = false;
@@ -618,9 +670,10 @@
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(112, 165);
+            this.label4.Location = new System.Drawing.Point(149, 203);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(15, 13);
+            this.label4.Size = new System.Drawing.Size(19, 16);
             this.label4.TabIndex = 29;
             this.label4.Text = "%";
             // 
@@ -629,10 +682,11 @@
             this.txtDescuento.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
             this.txtDescuento.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtDescuento.ForeColor = System.Drawing.Color.White;
-            this.txtDescuento.Location = new System.Drawing.Point(109, 162);
+            this.txtDescuento.Location = new System.Drawing.Point(145, 199);
+            this.txtDescuento.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtDescuento.Name = "txtDescuento";
             this.txtDescuento.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.txtDescuento.Size = new System.Drawing.Size(100, 20);
+            this.txtDescuento.Size = new System.Drawing.Size(133, 22);
             this.txtDescuento.TabIndex = 3;
             this.txtDescuento.Text = "0";
             this.txtDescuento.TextChanged += new System.EventHandler(this.txtDescuento_TextChanged);
@@ -642,9 +696,10 @@
             this.lblDescuento.AutoSize = true;
             this.lblDescuento.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(46)))), ((int)(((byte)(69)))));
             this.lblDescuento.ForeColor = System.Drawing.Color.White;
-            this.lblDescuento.Location = new System.Drawing.Point(14, 165);
+            this.lblDescuento.Location = new System.Drawing.Point(19, 203);
+            this.lblDescuento.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblDescuento.Name = "lblDescuento";
-            this.lblDescuento.Size = new System.Drawing.Size(62, 13);
+            this.lblDescuento.Size = new System.Drawing.Size(75, 16);
             this.lblDescuento.TabIndex = 22;
             this.lblDescuento.Text = "Descuento:";
             // 
@@ -660,21 +715,11 @@
             this.moverFormulario.TargetControl = this.bunifuGradientPanel1;
             this.moverFormulario.Vertical = true;
             // 
-            // chkFP
-            // 
-            this.chkFP.AutoSize = true;
-            this.chkFP.Location = new System.Drawing.Point(561, 166);
-            this.chkFP.Name = "chkFP";
-            this.chkFP.Size = new System.Drawing.Size(15, 14);
-            this.chkFP.TabIndex = 86;
-            this.chkFP.UseVisualStyleBackColor = true;
-            this.chkFP.CheckedChanged += new System.EventHandler(this.chkFP_CheckedChanged);
-            // 
             // registrarRefactura
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(592, 398);
+            this.ClientSize = new System.Drawing.Size(789, 490);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.txtDescuento);
             this.Controls.Add(this.lblDescuento);
@@ -715,6 +760,7 @@
             this.Controls.Add(this.lblFactura);
             this.Controls.Add(this.bunifuGradientPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "registrarRefactura";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Registrar Refactura";

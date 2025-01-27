@@ -60,9 +60,10 @@
             this.dato3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(28)))), ((int)(((byte)(31)))));
             this.dato3.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dato3.ForeColor = System.Drawing.Color.White;
-            this.dato3.Location = new System.Drawing.Point(341, 20);
+            this.dato3.Location = new System.Drawing.Point(455, 25);
+            this.dato3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.dato3.Name = "dato3";
-            this.dato3.Size = new System.Drawing.Size(56, 14);
+            this.dato3.Size = new System.Drawing.Size(68, 18);
             this.dato3.TabIndex = 0;
             this.dato3.Text = "FACTURA:";
             this.dato3.Visible = false;
@@ -95,7 +96,8 @@
             this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridView1.EnableHeadersVisualStyles = false;
             this.dataGridView1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(51)))), ((int)(((byte)(65)))));
-            this.dataGridView1.Location = new System.Drawing.Point(12, 66);
+            this.dataGridView1.Location = new System.Drawing.Point(16, 81);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
@@ -108,6 +110,7 @@
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dataGridView1.RowHeadersVisible = false;
+            this.dataGridView1.RowHeadersWidth = 51;
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
             dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
@@ -115,8 +118,9 @@
             dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.White;
             this.dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle4;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(440, 372);
+            this.dataGridView1.Size = new System.Drawing.Size(587, 458);
             this.dataGridView1.TabIndex = 1;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // rbtnEntregas
             // 
@@ -126,9 +130,10 @@
             this.rbtnEntregas.Cursor = System.Windows.Forms.Cursors.Hand;
             this.rbtnEntregas.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rbtnEntregas.ForeColor = System.Drawing.Color.White;
-            this.rbtnEntregas.Location = new System.Drawing.Point(33, 43);
+            this.rbtnEntregas.Location = new System.Drawing.Point(44, 53);
+            this.rbtnEntregas.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.rbtnEntregas.Name = "rbtnEntregas";
-            this.rbtnEntregas.Size = new System.Drawing.Size(80, 18);
+            this.rbtnEntregas.Size = new System.Drawing.Size(91, 22);
             this.rbtnEntregas.TabIndex = 2;
             this.rbtnEntregas.TabStop = true;
             this.rbtnEntregas.Text = "Entregada";
@@ -142,9 +147,10 @@
             this.rbtnDev.Cursor = System.Windows.Forms.Cursors.Hand;
             this.rbtnDev.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rbtnDev.ForeColor = System.Drawing.Color.White;
-            this.rbtnDev.Location = new System.Drawing.Point(141, 43);
+            this.rbtnDev.Location = new System.Drawing.Point(188, 53);
+            this.rbtnDev.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.rbtnDev.Name = "rbtnDev";
-            this.rbtnDev.Size = new System.Drawing.Size(74, 18);
+            this.rbtnDev.Size = new System.Drawing.Size(85, 22);
             this.rbtnDev.TabIndex = 3;
             this.rbtnDev.Text = "Devuelta";
             this.rbtnDev.UseVisualStyleBackColor = false;
@@ -156,9 +162,10 @@
             this.dato1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(28)))), ((int)(((byte)(31)))));
             this.dato1.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dato1.ForeColor = System.Drawing.Color.White;
-            this.dato1.Location = new System.Drawing.Point(30, 20);
+            this.dato1.Location = new System.Drawing.Point(40, 25);
+            this.dato1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.dato1.Name = "dato1";
-            this.dato1.Size = new System.Drawing.Size(65, 14);
+            this.dato1.Size = new System.Drawing.Size(76, 18);
             this.dato1.TabIndex = 4;
             this.dato1.Text = "SINIESTRO:";
             // 
@@ -168,18 +175,20 @@
             this.dato2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(28)))), ((int)(((byte)(31)))));
             this.dato2.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dato2.ForeColor = System.Drawing.Color.White;
-            this.dato2.Location = new System.Drawing.Point(199, 20);
+            this.dato2.Location = new System.Drawing.Point(265, 25);
+            this.dato2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.dato2.Name = "dato2";
-            this.dato2.Size = new System.Drawing.Size(50, 14);
+            this.dato2.Size = new System.Drawing.Size(59, 18);
             this.dato2.TabIndex = 5;
             this.dato2.Text = "PEDIDO:";
             // 
             // lblcve_venta
             // 
             this.lblcve_venta.AutoSize = true;
-            this.lblcve_venta.Location = new System.Drawing.Point(416, 43);
+            this.lblcve_venta.Location = new System.Drawing.Point(555, 53);
+            this.lblcve_venta.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblcve_venta.Name = "lblcve_venta";
-            this.lblcve_venta.Size = new System.Drawing.Size(58, 13);
+            this.lblcve_venta.Size = new System.Drawing.Size(69, 16);
             this.lblcve_venta.TabIndex = 6;
             this.lblcve_venta.Text = "cve_venta";
             this.lblcve_venta.Visible = false;
@@ -203,9 +212,10 @@
             this.bunifuGradientPanel1.GradientTopLeft = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
             this.bunifuGradientPanel1.GradientTopRight = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
             this.bunifuGradientPanel1.Location = new System.Drawing.Point(-1, 0);
+            this.bunifuGradientPanel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.bunifuGradientPanel1.Name = "bunifuGradientPanel1";
             this.bunifuGradientPanel1.Quality = 10;
-            this.bunifuGradientPanel1.Size = new System.Drawing.Size(464, 450);
+            this.bunifuGradientPanel1.Size = new System.Drawing.Size(619, 554);
             this.bunifuGradientPanel1.TabIndex = 7;
             // 
             // lblUsuario
@@ -213,9 +223,10 @@
             this.lblUsuario.AutoSize = true;
             this.lblUsuario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(27)))), ((int)(((byte)(28)))));
             this.lblUsuario.ForeColor = System.Drawing.Color.White;
-            this.lblUsuario.Location = new System.Drawing.Point(3, 3);
+            this.lblUsuario.Location = new System.Drawing.Point(4, 4);
+            this.lblUsuario.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblUsuario.Name = "lblUsuario";
-            this.lblUsuario.Size = new System.Drawing.Size(46, 13);
+            this.lblUsuario.Size = new System.Drawing.Size(57, 16);
             this.lblUsuario.TabIndex = 77;
             this.lblUsuario.Text = "Usuario:";
             // 
@@ -226,9 +237,10 @@
             this.rbtnPenalizacion.Cursor = System.Windows.Forms.Cursors.Hand;
             this.rbtnPenalizacion.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rbtnPenalizacion.ForeColor = System.Drawing.Color.White;
-            this.rbtnPenalizacion.Location = new System.Drawing.Point(254, 43);
+            this.rbtnPenalizacion.Location = new System.Drawing.Point(339, 53);
+            this.rbtnPenalizacion.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.rbtnPenalizacion.Name = "rbtnPenalizacion";
-            this.rbtnPenalizacion.Size = new System.Drawing.Size(148, 18);
+            this.rbtnPenalizacion.Size = new System.Drawing.Size(165, 22);
             this.rbtnPenalizacion.TabIndex = 76;
             this.rbtnPenalizacion.TabStop = true;
             this.rbtnPenalizacion.Text = "Penalizada/Cancelada";
@@ -239,10 +251,10 @@
             // 
             this.pbMinimize.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pbMinimize.Image = global::Jeic.Properties.Resources.Minimize_Window_2_48px;
-            this.pbMinimize.Location = new System.Drawing.Point(428, 2);
-            this.pbMinimize.Margin = new System.Windows.Forms.Padding(2);
+            this.pbMinimize.Location = new System.Drawing.Point(571, 2);
+            this.pbMinimize.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pbMinimize.Name = "pbMinimize";
-            this.pbMinimize.Size = new System.Drawing.Size(17, 17);
+            this.pbMinimize.Size = new System.Drawing.Size(23, 21);
             this.pbMinimize.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbMinimize.TabIndex = 75;
             this.pbMinimize.TabStop = false;
@@ -252,10 +264,10 @@
             // 
             this.pbClose.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pbClose.Image = global::Jeic.Properties.Resources.Close_Window__2_48px;
-            this.pbClose.Location = new System.Drawing.Point(447, 2);
-            this.pbClose.Margin = new System.Windows.Forms.Padding(2);
+            this.pbClose.Location = new System.Drawing.Point(596, 2);
+            this.pbClose.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pbClose.Name = "pbClose";
-            this.pbClose.Size = new System.Drawing.Size(15, 16);
+            this.pbClose.Size = new System.Drawing.Size(20, 20);
             this.pbClose.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbClose.TabIndex = 74;
             this.pbClose.TabStop = false;
@@ -270,9 +282,9 @@
             // 
             // BusquedaEntrega_Devolucion
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(462, 450);
+            this.ClientSize = new System.Drawing.Size(616, 554);
             this.Controls.Add(this.lblcve_venta);
             this.Controls.Add(this.dato2);
             this.Controls.Add(this.dato1);
@@ -282,6 +294,7 @@
             this.Controls.Add(this.dato3);
             this.Controls.Add(this.bunifuGradientPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "BusquedaEntrega_Devolucion";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Checar Entregas y Devoluciones";

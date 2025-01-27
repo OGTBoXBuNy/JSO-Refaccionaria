@@ -1204,7 +1204,7 @@ namespace Refracciones
             using (SqlConnection nuevaConexion = Conexion.conexion())
             {
                 nuevaConexion.Open();
-                Comando = new SqlCommand(string.Format("SELECT  pie.nombre AS PIEZA,  dev.cantidad AS CANTIDAD, c.cve_nombre AS CLIENTE, dev.motivo AS MOTIVO,dev.penalizacion AS 'PORCENTAJE PENALIZACIÓN (%)', dev.fecha AS FECHA, dev.realizo AS 'REALIZADA POR' FROM DEVOLUCION dev JOIN VENTAS ven ON ven.cve_venta= dev.cve_venta JOIN VALUADOR val ON val.cve_valuador = ven.cve_valuador JOIN CLIENTE c ON c.cve_nombre = val.cve_cliente JOIN PIEZA  pie ON pie.cve_pieza = dev.cve_pieza  WHERE dev.cve_venta  = {0}", cve_venta), nuevaConexion);
+                Comando = new SqlCommand(string.Format("SELECT  pie.nombre AS PIEZA,  dev.cantidad AS CANTIDAD, c.cve_nombre AS CLIENTE, dev.motivo AS MOTIVO,dev.penalizacion AS 'PORCENTAJE PENALIZACIÓN (%)', \r\ndev.fecha AS FECHA, dev.realizo AS 'REALIZADA POR', ped.cve_pedido\r\nFROM PEDIDO ped JOIN DEVOLUCION dev ON dev.cve_devolucion = ped.cve_devolucion JOIN VENTAS ven ON ven.cve_venta= dev.cve_venta \r\nJOIN VALUADOR val ON val.cve_valuador = ven.cve_valuador JOIN CLIENTE c ON c.cve_nombre = val.cve_cliente \r\nJOIN PIEZA  pie ON pie.cve_pieza = dev.cve_pieza  WHERE dev.cve_venta  = {0}", cve_venta), nuevaConexion);// SE AÑADIO LA COLUMNA DE CLAVE PEDIDO PARA PODER REGRESAR A 0 LAS PZAS DEVUELTAS Y QUE SE PUEDA VOLVER A DAR DE BAJA Y REGRESAR SI SE NECESITA 26/01/2025 ISRAEL
                 da = new SqlDataAdapter(Comando);
                 da.Fill(dt);
                 nuevaConexion.Close();
@@ -7942,8 +7942,13 @@ namespace Refracciones
                 using (SqlConnection nuevacon = Conexion.conexion())
                 {
                     nuevacon.Open();
-                    this.Comando = new SqlCommand("UPDATE ped SET ped.vale_liberado = 1 FROM PEDIDO ped LEFT OUTER JOIN VENTAS ven ON ven.cve_venta = ped.cve_venta WHERE ped.fecha_baja is not null AND ped.fecha_entrega is not null AND ped.vale_liberado != 1 AND ped.cve_factura is not null AND ped.estado = 6 AND ven.fecha_asignacion BETWEEN '2024-01-01' AND '2024-12-31';", nuevacon);
-                    this.Comando.ExecuteNonQuery();   
+                    //this.Comando = new SqlCommand("UPDATE ped SET ped.vale_liberado = 1 FROM PEDIDO ped LEFT OUTER JOIN VENTAS ven ON ven.cve_venta = ped.cve_venta WHERE ped.fecha_baja is not null AND ped.fecha_entrega is not null AND ped.vale_liberado != 1 AND ped.cve_factura is not null AND ped.estado = 6 AND ven.fecha_asignacion BETWEEN '2024-01-01' AND '2024-12-31';", nuevacon);
+                    this.Comando = new SqlCommand("UPDATE ped SET ped.vale_liberado = 1 FROM PEDIDO ped \r\nLEFT OUTER JOIN VENTAS ven ON ven.cve_venta = ped.cve_venta \r\nWHERE ped.fecha_baja is not null \r\nAND ped.fecha_entrega is not null AND ped.vale_liberado != 1 \r\nAND ped.cve_factura is not null AND ped.estado = 6 \r\nAND ven.fecha_asignacion BETWEEN '2024-07-01' AND '2025-12-31';", nuevacon);
+                    this.Comando.ExecuteNonQuery();
+
+                    this.Comando = new SqlCommand("UPDATE ped SET ped.vale_liberado = 0 FROM PEDIDO ped \r\nLEFT OUTER JOIN VENTAS ven ON ven.cve_venta = ped.cve_venta \r\nWHERE ped.fecha_baja is null \r\nOR ped.fecha_entrega is null\r\nOR ped.cve_factura is null OR ped.estado != 6 \r\nAND ven.fecha_asignacion BETWEEN '2024-07-01' AND '2025-12-31';", nuevacon);
+                    this.Comando.ExecuteNonQuery();
+
                     nuevacon.Close();
                 }
             }
@@ -7988,6 +7993,29 @@ namespace Refracciones
         }
 
         //ENVIAR CORREO END
+
+        //CANCELAR DEVOLUCION ISRAEL 26/01/2025
+        public void cancelarDevolucion(string cve_pedido)
+        {
+            
+
+            using (SqlConnection nuevaConexion = Conexion.conexion())
+            {
+                nuevaConexion.Open();
+
+                
+                    Comando = new SqlCommand("UPDATE ped SET ped.pzas_devolucion = 0 FROM PEDIDO ped WHERE cve_pedido = @cvePedido;", nuevaConexion);
+                    Comando.Parameters.AddWithValue("@cvePedido",cve_pedido);
+                    
+                    Comando.ExecuteNonQuery();
+                
+
+                nuevaConexion.Close();
+                MessageBOX.SHowDialog('2', "Operación realizada correctamente");
+            }
+        }
+
+
 
         /*
         //SE QUITARÁ
