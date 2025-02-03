@@ -85,6 +85,7 @@
             this.txtDiasEspera = new System.Windows.Forms.TextBox();
             this.lblDiasEspera = new System.Windows.Forms.Label();
             this.bunifuGradientPanel1 = new Bunifu.Framework.UI.BunifuGradientPanel();
+            this.lblClaveSiniestroPasada = new System.Windows.Forms.Label();
             this.btnModificarSiniestro = new System.Windows.Forms.Button();
             this.dgvDatosPDF = new System.Windows.Forms.DataGridView();
             this.btnPDF = new System.Windows.Forms.Button();
@@ -113,7 +114,6 @@
             this.lblUsuario = new System.Windows.Forms.Label();
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
             this.fileRoute = new System.Windows.Forms.SaveFileDialog();
-            this.lblClaveSiniestroPasada = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPedido)).BeginInit();
             this.bunifuGradientPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDatosPDF)).BeginInit();
@@ -953,6 +953,19 @@
             this.bunifuGradientPanel1.Size = new System.Drawing.Size(1420, 740);
             this.bunifuGradientPanel1.TabIndex = 0;
             // 
+            // lblClaveSiniestroPasada
+            // 
+            this.lblClaveSiniestroPasada.AutoSize = true;
+            this.lblClaveSiniestroPasada.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(45)))), ((int)(((byte)(57)))));
+            this.lblClaveSiniestroPasada.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblClaveSiniestroPasada.ForeColor = System.Drawing.Color.White;
+            this.lblClaveSiniestroPasada.Location = new System.Drawing.Point(12, 263);
+            this.lblClaveSiniestroPasada.Name = "lblClaveSiniestroPasada";
+            this.lblClaveSiniestroPasada.Size = new System.Drawing.Size(146, 18);
+            this.lblClaveSiniestroPasada.TabIndex = 91;
+            this.lblClaveSiniestroPasada.Text = "Clave Siniestro Pasada";
+            this.lblClaveSiniestroPasada.Visible = false;
+            // 
             // btnModificarSiniestro
             // 
             this.btnModificarSiniestro.BackColor = System.Drawing.Color.RoyalBlue;
@@ -1302,18 +1315,6 @@
             this.lblUsuario.Size = new System.Drawing.Size(57, 16);
             this.lblUsuario.TabIndex = 88;
             this.lblUsuario.Text = "Usuario:";
-            // 
-            // lblClaveSiniestroPasada
-            // 
-            this.lblClaveSiniestroPasada.AutoSize = true;
-            this.lblClaveSiniestroPasada.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(45)))), ((int)(((byte)(57)))));
-            this.lblClaveSiniestroPasada.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblClaveSiniestroPasada.ForeColor = System.Drawing.Color.White;
-            this.lblClaveSiniestroPasada.Location = new System.Drawing.Point(12, 263);
-            this.lblClaveSiniestroPasada.Name = "lblClaveSiniestroPasada";
-            this.lblClaveSiniestroPasada.Size = new System.Drawing.Size(146, 18);
-            this.lblClaveSiniestroPasada.TabIndex = 91;
-            this.lblClaveSiniestroPasada.Text = "Clave Siniestro Pasada";
             // 
             // Pedido
             // 
