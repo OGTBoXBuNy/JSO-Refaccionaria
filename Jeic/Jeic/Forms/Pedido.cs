@@ -305,7 +305,7 @@ namespace Refracciones.Forms
                 cbValuador.DataSource = operacion.ValuadoresRegistrados(cbAseguradora.Text.Trim()).Tables[0].DefaultView;
                 cbValuador.ValueMember = "nombre";
             }
-           
+            lblClaveSiniestroPasada.Text = lblClaveSiniestro.Text;//PARA GUARDAR LA CLAVE DE SINIESTRO AL ACTUALIZAR
         }
 
         //Parámetros que sirven al momento de actualizar formulario
@@ -898,8 +898,8 @@ namespace Refracciones.Forms
                             }
 
                             //ACTUALIZAR lo correspondiente a SINIESTRO
-                            operacion.actualizarSiniestro(lblVehiculo.Text.Trim(), lblClaveSiniestro.Text.Trim(), txtComentarioSiniestro.Text.Trim(), Convert.ToInt32(lblAnio.Text));
-
+                            //operacion.actualizarSiniestro(lblVehiculo.Text.Trim(), lblClaveSiniestro.Text.Trim(), txtComentarioSiniestro.Text.Trim(), Convert.ToInt32(lblAnio.Text));
+                            operacion.actualizarSiniestro(lblVehiculo.Text.Trim(), lblClaveSiniestro.Text.Trim(), txtComentarioSiniestro.Text.Trim(), Convert.ToInt32(lblAnio.Text), lblClaveSiniestroPasada.Text);//ACTUALIZAR NUMERO DE SINIESTRO 03/02/2025
                             calcularDGV();
 
                             //AGREGANDO DATOS A VENTA
@@ -2253,7 +2253,7 @@ namespace Refracciones.Forms
                             }
 
                             //ACTUALIZAR lo correspondiente a SINIESTRO
-                            operacion.actualizarSiniestro(lblVehiculo.Text.Trim(), lblClaveSiniestro.Text.Trim(), txtComentarioSiniestro.Text.Trim(), Convert.ToInt32(lblAnio.Text));
+                            operacion.actualizarSiniestro(lblVehiculo.Text.Trim(), lblClaveSiniestro.Text.Trim(), txtComentarioSiniestro.Text.Trim(), Convert.ToInt32(lblAnio.Text), lblClaveSiniestroPasada.Text);
 
                             calcularDGV();
 
@@ -2286,15 +2286,28 @@ namespace Refracciones.Forms
 
         private void btnModificarSiniestro_Click(object sender, EventArgs e)
         {
+            //LISTA DE PERSONAS AUTORIZADAS PARA EDITAR SINIESTRO
+            List<string> editarSiniestro = new List<string>();
+            editarSiniestro.Add("Usuario: Erik.15");
+            editarSiniestro.Add("Usuario: Emilio.99");
+            editarSiniestro.Add("Usuario: Maximiliano.1");
+
+            
+
             Siniestro siniestro = new Siniestro();
             siniestro.claveSiniestroPedido = lblClaveSiniestro.Text;
             siniestro.marcaPedido = lblMarca.Text;
             siniestro.vehiculoPedido = lblVehiculo.Text;
             siniestro.anioPedido = lblAnio.Text;
             siniestro.indicadorPedido = 1;
+            if (editarSiniestro.Contains(lblUsuario.Text)) {
+                siniestro.editarSiniestro = true;
+            }
 
             if (siniestro.ShowDialog() == DialogResult.OK)
             {
+                lblClaveSiniestroPasada.Text = siniestro.claveSiniestroPasada;//SE UTILIZA PARA PODER ACTUALIZAR EL NUMERO DE SINIESTRO 
+                lblClaveSiniestro.Text = siniestro.claveSiniestro;
                 nuevoVehiculo = siniestro.otroVehiculo;
                 nuevoMarca = siniestro.otroMarca;
                 lblVehiculo.Text = siniestro.vehiculoSiniestro;

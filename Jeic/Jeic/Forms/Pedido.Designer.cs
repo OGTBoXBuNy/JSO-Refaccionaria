@@ -113,6 +113,7 @@
             this.lblUsuario = new System.Windows.Forms.Label();
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
             this.fileRoute = new System.Windows.Forms.SaveFileDialog();
+            this.lblClaveSiniestroPasada = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPedido)).BeginInit();
             this.bunifuGradientPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDatosPDF)).BeginInit();
@@ -885,6 +886,7 @@
             this.bunifuGradientPanel1.BackColor = System.Drawing.Color.Transparent;
             this.bunifuGradientPanel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuGradientPanel1.BackgroundImage")));
             this.bunifuGradientPanel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.bunifuGradientPanel1.Controls.Add(this.lblClaveSiniestroPasada);
             this.bunifuGradientPanel1.Controls.Add(this.btnModificarSiniestro);
             this.bunifuGradientPanel1.Controls.Add(this.dgvDatosPDF);
             this.bunifuGradientPanel1.Controls.Add(this.btnPDF);
@@ -1301,6 +1303,18 @@
             this.lblUsuario.TabIndex = 88;
             this.lblUsuario.Text = "Usuario:";
             // 
+            // lblClaveSiniestroPasada
+            // 
+            this.lblClaveSiniestroPasada.AutoSize = true;
+            this.lblClaveSiniestroPasada.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(45)))), ((int)(((byte)(57)))));
+            this.lblClaveSiniestroPasada.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblClaveSiniestroPasada.ForeColor = System.Drawing.Color.White;
+            this.lblClaveSiniestroPasada.Location = new System.Drawing.Point(12, 263);
+            this.lblClaveSiniestroPasada.Name = "lblClaveSiniestroPasada";
+            this.lblClaveSiniestroPasada.Size = new System.Drawing.Size(146, 18);
+            this.lblClaveSiniestroPasada.TabIndex = 91;
+            this.lblClaveSiniestroPasada.Text = "Clave Siniestro Pasada";
+            // 
             // Pedido
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -1423,5 +1437,6 @@
         private System.Windows.Forms.DataGridView dgvDatosPDF;
         private System.Windows.Forms.Button btnModificarSiniestro;
         private System.Windows.Forms.SaveFileDialog fileRoute;
+        private System.Windows.Forms.Label lblClaveSiniestroPasada;
     }
 }

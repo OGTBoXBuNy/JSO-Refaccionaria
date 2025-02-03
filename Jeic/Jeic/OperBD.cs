@@ -5538,7 +5538,7 @@ namespace Refracciones
         }
 
         //--------------- ACTUALIZAR SINIESTRO
-        public int actualizarSiniestro(string modelo, string claveSiniestro, string comentario, int anio)
+        public int actualizarSiniestro(string modelo, string claveSiniestro, string comentario, int anio, string claveSiniestroPasada)
         {
             int i = 0;
             try
@@ -5552,7 +5552,7 @@ namespace Refracciones
                     nuevaConexion.Open();
                     //Obteniendo la clave del vehículo pasado
                     Comando = new SqlCommand("SELECT cve_vehiculo FROM SINIESTRO WHERE cve_siniestro = @cve_siniestro", nuevaConexion);
-                    Comando.Parameters.AddWithValue("@cve_siniestro", claveSiniestro);
+                    Comando.Parameters.AddWithValue("@cve_siniestro", claveSiniestroPasada);
                     Lector = Comando.ExecuteReader();
                     if (Lector.Read())
                     {
@@ -5572,7 +5572,9 @@ namespace Refracciones
                     Lector.Close();
 
                     //Insertando los datos en la tabla SINIESTRO
-                    Comando = new SqlCommand("UPDATE SINIESTRO SET cve_vehiculo = @cveVehiculoActual, comentario = @comentario WHERE cve_siniestro = @cve_siniestro AND cve_vehiculo = @cveVehiculoPasado", nuevaConexion);
+                    Comando = new SqlCommand("UPDATE SINIESTRO SET cve_siniestro = @cve_siniestro ,cve_vehiculo = @cveVehiculoActual, comentario = @comentario WHERE cve_siniestro = @cve_siniestro_Pasada AND cve_vehiculo = @cveVehiculoPasado", nuevaConexion);
+                    //Comando = new SqlCommand("UPDATE SINIESTRO SET cve_vehiculo = @cveVehiculoActual, comentario = @comentario WHERE cve_siniestro = @cve_siniestro AND cve_vehiculo = @cveVehiculoPasado", nuevaConexion);
+                    Comando.Parameters.AddWithValue("@cve_siniestro_Pasada", claveSiniestroPasada.Trim());
                     Comando.Parameters.AddWithValue("@cve_siniestro", claveSiniestro.Trim());
                     Comando.Parameters.AddWithValue("@cveVehiculoPasado", claveVehiculoPasado);
                     Comando.Parameters.AddWithValue("@cveVehiculoActual", claveVehiculoActual);

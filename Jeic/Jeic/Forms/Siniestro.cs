@@ -22,10 +22,13 @@ namespace Refracciones.Forms
         }
 
         public string claveSiniestroPedido = "";
+        public string ClaveSiniestroPasada = "";
         public string marcaPedido = "";
         public string vehiculoPedido = "";
         public string anioPedido = "";
         public int indicadorPedido = 0;
+        public bool editarSiniestro = false;
+        
 
         private void Siniestro_Load(object sender, EventArgs e)
         {
@@ -50,6 +53,8 @@ namespace Refracciones.Forms
 
             if(indicadorPedido == 1)
             {
+                
+                
                 //Carga los datos de las marcas de vehículos en el combobox
                 cbMarca.DataSource = operacion.MarcasRegistradas(1).Tables[0];
                 cbMarca.ValueMember = "cve_marca";
@@ -57,7 +62,8 @@ namespace Refracciones.Forms
                 cbMarca.SelectedValue = operacion.indexMarcasRegistradas(marcaPedido);
 
                 txtClaveSiniestro.Text = claveSiniestroPedido;
-                txtClaveSiniestro.Enabled = false;
+                ClaveSiniestroPasada = claveSiniestroPedido;//Para poder actualizar la clave siniestro
+                txtClaveSiniestro.Enabled = editarSiniestro;//SOLICITUD POR ISRA Y DANIEL 03/02/2025 Poder cambiar numero de siniestro
                 cbVehiculo.SelectedValue = vehiculoPedido;
                 dtpYear.Text = "01/12/"+anioPedido;
             }
@@ -131,9 +137,16 @@ namespace Refracciones.Forms
             }
         }
 
+        public string claveSiniestroPasada
+        {
+            get { return ClaveSiniestroPasada; }
+            
+        }
+
         public string claveNOSiniestro
         {
             set { txtClaveSiniestro.Text = value; }
+
         }
 
         public string claveSiniestro
