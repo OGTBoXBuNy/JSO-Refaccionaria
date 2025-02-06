@@ -219,8 +219,8 @@ namespace Refracciones.Forms
                 //e.Cancel = true;
                 //errorProvider1.SetError(txtClaveSiniestro, "Ya existe un siniestro con la misma clave");
                 datos = (string[])operacion.llenarSiniestro(claveSiniestro).Clone();
-                cbMarca.Text = datos[0];
-                cbVehiculo.Text = datos[1];
+                //cbMarca.Text = datos[0];//SE BORRO PARA DEJAR A EMILIO Y MAXIMILIANO EDITAR FECHA DE SINIESTRO
+                //cbVehiculo.Text = datos[1];//SE BORRO PARA DEJAR A EMILIO Y MAXIMILIANO EDITAR FECHA DE SINIESTRO
                 //dtpYear.Text = "01/12/" + datos[2];//SE BORRO PARA DEJAR A EMILIO Y MAXIMILIANO EDITAR FECHA DE SINIESTRO
             }
             else if (txtClaveSiniestro.Text.Trim() == "Escriba clave del siniestro")
