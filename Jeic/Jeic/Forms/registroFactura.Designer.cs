@@ -388,7 +388,8 @@
             this.cmbEstadoFactura.Items.AddRange(new object[] {
             "PENDIENTE",
             "PAGADA",
-            "CANCELADA"});
+            "CANCELADA",
+            "SIN FACTURAR"});
             this.cmbEstadoFactura.Location = new System.Drawing.Point(184, 354);
             this.cmbEstadoFactura.Margin = new System.Windows.Forms.Padding(4);
             this.cmbEstadoFactura.Name = "cmbEstadoFactura";

@@ -94,6 +94,9 @@ namespace Refracciones.Forms
                 else if (cmbEstadoFactura.Text.Equals("CANCELADA"))
                     cve_estado = 3;
 
+                else if (cmbEstadoFactura.Text.Equals("SIN FACTURAR"))
+                    cve_estado = 4;
+                //SOLICITADO POR ISRA 28/MAYO/2025
 
 
                 fecha_ingreso = dtpFechaIngreso.Value.Date;
@@ -200,12 +203,14 @@ namespace Refracciones.Forms
                 //txtFacturasinIVA.Text = oper.venta_total(dat).ToString();
                 cmbEstadoFactura.SelectedIndex = 0;
                 dtpFechaPago.Value = dtpFechaIngreso.Value.AddDays(oper.Dias_Espera(cve_siniestro, cve_pedido));
-                if (dato3.Text == "0")// significa que se va a modificar una factura existente
-                {
-                    dataGridView1.DataSource = oper.Actualizar_Factura(oper.Clave_Fact(cve_siniestro, cve_pedido, lblPieza.Text.Substring(7, (lblPieza.Text.Length - 7)), int.Parse(lblcvePedidoidentity.Text)));
-                    if (dataGridView1.Rows[0].Cells[1].Value.ToString() == "1") { cmbEstadoFactura.SelectedIndex = 0; }
-                    else if (dataGridView1.Rows[0].Cells[1].Value.ToString() == "2") { cmbEstadoFactura.SelectedIndex = 1; }
-                    else if (dataGridView1.Rows[0].Cells[1].Value.ToString() == "3") { cmbEstadoFactura.SelectedIndex = 2; }
+            if (dato3.Text == "0")// significa que se va a modificar una factura existente
+            {
+                dataGridView1.DataSource = oper.Actualizar_Factura(oper.Clave_Fact(cve_siniestro, cve_pedido, lblPieza.Text.Substring(7, (lblPieza.Text.Length - 7)), int.Parse(lblcvePedidoidentity.Text)));
+                if (dataGridView1.Rows[0].Cells[1].Value.ToString() == "1") { cmbEstadoFactura.SelectedIndex = 0; }
+                else if (dataGridView1.Rows[0].Cells[1].Value.ToString() == "2") { cmbEstadoFactura.SelectedIndex = 1; }
+                else if (dataGridView1.Rows[0].Cells[1].Value.ToString() == "3") { cmbEstadoFactura.SelectedIndex = 2; }
+                else if (dataGridView1.Rows[0].Cells[1].Value.ToString() == "4") { cmbEstadoFactura.SelectedIndex = 4; }
+                //SOLICITADO POR ISRA 28/MAY/2025
                     txtCve_Factura.Text = dataGridView1.Rows[0].Cells[0].Value.ToString();
                     txtFacturasinIVA.Text = dataGridView1.Rows[0].Cells[3].Value.ToString();
                     txtDescuento.Text = dataGridView1.Rows[0].Cells[4].Value.ToString();

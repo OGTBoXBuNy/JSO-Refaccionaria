@@ -103,6 +103,9 @@ namespace Refracciones.Forms
                     cve_estado = 2;
                 else if (cmbEstadoFactura.Text.Trim().Equals("CANCELADA"))
                     cve_estado = 3;
+                else if (cmbEstadoFactura.Text.Trim().Equals("SIN FACTURAR"))
+                    cve_estado = 4;
+                //SOLICITADO POR ISRA 28/MAY/2025
 
                 //if (chkFechaIngreso.Checked)
                 fecha_ingreso = DateTime.Parse(dtpFechaIngreso.Value.ToShortDateString());
@@ -191,6 +194,8 @@ namespace Refracciones.Forms
                     if (dataGridView1.Rows[0].Cells[1].Value.ToString() == "1") { cmbEstadoFactura.SelectedIndex = 0; }
                     else if (dataGridView1.Rows[0].Cells[1].Value.ToString() == "2") { cmbEstadoFactura.SelectedIndex = 1; }
                     else if (dataGridView1.Rows[0].Cells[1].Value.ToString() == "3") { cmbEstadoFactura.SelectedIndex = 2; }
+                    else if (dataGridView1.Rows[0].Cells[1].Value.ToString() == "4") { cmbEstadoFactura.SelectedIndex = 3; }
+                    //SOLICITADO POR ISRA 28/MAY/2025
                     txtCve_Factura.Text = dataGridView1.Rows[0].Cells[0].Value.ToString();
                     txtRefactura.Text = dataGridView1.Rows[0].Cells[2].Value.ToString();
                     txtFacturasinIVA.Text = dataGridView1.Rows[0].Cells[3].Value.ToString();

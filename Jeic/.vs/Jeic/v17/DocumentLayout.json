@@ -1,12 +1,185 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\boxbu\\source\\repos\\Axdrox\\proyectoJeic\\Jeic\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{B67C3104-50DA-4D29-A490-80181AED493C}|Jeic\\Jeic.csproj|C:\\Users\\boxbu\\source\\repos\\Axdrox\\proyectoJeic\\Jeic\\jeic\\forms\\iniciosesion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{B67C3104-50DA-4D29-A490-80181AED493C}|Jeic\\Jeic.csproj|solutionrelative:jeic\\forms\\iniciosesion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B67C3104-50DA-4D29-A490-80181AED493C}|Jeic\\Jeic.csproj|c:\\users\\boxbu\\source\\repos\\axdrox\\proyectojeic\\jeic\\jeic\\forms\\iniciosesion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B67C3104-50DA-4D29-A490-80181AED493C}|Jeic\\Jeic.csproj|solutionrelative:jeic\\forms\\iniciosesion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B67C3104-50DA-4D29-A490-80181AED493C}|Jeic\\Jeic.csproj|c:\\users\\boxbu\\source\\repos\\axdrox\\proyectojeic\\jeic\\jeic\\forms\\buscarfacturas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{B67C3104-50DA-4D29-A490-80181AED493C}|Jeic\\Jeic.csproj|solutionrelative:jeic\\forms\\buscarfacturas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B67C3104-50DA-4D29-A490-80181AED493C}|Jeic\\Jeic.csproj|c:\\users\\boxbu\\source\\repos\\axdrox\\proyectojeic\\jeic\\jeic\\forms\\registrofactura.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B67C3104-50DA-4D29-A490-80181AED493C}|Jeic\\Jeic.csproj|solutionrelative:jeic\\forms\\registrofactura.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B67C3104-50DA-4D29-A490-80181AED493C}|Jeic\\Jeic.csproj|c:\\users\\boxbu\\source\\repos\\axdrox\\proyectojeic\\jeic\\jeic\\forms\\buscarfacturas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B67C3104-50DA-4D29-A490-80181AED493C}|Jeic\\Jeic.csproj|solutionrelative:jeic\\forms\\buscarfacturas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B67C3104-50DA-4D29-A490-80181AED493C}|Jeic\\Jeic.csproj|c:\\users\\boxbu\\source\\repos\\axdrox\\proyectojeic\\jeic\\jeic\\forms\\registrarrefactura.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{B67C3104-50DA-4D29-A490-80181AED493C}|Jeic\\Jeic.csproj|solutionrelative:jeic\\forms\\registrarrefactura.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B67C3104-50DA-4D29-A490-80181AED493C}|Jeic\\Jeic.csproj|c:\\users\\boxbu\\source\\repos\\axdrox\\proyectojeic\\jeic\\jeic\\forms\\registrarrefactura.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B67C3104-50DA-4D29-A490-80181AED493C}|Jeic\\Jeic.csproj|solutionrelative:jeic\\forms\\registrarrefactura.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B67C3104-50DA-4D29-A490-80181AED493C}|Jeic\\Jeic.csproj|c:\\users\\boxbu\\source\\repos\\axdrox\\proyectojeic\\jeic\\jeic\\operbd.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B67C3104-50DA-4D29-A490-80181AED493C}|Jeic\\Jeic.csproj|solutionrelative:jeic\\operbd.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B67C3104-50DA-4D29-A490-80181AED493C}|Jeic\\Jeic.csproj|c:\\users\\boxbu\\source\\repos\\axdrox\\proyectojeic\\jeic\\jeic\\forms\\registrofactura.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{B67C3104-50DA-4D29-A490-80181AED493C}|Jeic\\Jeic.csproj|solutionrelative:jeic\\forms\\registrofactura.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B67C3104-50DA-4D29-A490-80181AED493C}|Jeic\\Jeic.csproj|C:\\Users\\boxbu\\source\\repos\\Axdrox\\proyectoJeic\\Jeic\\jeic\\conexion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B67C3104-50DA-4D29-A490-80181AED493C}|Jeic\\Jeic.csproj|solutionrelative:jeic\\conexion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": []
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 5,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "registrarRefactura.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\boxbu\\source\\repos\\Axdrox\\proyectoJeic\\Jeic\\Jeic\\Forms\\registrarRefactura.cs",
+              "RelativeDocumentMoniker": "Jeic\\Forms\\registrarRefactura.cs",
+              "ToolTip": "C:\\Users\\boxbu\\source\\repos\\Axdrox\\proyectoJeic\\Jeic\\Jeic\\Forms\\registrarRefactura.cs [Design]",
+              "RelativeToolTip": "Jeic\\Forms\\registrarRefactura.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-29T12:27:37.038Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "buscarFacturas.cs",
+              "DocumentMoniker": "C:\\Users\\boxbu\\source\\repos\\Axdrox\\proyectoJeic\\Jeic\\Jeic\\Forms\\buscarFacturas.cs",
+              "RelativeDocumentMoniker": "Jeic\\Forms\\buscarFacturas.cs",
+              "ToolTip": "C:\\Users\\boxbu\\source\\repos\\Axdrox\\proyectoJeic\\Jeic\\Jeic\\Forms\\buscarFacturas.cs",
+              "RelativeToolTip": "Jeic\\Forms\\buscarFacturas.cs",
+              "ViewState": "AgIAAGEAAAAAAAAAAAD4v3AAAABAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-29T12:16:33.028Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "registroFactura.cs",
+              "DocumentMoniker": "C:\\Users\\boxbu\\source\\repos\\Axdrox\\proyectoJeic\\Jeic\\Jeic\\Forms\\registroFactura.cs",
+              "RelativeDocumentMoniker": "Jeic\\Forms\\registroFactura.cs",
+              "ToolTip": "C:\\Users\\boxbu\\source\\repos\\Axdrox\\proyectoJeic\\Jeic\\Jeic\\Forms\\registroFactura.cs",
+              "RelativeToolTip": "Jeic\\Forms\\registroFactura.cs",
+              "ViewState": "AgIAANgAAAAAAAAAAAAAAM8AAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-29T12:13:36.756Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "buscarFacturas.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\boxbu\\source\\repos\\Axdrox\\proyectoJeic\\Jeic\\Jeic\\Forms\\buscarFacturas.cs",
+              "RelativeDocumentMoniker": "Jeic\\Forms\\buscarFacturas.cs",
+              "ToolTip": "C:\\Users\\boxbu\\source\\repos\\Axdrox\\proyectoJeic\\Jeic\\Jeic\\Forms\\buscarFacturas.cs [Design]",
+              "RelativeToolTip": "Jeic\\Forms\\buscarFacturas.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-29T12:12:57.459Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "InicioSesion.cs",
+              "DocumentMoniker": "C:\\Users\\boxbu\\source\\repos\\Axdrox\\proyectoJeic\\Jeic\\Jeic\\Forms\\InicioSesion.cs",
+              "RelativeDocumentMoniker": "Jeic\\Forms\\InicioSesion.cs",
+              "ToolTip": "C:\\Users\\boxbu\\source\\repos\\Axdrox\\proyectoJeic\\Jeic\\Jeic\\Forms\\InicioSesion.cs",
+              "RelativeToolTip": "Jeic\\Forms\\InicioSesion.cs",
+              "ViewState": "AgIAAFkAAAAAAAAAAAAIwHMAAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-19T19:32:10.922Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "InicioSesion.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\boxbu\\source\\repos\\Axdrox\\proyectoJeic\\Jeic\\Jeic\\Forms\\InicioSesion.cs",
+              "RelativeDocumentMoniker": "Jeic\\Forms\\InicioSesion.cs",
+              "ToolTip": "C:\\Users\\boxbu\\source\\repos\\Axdrox\\proyectoJeic\\Jeic\\Jeic\\Forms\\InicioSesion.cs [Design]",
+              "RelativeToolTip": "Jeic\\Forms\\InicioSesion.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-19T19:32:00.777Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "registrarRefactura.cs",
+              "DocumentMoniker": "C:\\Users\\boxbu\\source\\repos\\Axdrox\\proyectoJeic\\Jeic\\Jeic\\Forms\\registrarRefactura.cs",
+              "RelativeDocumentMoniker": "Jeic\\Forms\\registrarRefactura.cs",
+              "ToolTip": "C:\\Users\\boxbu\\source\\repos\\Axdrox\\proyectoJeic\\Jeic\\Jeic\\Forms\\registrarRefactura.cs",
+              "RelativeToolTip": "Jeic\\Forms\\registrarRefactura.cs",
+              "ViewState": "AgIAAFsAAAAAAAAAAAAAAMQAAABnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-29T12:28:01.473Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "OperBD.cs",
+              "DocumentMoniker": "C:\\Users\\boxbu\\source\\repos\\Axdrox\\proyectoJeic\\Jeic\\Jeic\\OperBD.cs",
+              "RelativeDocumentMoniker": "Jeic\\OperBD.cs",
+              "ToolTip": "C:\\Users\\boxbu\\source\\repos\\Axdrox\\proyectoJeic\\Jeic\\Jeic\\OperBD.cs",
+              "RelativeToolTip": "Jeic\\OperBD.cs",
+              "ViewState": "AgIAAKQLAAAAAAAAAAD4v7ELAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-29T12:13:36.734Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "registroFactura.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\boxbu\\source\\repos\\Axdrox\\proyectoJeic\\Jeic\\Jeic\\Forms\\registroFactura.cs",
+              "RelativeDocumentMoniker": "Jeic\\Forms\\registroFactura.cs",
+              "ToolTip": "C:\\Users\\boxbu\\source\\repos\\Axdrox\\proyectoJeic\\Jeic\\Jeic\\Forms\\registroFactura.cs [Design]",
+              "RelativeToolTip": "Jeic\\Forms\\registroFactura.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-29T12:14:08.611Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Conexion.cs",
+              "DocumentMoniker": "C:\\Users\\boxbu\\source\\repos\\Axdrox\\proyectoJeic\\Jeic\\Jeic\\Conexion.cs",
+              "RelativeDocumentMoniker": "Jeic\\Conexion.cs",
+              "ToolTip": "C:\\Users\\boxbu\\source\\repos\\Axdrox\\proyectoJeic\\Jeic\\Jeic\\Conexion.cs",
+              "RelativeToolTip": "Jeic\\Conexion.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-05T18:49:12.598Z"
+            }
+          ]
+        }
+      ]
     }
   ]
 }

@@ -100,9 +100,10 @@
             this.cmbEstadoFactura.Items.AddRange(new object[] {
             "PENDIENTE",
             "PAGADA",
-            "CANCELADA"});
+            "CANCELADA",
+            "SIN FACTURAR"});
             this.cmbEstadoFactura.Location = new System.Drawing.Point(184, 432);
-            this.cmbEstadoFactura.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cmbEstadoFactura.Margin = new System.Windows.Forms.Padding(4);
             this.cmbEstadoFactura.Name = "cmbEstadoFactura";
             this.cmbEstadoFactura.Size = new System.Drawing.Size(160, 26);
             this.cmbEstadoFactura.TabIndex = 8;
@@ -139,7 +140,7 @@
             this.txtComentario.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtComentario.ForeColor = System.Drawing.Color.White;
             this.txtComentario.Location = new System.Drawing.Point(428, 288);
-            this.txtComentario.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtComentario.Margin = new System.Windows.Forms.Padding(4);
             this.txtComentario.MaxLength = 100;
             this.txtComentario.Multiline = true;
             this.txtComentario.Name = "txtComentario";
@@ -153,7 +154,7 @@
             this.btnBuscarXml.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnBuscarXml.ForeColor = System.Drawing.Color.White;
             this.btnBuscarXml.Location = new System.Drawing.Point(335, 396);
-            this.btnBuscarXml.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnBuscarXml.Margin = new System.Windows.Forms.Padding(4);
             this.btnBuscarXml.Name = "btnBuscarXml";
             this.btnBuscarXml.Size = new System.Drawing.Size(60, 25);
             this.btnBuscarXml.TabIndex = 7;
@@ -167,7 +168,7 @@
             this.txtRutaXml.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtRutaXml.ForeColor = System.Drawing.Color.White;
             this.txtRutaXml.Location = new System.Drawing.Point(23, 396);
-            this.txtRutaXml.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtRutaXml.Margin = new System.Windows.Forms.Padding(4);
             this.txtRutaXml.Name = "txtRutaXml";
             this.txtRutaXml.ReadOnly = true;
             this.txtRutaXml.Size = new System.Drawing.Size(303, 22);
@@ -218,7 +219,7 @@
             this.dtpFechaPago.Cursor = System.Windows.Forms.Cursors.Hand;
             this.dtpFechaPago.Enabled = false;
             this.dtpFechaPago.Location = new System.Drawing.Point(473, 201);
-            this.dtpFechaPago.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dtpFechaPago.Margin = new System.Windows.Forms.Padding(4);
             this.dtpFechaPago.Name = "dtpFechaPago";
             this.dtpFechaPago.Size = new System.Drawing.Size(265, 22);
             this.dtpFechaPago.TabIndex = 12;
@@ -227,7 +228,7 @@
             // 
             this.dtpFechaRevision.Cursor = System.Windows.Forms.Cursors.Hand;
             this.dtpFechaRevision.Location = new System.Drawing.Point(473, 155);
-            this.dtpFechaRevision.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dtpFechaRevision.Margin = new System.Windows.Forms.Padding(4);
             this.dtpFechaRevision.Name = "dtpFechaRevision";
             this.dtpFechaRevision.Size = new System.Drawing.Size(265, 22);
             this.dtpFechaRevision.TabIndex = 11;
@@ -249,7 +250,7 @@
             // 
             this.dtpFechaIngreso.Cursor = System.Windows.Forms.Cursors.Hand;
             this.dtpFechaIngreso.Location = new System.Drawing.Point(473, 105);
-            this.dtpFechaIngreso.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dtpFechaIngreso.Margin = new System.Windows.Forms.Padding(4);
             this.dtpFechaIngreso.Name = "dtpFechaIngreso";
             this.dtpFechaIngreso.Size = new System.Drawing.Size(265, 22);
             this.dtpFechaIngreso.TabIndex = 10;
@@ -274,7 +275,7 @@
             this.txtFacturasinIVA.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtFacturasinIVA.ForeColor = System.Drawing.Color.White;
             this.txtFacturasinIVA.Location = new System.Drawing.Point(145, 155);
-            this.txtFacturasinIVA.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtFacturasinIVA.Margin = new System.Windows.Forms.Padding(4);
             this.txtFacturasinIVA.Name = "txtFacturasinIVA";
             this.txtFacturasinIVA.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.txtFacturasinIVA.Size = new System.Drawing.Size(133, 22);
@@ -290,7 +291,7 @@
             this.txtRefactura.Enabled = false;
             this.txtRefactura.ForeColor = System.Drawing.Color.White;
             this.txtRefactura.Location = new System.Drawing.Point(145, 108);
-            this.txtRefactura.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtRefactura.Margin = new System.Windows.Forms.Padding(4);
             this.txtRefactura.Name = "txtRefactura";
             this.txtRefactura.Size = new System.Drawing.Size(133, 22);
             this.txtRefactura.TabIndex = 1;
@@ -319,7 +320,7 @@
             this.btnGuardar.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGuardar.ForeColor = System.Drawing.Color.White;
             this.btnGuardar.Location = new System.Drawing.Point(631, 426);
-            this.btnGuardar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnGuardar.Margin = new System.Windows.Forms.Padding(4);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(100, 28);
             this.btnGuardar.TabIndex = 14;
@@ -334,7 +335,7 @@
             this.btnBuscarFact.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnBuscarFact.ForeColor = System.Drawing.Color.White;
             this.btnBuscarFact.Location = new System.Drawing.Point(335, 348);
-            this.btnBuscarFact.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnBuscarFact.Margin = new System.Windows.Forms.Padding(4);
             this.btnBuscarFact.Name = "btnBuscarFact";
             this.btnBuscarFact.Size = new System.Drawing.Size(60, 25);
             this.btnBuscarFact.TabIndex = 6;
@@ -348,7 +349,7 @@
             this.txtRutaFactura.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtRutaFactura.ForeColor = System.Drawing.Color.White;
             this.txtRutaFactura.Location = new System.Drawing.Point(23, 348);
-            this.txtRutaFactura.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtRutaFactura.Margin = new System.Windows.Forms.Padding(4);
             this.txtRutaFactura.Name = "txtRutaFactura";
             this.txtRutaFactura.ReadOnly = true;
             this.txtRutaFactura.Size = new System.Drawing.Size(303, 22);
@@ -361,7 +362,7 @@
             this.txtCve_Factura.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtCve_Factura.ForeColor = System.Drawing.Color.White;
             this.txtCve_Factura.Location = new System.Drawing.Point(145, 64);
-            this.txtCve_Factura.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtCve_Factura.Margin = new System.Windows.Forms.Padding(4);
             this.txtCve_Factura.Name = "txtCve_Factura";
             this.txtCve_Factura.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.txtCve_Factura.Size = new System.Drawing.Size(133, 22);
@@ -413,7 +414,7 @@
             this.txtFacturaconIVA.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtFacturaconIVA.ForeColor = System.Drawing.Color.White;
             this.txtFacturaconIVA.Location = new System.Drawing.Point(145, 241);
-            this.txtFacturaconIVA.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtFacturaconIVA.Margin = new System.Windows.Forms.Padding(4);
             this.txtFacturaconIVA.Name = "txtFacturaconIVA";
             this.txtFacturaconIVA.ReadOnly = true;
             this.txtFacturaconIVA.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
@@ -439,7 +440,7 @@
             this.txtCostoRefactura.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtCostoRefactura.ForeColor = System.Drawing.Color.White;
             this.txtCostoRefactura.Location = new System.Drawing.Point(145, 284);
-            this.txtCostoRefactura.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtCostoRefactura.Margin = new System.Windows.Forms.Padding(4);
             this.txtCostoRefactura.Name = "txtCostoRefactura";
             this.txtCostoRefactura.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.txtCostoRefactura.Size = new System.Drawing.Size(133, 22);
@@ -464,7 +465,7 @@
             // 
             this.dtpFechaRefacturacion.Cursor = System.Windows.Forms.Cursors.Hand;
             this.dtpFechaRefacturacion.Location = new System.Drawing.Point(473, 64);
-            this.dtpFechaRefacturacion.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dtpFechaRefacturacion.Margin = new System.Windows.Forms.Padding(4);
             this.dtpFechaRefacturacion.Name = "dtpFechaRefacturacion";
             this.dtpFechaRefacturacion.Size = new System.Drawing.Size(265, 22);
             this.dtpFechaRefacturacion.TabIndex = 9;
@@ -482,7 +483,7 @@
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Enabled = false;
             this.dataGridView1.Location = new System.Drawing.Point(81, 529);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.Size = new System.Drawing.Size(320, 185);
@@ -583,7 +584,7 @@
             this.bunifuGradientPanel1.GradientTopLeft = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
             this.bunifuGradientPanel1.GradientTopRight = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
             this.bunifuGradientPanel1.Location = new System.Drawing.Point(0, 0);
-            this.bunifuGradientPanel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bunifuGradientPanel1.Margin = new System.Windows.Forms.Padding(4);
             this.bunifuGradientPanel1.Name = "bunifuGradientPanel1";
             this.bunifuGradientPanel1.Quality = 10;
             this.bunifuGradientPanel1.Size = new System.Drawing.Size(789, 489);
@@ -593,7 +594,7 @@
             // 
             this.chkFP.AutoSize = true;
             this.chkFP.Location = new System.Drawing.Point(748, 204);
-            this.chkFP.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.chkFP.Margin = new System.Windows.Forms.Padding(4);
             this.chkFP.Name = "chkFP";
             this.chkFP.Size = new System.Drawing.Size(18, 17);
             this.chkFP.TabIndex = 86;
@@ -683,7 +684,7 @@
             this.txtDescuento.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtDescuento.ForeColor = System.Drawing.Color.White;
             this.txtDescuento.Location = new System.Drawing.Point(145, 199);
-            this.txtDescuento.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtDescuento.Margin = new System.Windows.Forms.Padding(4);
             this.txtDescuento.Name = "txtDescuento";
             this.txtDescuento.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.txtDescuento.Size = new System.Drawing.Size(133, 22);
@@ -760,7 +761,7 @@
             this.Controls.Add(this.lblFactura);
             this.Controls.Add(this.bunifuGradientPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "registrarRefactura";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Registrar Refactura";
