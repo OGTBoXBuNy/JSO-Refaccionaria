@@ -425,5 +425,19 @@ namespace Refracciones.Forms
         {
 
         }
+
+        private void chkSF_CheckedChanged(object sender, EventArgs e)
+        {
+            if (chkSF.Checked == true)
+            {
+                txtCve_Factura.Enabled = false;
+                txtCve_Factura.Text = "S F " + oper.TotalFacturaSF();
+            }
+            else
+            {
+                txtCve_Factura.Enabled = true;
+                txtCve_Factura.Text = string.Empty;
+            }
+        }
     }
 }

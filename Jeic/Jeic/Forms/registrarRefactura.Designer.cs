@@ -81,6 +81,8 @@
             this.lblDescuento = new System.Windows.Forms.Label();
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.moverFormulario = new Bunifu.Framework.UI.BunifuDragControl(this.components);
+            this.lblSF = new System.Windows.Forms.Label();
+            this.chkSF = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorP)).BeginInit();
             this.bunifuGradientPanel1.SuspendLayout();
@@ -100,8 +102,7 @@
             this.cmbEstadoFactura.Items.AddRange(new object[] {
             "PENDIENTE",
             "PAGADA",
-            "CANCELADA",
-            "SIN FACTURAR"});
+            "CANCELADA"});
             this.cmbEstadoFactura.Location = new System.Drawing.Point(184, 432);
             this.cmbEstadoFactura.Margin = new System.Windows.Forms.Padding(4);
             this.cmbEstadoFactura.Name = "cmbEstadoFactura";
@@ -572,6 +573,8 @@
             this.bunifuGradientPanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
             this.bunifuGradientPanel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuGradientPanel1.BackgroundImage")));
             this.bunifuGradientPanel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.bunifuGradientPanel1.Controls.Add(this.lblSF);
+            this.bunifuGradientPanel1.Controls.Add(this.chkSF);
             this.bunifuGradientPanel1.Controls.Add(this.chkFP);
             this.bunifuGradientPanel1.Controls.Add(this.lblcvePedidoidentity);
             this.bunifuGradientPanel1.Controls.Add(this.lblPieza);
@@ -716,6 +719,29 @@
             this.moverFormulario.TargetControl = this.bunifuGradientPanel1;
             this.moverFormulario.Vertical = true;
             // 
+            // lblSF
+            // 
+            this.lblSF.AutoSize = true;
+            this.lblSF.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(46)))), ((int)(((byte)(69)))));
+            this.lblSF.ForeColor = System.Drawing.Color.White;
+            this.lblSF.Location = new System.Drawing.Point(32, 90);
+            this.lblSF.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblSF.Name = "lblSF";
+            this.lblSF.Size = new System.Drawing.Size(27, 16);
+            this.lblSF.TabIndex = 89;
+            this.lblSF.Text = "S F";
+            // 
+            // chkSF
+            // 
+            this.chkSF.AutoSize = true;
+            this.chkSF.Location = new System.Drawing.Point(67, 91);
+            this.chkSF.Margin = new System.Windows.Forms.Padding(4);
+            this.chkSF.Name = "chkSF";
+            this.chkSF.Size = new System.Drawing.Size(18, 17);
+            this.chkSF.TabIndex = 88;
+            this.chkSF.UseVisualStyleBackColor = true;
+            this.chkSF.CheckedChanged += new System.EventHandler(this.chkSF_CheckedChanged);
+            // 
             // registrarRefactura
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -830,5 +856,7 @@
         public System.Windows.Forms.Label lblcvePedidoidentity;
         public System.Windows.Forms.TextBox txtFacturasinIVA;
         private System.Windows.Forms.CheckBox chkFP;
+        private System.Windows.Forms.Label lblSF;
+        private System.Windows.Forms.CheckBox chkSF;
     }
 }

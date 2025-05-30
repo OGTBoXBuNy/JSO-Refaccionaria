@@ -440,5 +440,19 @@ namespace Refracciones.Forms
                 dtpFechaPago.Enabled = false;
             }
         }
+
+        private void chkSF_CheckedChanged(object sender, EventArgs e)
+        {
+            if (chkSF.Checked == true)
+            {
+                txtCve_Factura.Enabled = false;
+                txtCve_Factura.Text = "S F " + factura.TotalFacturaSF();
+            }
+            else
+            {
+                txtCve_Factura.Enabled = true;
+                txtCve_Factura.Text = string.Empty;
+            }
+        }
     }
 }

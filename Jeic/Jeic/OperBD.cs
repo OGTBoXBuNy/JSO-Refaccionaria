@@ -2586,7 +2586,13 @@ namespace Refracciones
                         if (int.TryParse(Lector["FACTURA ACTUAL"].ToString(), out temp))
                         { sl.SetCellValue("AJ" + celdaContenido, Int32.Parse(Lector["FACTURA ACTUAL"].ToString())); }
                         else
-                        { sl.SetCellValue("AJ" + celdaContenido, Lector["FACTURA ACTUAL"].ToString()); }
+                        { 
+                            if(Lector["FACTURA ACTUAL"].ToString().Contains("S F"))
+                                sl.SetCellValue("AJ" + celdaContenido, "S F");
+                            else
+                                sl.SetCellValue("AJ" + celdaContenido, Lector["FACTURA ACTUAL"].ToString()); 
+
+                        }
                         if (int.TryParse(Lector["FACTURA ANTERIOR"].ToString(), out temp))
                         { sl.SetCellValue("AK" + celdaContenido, Int32.Parse(Lector["FACTURA ANTERIOR"].ToString())); }
                         else
@@ -3816,6 +3822,20 @@ namespace Refracciones
             {
                 nuevaConexion.Open();
                 Comando = new SqlCommand("SELECT COUNT(*) FROM SINIESTRO", nuevaConexion);
+                count = (int)Comando.ExecuteScalar();
+                nuevaConexion.Close();
+            }
+            return count + 1;
+        }
+
+        //Se ocupará al momento de querer agregar S F al num de factura
+        public int TotalFacturaSF()
+        {
+            int count = 0;
+            using (SqlConnection nuevaConexion = Conexion.conexion())
+            {
+                nuevaConexion.Open();
+                Comando = new SqlCommand("SELECT COUNT(*) FROM FACTURA WHERE cve_factura LIKE 'S F%';", nuevaConexion);
                 count = (int)Comando.ExecuteScalar();
                 nuevaConexion.Close();
             }

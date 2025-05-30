@@ -65,7 +65,7 @@
             // 
             this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.splitContainer1.Location = new System.Drawing.Point(0, 0);
-            this.splitContainer1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.splitContainer1.Margin = new System.Windows.Forms.Padding(4);
             this.splitContainer1.Name = "splitContainer1";
             this.splitContainer1.Orientation = System.Windows.Forms.Orientation.Horizontal;
             // 
@@ -99,7 +99,7 @@
             this.bunifuGradientPanel1.GradientTopLeft = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
             this.bunifuGradientPanel1.GradientTopRight = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
             this.bunifuGradientPanel1.Location = new System.Drawing.Point(0, 0);
-            this.bunifuGradientPanel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bunifuGradientPanel1.Margin = new System.Windows.Forms.Padding(4);
             this.bunifuGradientPanel1.Name = "bunifuGradientPanel1";
             this.bunifuGradientPanel1.Quality = 10;
             this.bunifuGradientPanel1.Size = new System.Drawing.Size(661, 479);
@@ -130,10 +130,9 @@
             this.cmbEstadoFactura.Items.AddRange(new object[] {
             "PENDIENTE",
             "PAGADA",
-            "CANCELADA",
-            "SIN FACTURAR"});
+            "CANCELADA"});
             this.cmbEstadoFactura.Location = new System.Drawing.Point(472, 31);
-            this.cmbEstadoFactura.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cmbEstadoFactura.Margin = new System.Windows.Forms.Padding(4);
             this.cmbEstadoFactura.Name = "cmbEstadoFactura";
             this.cmbEstadoFactura.Size = new System.Drawing.Size(160, 24);
             this.cmbEstadoFactura.TabIndex = 80;
@@ -145,7 +144,7 @@
             this.txtFactura.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtFactura.ForeColor = System.Drawing.Color.White;
             this.txtFactura.Location = new System.Drawing.Point(163, 32);
-            this.txtFactura.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtFactura.Margin = new System.Windows.Forms.Padding(4);
             this.txtFactura.Name = "txtFactura";
             this.txtFactura.Size = new System.Drawing.Size(133, 22);
             this.txtFactura.TabIndex = 0;
@@ -187,7 +186,7 @@
             this.PanelFecha.Controls.Add(this.label4);
             this.PanelFecha.ForeColor = System.Drawing.Color.White;
             this.PanelFecha.Location = new System.Drawing.Point(93, 68);
-            this.PanelFecha.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.PanelFecha.Margin = new System.Windows.Forms.Padding(4);
             this.PanelFecha.Name = "PanelFecha";
             this.PanelFecha.Size = new System.Drawing.Size(475, 80);
             this.PanelFecha.TabIndex = 78;
@@ -197,7 +196,7 @@
             this.Fecha_in.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Fecha_in.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.Fecha_in.Location = new System.Drawing.Point(32, 34);
-            this.Fecha_in.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Fecha_in.Margin = new System.Windows.Forms.Padding(4);
             this.Fecha_in.Name = "Fecha_in";
             this.Fecha_in.Size = new System.Drawing.Size(169, 23);
             this.Fecha_in.TabIndex = 5;
@@ -219,7 +218,7 @@
             this.Fecha_Fin.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Fecha_Fin.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.Fecha_Fin.Location = new System.Drawing.Point(307, 34);
-            this.Fecha_Fin.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Fecha_Fin.Margin = new System.Windows.Forms.Padding(4);
             this.Fecha_Fin.Name = "Fecha_Fin";
             this.Fecha_Fin.Size = new System.Drawing.Size(148, 23);
             this.Fecha_Fin.TabIndex = 8;
@@ -282,7 +281,7 @@
             this.dgvFacturas.EnableHeadersVisualStyles = false;
             this.dgvFacturas.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(51)))), ((int)(((byte)(65)))));
             this.dgvFacturas.Location = new System.Drawing.Point(0, 0);
-            this.dgvFacturas.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dgvFacturas.Margin = new System.Windows.Forms.Padding(4);
             this.dgvFacturas.Name = "dgvFacturas";
             this.dgvFacturas.ReadOnly = true;
             this.dgvFacturas.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
@@ -327,7 +326,7 @@
             this.ClientSize = new System.Drawing.Size(661, 482);
             this.Controls.Add(this.splitContainer1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "buscarFacturas";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Buscar Facturas";
