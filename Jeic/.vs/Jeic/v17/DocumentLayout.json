@@ -1,12 +1,54 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\boxbu\\source\\repos\\Axdrox\\proyectoJeic\\Jeic\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{B67C3104-50DA-4D29-A490-80181AED493C}|Jeic\\Jeic.csproj|c:\\users\\boxbu\\source\\repos\\axdrox\\proyectojeic\\jeic\\jeic\\forms\\busqueda.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B67C3104-50DA-4D29-A490-80181AED493C}|Jeic\\Jeic.csproj|solutionrelative:jeic\\forms\\busqueda.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B67C3104-50DA-4D29-A490-80181AED493C}|Jeic\\Jeic.csproj|c:\\users\\boxbu\\source\\repos\\axdrox\\proyectojeic\\jeic\\jeic\\forms\\pedido.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B67C3104-50DA-4D29-A490-80181AED493C}|Jeic\\Jeic.csproj|solutionrelative:jeic\\forms\\pedido.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": []
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Busqueda.cs",
+              "DocumentMoniker": "C:\\Users\\boxbu\\source\\repos\\Axdrox\\proyectoJeic\\Jeic\\Jeic\\Forms\\Busqueda.cs",
+              "RelativeDocumentMoniker": "Jeic\\Forms\\Busqueda.cs",
+              "ToolTip": "C:\\Users\\boxbu\\source\\repos\\Axdrox\\proyectoJeic\\Jeic\\Jeic\\Forms\\Busqueda.cs",
+              "RelativeToolTip": "Jeic\\Forms\\Busqueda.cs",
+              "ViewState": "AgIAAIIAAAAAAAAAAAAAAI4AAACVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-01T12:43:36.279Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Pedido.cs",
+              "DocumentMoniker": "C:\\Users\\boxbu\\source\\repos\\Axdrox\\proyectoJeic\\Jeic\\Jeic\\Forms\\Pedido.cs",
+              "RelativeDocumentMoniker": "Jeic\\Forms\\Pedido.cs",
+              "ToolTip": "C:\\Users\\boxbu\\source\\repos\\Axdrox\\proyectoJeic\\Jeic\\Jeic\\Forms\\Pedido.cs",
+              "RelativeToolTip": "Jeic\\Forms\\Pedido.cs",
+              "ViewState": "AgIAAIkDAAAAAAAAAAD4v44DAABRAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-12T18:11:26.499Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
     }
   ]
 }
