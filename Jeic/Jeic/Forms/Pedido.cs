@@ -58,7 +58,7 @@ namespace Refracciones.Forms
             set { lblAnio.Text = value; }
         }
 
-        private void columnaCombobox()
+        private void columnaCombobox(string usuario)
         {
             //Agregando combobox en DGV
             var comboboxDgv = new DataGridViewComboBoxColumn();
@@ -66,10 +66,12 @@ namespace Refracciones.Forms
             comboboxDgv.HeaderText = "Estado";
             comboboxDgv.Name = "dataGridViewStatusCombobox";
             comboboxDgv.DataPropertyName = "Estado";
-            comboboxDgv.DataSource = operacion.EstadoSiniestro().Tables[0].DefaultView;
+            comboboxDgv.DataSource = operacion.EstadoSiniestro(usuario).Tables[0].DefaultView;
             comboboxDgv.ValueMember = "cve_estado";
             comboboxDgv.DisplayMember = "estado";
             comboboxDgv.AutoComplete = true;
+            //QUITAR EL ESTADO DE REEMBOLSO SI NO ES DANIEL FREGOSO (Daniel.71) o  Israel (JEICI) 25/08/2025 Israel 
+            
             this.dgvPedido.Columns.Add(comboboxDgv);
         }
 
@@ -78,7 +80,9 @@ namespace Refracciones.Forms
 
             dsPiezas = operacion.NombrePiezasRegistrados(1);
             //Agregar columna estado combobox a DGV
-            columnaCombobox();
+            columnaCombobox(lblUsuario.Text.Substring(9));
+            
+            
 
             if (actualizar == 1)
             {

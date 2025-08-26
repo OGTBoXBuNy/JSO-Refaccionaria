@@ -3,12 +3,48 @@
   "WorkspaceRootPath": "C:\\Users\\boxbu\\source\\repos\\Axdrox\\proyectoJeic\\Jeic\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{B67C3104-50DA-4D29-A490-80181AED493C}|Jeic\\Jeic.csproj|c:\\users\\boxbu\\source\\repos\\axdrox\\proyectojeic\\jeic\\jeic\\forms\\busqueda.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B67C3104-50DA-4D29-A490-80181AED493C}|Jeic\\Jeic.csproj|solutionrelative:jeic\\forms\\busqueda.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{B67C3104-50DA-4D29-A490-80181AED493C}|Jeic\\Jeic.csproj|c:\\users\\boxbu\\source\\repos\\axdrox\\proyectojeic\\jeic\\jeic\\forms\\iniciosesion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{B67C3104-50DA-4D29-A490-80181AED493C}|Jeic\\Jeic.csproj|solutionrelative:jeic\\forms\\iniciosesion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{B67C3104-50DA-4D29-A490-80181AED493C}|Jeic\\Jeic.csproj|c:\\users\\boxbu\\source\\repos\\axdrox\\proyectojeic\\jeic\\jeic\\forms\\pedido.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B67C3104-50DA-4D29-A490-80181AED493C}|Jeic\\Jeic.csproj|solutionrelative:jeic\\forms\\pedido.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B67C3104-50DA-4D29-A490-80181AED493C}|Jeic\\Jeic.csproj|c:\\users\\boxbu\\source\\repos\\axdrox\\proyectojeic\\jeic\\jeic\\operbd.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B67C3104-50DA-4D29-A490-80181AED493C}|Jeic\\Jeic.csproj|solutionrelative:jeic\\operbd.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B67C3104-50DA-4D29-A490-80181AED493C}|Jeic\\Jeic.csproj|C:\\Users\\boxbu\\source\\repos\\Axdrox\\proyectoJeic\\Jeic\\jeic\\forms\\pedido.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{B67C3104-50DA-4D29-A490-80181AED493C}|Jeic\\Jeic.csproj|solutionrelative:jeic\\forms\\pedido.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B67C3104-50DA-4D29-A490-80181AED493C}|Jeic\\Jeic.csproj|c:\\users\\boxbu\\source\\repos\\axdrox\\proyectojeic\\jeic\\jeic\\forms\\exportarexcel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B67C3104-50DA-4D29-A490-80181AED493C}|Jeic\\Jeic.csproj|solutionrelative:jeic\\forms\\exportarexcel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B67C3104-50DA-4D29-A490-80181AED493C}|Jeic\\Jeic.csproj|c:\\users\\boxbu\\source\\repos\\axdrox\\proyectojeic\\jeic\\jeic\\forms\\exportarexcel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{B67C3104-50DA-4D29-A490-80181AED493C}|Jeic\\Jeic.csproj|solutionrelative:jeic\\forms\\exportarexcel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B67C3104-50DA-4D29-A490-80181AED493C}|Jeic\\Jeic.csproj|c:\\users\\boxbu\\source\\repos\\axdrox\\proyectojeic\\jeic\\jeic\\forms\\bajasmultiples.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B67C3104-50DA-4D29-A490-80181AED493C}|Jeic\\Jeic.csproj|solutionrelative:jeic\\forms\\bajasmultiples.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B67C3104-50DA-4D29-A490-80181AED493C}|Jeic\\Jeic.csproj|c:\\users\\boxbu\\source\\repos\\axdrox\\proyectojeic\\jeic\\jeic\\forms\\devolucion-entrega.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B67C3104-50DA-4D29-A490-80181AED493C}|Jeic\\Jeic.csproj|solutionrelative:jeic\\forms\\devolucion-entrega.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B67C3104-50DA-4D29-A490-80181AED493C}|Jeic\\Jeic.csproj|c:\\users\\boxbu\\source\\repos\\axdrox\\proyectojeic\\jeic\\jeic\\bajasmultiplessincodbarras.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B67C3104-50DA-4D29-A490-80181AED493C}|Jeic\\Jeic.csproj|solutionrelative:jeic\\bajasmultiplessincodbarras.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B67C3104-50DA-4D29-A490-80181AED493C}|Jeic\\Jeic.csproj|C:\\Users\\boxbu\\source\\repos\\Axdrox\\proyectoJeic\\Jeic\\jeic\\forms\\log.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{B67C3104-50DA-4D29-A490-80181AED493C}|Jeic\\Jeic.csproj|solutionrelative:jeic\\forms\\log.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B67C3104-50DA-4D29-A490-80181AED493C}|Jeic\\Jeic.csproj|C:\\Users\\boxbu\\source\\repos\\Axdrox\\proyectoJeic\\Jeic\\jeic\\forms\\busqueda.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B67C3104-50DA-4D29-A490-80181AED493C}|Jeic\\Jeic.csproj|solutionrelative:jeic\\forms\\busqueda.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -23,15 +59,91 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Busqueda.cs",
-              "DocumentMoniker": "C:\\Users\\boxbu\\source\\repos\\Axdrox\\proyectoJeic\\Jeic\\Jeic\\Forms\\Busqueda.cs",
-              "RelativeDocumentMoniker": "Jeic\\Forms\\Busqueda.cs",
-              "ToolTip": "C:\\Users\\boxbu\\source\\repos\\Axdrox\\proyectoJeic\\Jeic\\Jeic\\Forms\\Busqueda.cs",
-              "RelativeToolTip": "Jeic\\Forms\\Busqueda.cs",
-              "ViewState": "AgIAAIIAAAAAAAAAAAAAAI4AAACVAAAAAAAAAA==",
+              "Title": "InicioSesion.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\boxbu\\source\\repos\\Axdrox\\proyectoJeic\\Jeic\\Jeic\\Forms\\InicioSesion.cs",
+              "RelativeDocumentMoniker": "Jeic\\Forms\\InicioSesion.cs",
+              "ToolTip": "C:\\Users\\boxbu\\source\\repos\\Axdrox\\proyectoJeic\\Jeic\\Jeic\\Forms\\InicioSesion.cs [Design]",
+              "RelativeToolTip": "Jeic\\Forms\\InicioSesion.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-01T12:43:36.279Z",
+              "WhenOpened": "2025-08-26T04:13:37.982Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "OperBD.cs",
+              "DocumentMoniker": "C:\\Users\\boxbu\\source\\repos\\Axdrox\\proyectoJeic\\Jeic\\Jeic\\OperBD.cs",
+              "RelativeDocumentMoniker": "Jeic\\OperBD.cs",
+              "ToolTip": "C:\\Users\\boxbu\\source\\repos\\Axdrox\\proyectoJeic\\Jeic\\Jeic\\OperBD.cs",
+              "RelativeToolTip": "Jeic\\OperBD.cs",
+              "ViewState": "AgIAAAwPAAAAAAAAAAAUwCYPAAB/AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-26T02:20:09.982Z",
               "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Devolucion-Entrega.cs",
+              "DocumentMoniker": "C:\\Users\\boxbu\\source\\repos\\Axdrox\\proyectoJeic\\Jeic\\Jeic\\Forms\\Devolucion-Entrega.cs",
+              "RelativeDocumentMoniker": "Jeic\\Forms\\Devolucion-Entrega.cs",
+              "ToolTip": "C:\\Users\\boxbu\\source\\repos\\Axdrox\\proyectoJeic\\Jeic\\Jeic\\Forms\\Devolucion-Entrega.cs",
+              "RelativeToolTip": "Jeic\\Forms\\Devolucion-Entrega.cs",
+              "ViewState": "AgIAAPEAAAAAAAAAAAAAAAkBAAA2AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-26T02:33:39.453Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "bajasMultiplesSinCodBarras.cs",
+              "DocumentMoniker": "C:\\Users\\boxbu\\source\\repos\\Axdrox\\proyectoJeic\\Jeic\\Jeic\\bajasMultiplesSinCodBarras.cs",
+              "RelativeDocumentMoniker": "Jeic\\bajasMultiplesSinCodBarras.cs",
+              "ToolTip": "C:\\Users\\boxbu\\source\\repos\\Axdrox\\proyectoJeic\\Jeic\\Jeic\\bajasMultiplesSinCodBarras.cs",
+              "RelativeToolTip": "Jeic\\bajasMultiplesSinCodBarras.cs",
+              "ViewState": "AgIAADwAAAAAAAAAAAAAAF0AAABiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-26T02:33:32.721Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "bajasMultiples.cs",
+              "DocumentMoniker": "C:\\Users\\boxbu\\source\\repos\\Axdrox\\proyectoJeic\\Jeic\\Jeic\\Forms\\bajasMultiples.cs",
+              "RelativeDocumentMoniker": "Jeic\\Forms\\bajasMultiples.cs",
+              "ToolTip": "C:\\Users\\boxbu\\source\\repos\\Axdrox\\proyectoJeic\\Jeic\\Jeic\\Forms\\bajasMultiples.cs",
+              "RelativeToolTip": "Jeic\\Forms\\bajasMultiples.cs",
+              "ViewState": "AgIAAKkAAAAAAAAAAAAAALsAAABeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-26T02:33:24.723Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "exportarExcel.cs",
+              "DocumentMoniker": "C:\\Users\\boxbu\\source\\repos\\Axdrox\\proyectoJeic\\Jeic\\Jeic\\Forms\\exportarExcel.cs",
+              "RelativeDocumentMoniker": "Jeic\\Forms\\exportarExcel.cs",
+              "ToolTip": "C:\\Users\\boxbu\\source\\repos\\Axdrox\\proyectoJeic\\Jeic\\Jeic\\Forms\\exportarExcel.cs",
+              "RelativeToolTip": "Jeic\\Forms\\exportarExcel.cs",
+              "ViewState": "AgIAABUAAAAAAAAAAAAEwCsAAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-26T02:20:01.685Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "exportarExcel.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\boxbu\\source\\repos\\Axdrox\\proyectoJeic\\Jeic\\Jeic\\Forms\\exportarExcel.cs",
+              "RelativeDocumentMoniker": "Jeic\\Forms\\exportarExcel.cs",
+              "ToolTip": "C:\\Users\\boxbu\\source\\repos\\Axdrox\\proyectoJeic\\Jeic\\Jeic\\Forms\\exportarExcel.cs [Design]",
+              "RelativeToolTip": "Jeic\\Forms\\exportarExcel.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-26T02:19:56.969Z",
+              "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
@@ -41,10 +153,45 @@
               "RelativeDocumentMoniker": "Jeic\\Forms\\Pedido.cs",
               "ToolTip": "C:\\Users\\boxbu\\source\\repos\\Axdrox\\proyectoJeic\\Jeic\\Jeic\\Forms\\Pedido.cs",
               "RelativeToolTip": "Jeic\\Forms\\Pedido.cs",
-              "ViewState": "AgIAAIkDAAAAAAAAAAD4v44DAABRAAAAAAAAAA==",
+              "ViewState": "AgIAADoAAAAAAAAAAAAAAEQAAAA+AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-12T18:11:26.499Z",
               "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Pedido.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\boxbu\\source\\repos\\Axdrox\\proyectoJeic\\Jeic\\Jeic\\Forms\\Pedido.cs",
+              "RelativeDocumentMoniker": "Jeic\\Forms\\Pedido.cs",
+              "ToolTip": "C:\\Users\\boxbu\\source\\repos\\Axdrox\\proyectoJeic\\Jeic\\Jeic\\Forms\\Pedido.cs [Design]",
+              "RelativeToolTip": "Jeic\\Forms\\Pedido.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-20T17:32:33.778Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Log.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\boxbu\\source\\repos\\Axdrox\\proyectoJeic\\Jeic\\Jeic\\Forms\\Log.cs",
+              "RelativeDocumentMoniker": "Jeic\\Forms\\Log.cs",
+              "ToolTip": "C:\\Users\\boxbu\\source\\repos\\Axdrox\\proyectoJeic\\Jeic\\Jeic\\Forms\\Log.cs [Design]",
+              "RelativeToolTip": "Jeic\\Forms\\Log.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-03T21:47:16.768Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Busqueda.cs",
+              "DocumentMoniker": "C:\\Users\\boxbu\\source\\repos\\Axdrox\\proyectoJeic\\Jeic\\Jeic\\Forms\\Busqueda.cs",
+              "RelativeDocumentMoniker": "Jeic\\Forms\\Busqueda.cs",
+              "ToolTip": "C:\\Users\\boxbu\\source\\repos\\Axdrox\\proyectoJeic\\Jeic\\Jeic\\Forms\\Busqueda.cs",
+              "RelativeToolTip": "Jeic\\Forms\\Busqueda.cs",
+              "ViewState": "AgIAAIIAAAAAAAAAAAAAAI4AAACVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-01T12:43:36.279Z"
             }
           ]
         }
