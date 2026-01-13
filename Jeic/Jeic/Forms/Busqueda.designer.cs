@@ -41,6 +41,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.Fecha_in = new System.Windows.Forms.DateTimePicker();
             this.Panelinfo = new System.Windows.Forms.Panel();
+            this.btnEliminarCveGuia = new System.Windows.Forms.Button();
             this.txtCvePedido = new System.Windows.Forms.TextBox();
             this.txtCveSiniestro = new System.Windows.Forms.TextBox();
             this.btnEliminarFechaBaja = new System.Windows.Forms.Button();
@@ -200,6 +201,7 @@
             // 
             this.Panelinfo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(45)))), ((int)(((byte)(59)))));
             this.Panelinfo.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.Panelinfo.Controls.Add(this.btnEliminarCveGuia);
             this.Panelinfo.Controls.Add(this.txtCvePedido);
             this.Panelinfo.Controls.Add(this.txtCveSiniestro);
             this.Panelinfo.Controls.Add(this.btnEliminarFechaBaja);
@@ -249,6 +251,24 @@
             this.Panelinfo.Name = "Panelinfo";
             this.Panelinfo.Size = new System.Drawing.Size(425, 589);
             this.Panelinfo.TabIndex = 6;
+            // 
+            // btnEliminarCveGuia
+            // 
+            this.btnEliminarCveGuia.BackColor = System.Drawing.Color.Yellow;
+            this.btnEliminarCveGuia.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnEliminarCveGuia.Enabled = false;
+            this.btnEliminarCveGuia.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnEliminarCveGuia.Font = new System.Drawing.Font("Calibri", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEliminarCveGuia.ForeColor = System.Drawing.Color.Black;
+            this.btnEliminarCveGuia.Location = new System.Drawing.Point(248, 435);
+            this.btnEliminarCveGuia.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnEliminarCveGuia.Name = "btnEliminarCveGuia";
+            this.btnEliminarCveGuia.Size = new System.Drawing.Size(132, 23);
+            this.btnEliminarCveGuia.TabIndex = 50;
+            this.btnEliminarCveGuia.Text = "Eliminar # Guía";
+            this.btnEliminarCveGuia.UseVisualStyleBackColor = false;
+            this.btnEliminarCveGuia.Visible = false;
+            this.btnEliminarCveGuia.Click += new System.EventHandler(this.btnEliminarCveGuia_Click);
             // 
             // txtCvePedido
             // 
@@ -1250,5 +1270,6 @@
         private System.Windows.Forms.TextBox txtCveSiniestro;
         private System.Windows.Forms.TextBox txtCvePedido;
         private System.Windows.Forms.ToolStripMenuItem registroBajas2ToolStripMenuItem;
+        private System.Windows.Forms.Button btnEliminarCveGuia;
     }
 }

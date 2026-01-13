@@ -137,6 +137,9 @@ namespace Refracciones.Forms
             if (permisos.Contains("eliminarFechaBaja"))
                 btnEliminarFechaBaja.Visible = true;
 
+            if (permisos.Contains("eliminarClaveGuia"))
+                btnEliminarCveGuia.Visible = true;
+
             if (permisos.Contains("eliminarFechaEntrega") && (userName == "Daniel.71" || userName == "JEICJ" || userName == "JEICI" || userName == "Brandon.01"))//Se agergo a Brandon.01 a peticion de Israel
                 btnEliminarFechaEntrega.Visible = true;
 
@@ -371,6 +374,7 @@ namespace Refracciones.Forms
 
                 btnEliminarFechaBaja.Enabled = true;
                 btnEliminarFechaEntrega.Enabled = true;
+                btnEliminarCveGuia.Enabled = true;
                 string EstadoFact = "";
                 OperBD llenardatos = new OperBD();
                 cvePedido = dvgPedido.Rows[fila].Cells[10].Value.ToString();
@@ -516,6 +520,17 @@ namespace Refracciones.Forms
             bajasMultiplesSinCodBarras regBajMul = new bajasMultiplesSinCodBarras();
             regBajMul.lblUsuario.Text = Usuario.Text;
             regBajMul.ShowDialog();
+        }
+
+        private void btnEliminarCveGuia_Click(object sender, EventArgs e)
+        {
+            MessageBOX mes = new MessageBOX(4, "¿Esta seguro de eliminar la Clave de Guía");
+            if (mes.ShowDialog() == DialogResult.OK)
+            {
+                llenar.eliminarClaveGuia(cvePedido);
+                btnEliminarCveGuia.Enabled = false;
+                //MessageBox.Show(cvePedido);
+            }
         }
     }
 }

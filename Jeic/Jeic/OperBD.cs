@@ -7254,7 +7254,7 @@ namespace Refracciones
             {
                 using (SqlConnection nuevacon = Conexion.conexion())
                 {
-                    this.Comando = new SqlCommand(string.Format("SELECT agregarPed,modDatPed,modPrecioPed,modProvPed,elabFact,refacturar,regBajDev,revPedEntDev,genPdf,genRepven,genClaves,cambioCostEnv,cambioEst,cambioGuias,regBajas,buscarFact,eliminarFechaBaja,eliminarFechaEntrega,cambiosLog  FROM PERMISOS per INNER JOIN USUARIOS us ON per.cveAdmin = us.cve_Administrador WHERE us.usuario = '{0}';", userName), nuevacon);
+                    this.Comando = new SqlCommand(string.Format("SELECT agregarPed,modDatPed,modPrecioPed,modProvPed,elabFact,refacturar,regBajDev,revPedEntDev,genPdf,genRepven,genClaves,cambioCostEnv,cambioEst,cambioGuias,regBajas,buscarFact,eliminarFechaBaja,eliminarFechaEntrega,cambiosLog,eliminarClaveGuia  FROM PERMISOS per INNER JOIN USUARIOS us ON per.cveAdmin = us.cve_Administrador WHERE us.usuario = '{0}';", userName), nuevacon);
                     nuevacon.Open();
                     Lector = Comando.ExecuteReader();
                     while (Lector.Read()) {
@@ -7315,6 +7315,9 @@ namespace Refracciones
 
                         if (Boolean.Parse(Lector["cambiosLog"].ToString()))
                             permisos.Add("cambiosLog");
+
+                        if (Boolean.Parse(Lector["eliminarClaveGuia"].ToString()))
+                            permisos.Add("eliminarClaveGuia");
 
                     }
                     Busqueda.permisos = permisos;
@@ -7981,6 +7984,31 @@ namespace Refracciones
             catch (Exception EX)
             {
                 MessageBox.Show("Error al eliminar fecha entrega: " + EX.Message);
+            }
+        }
+
+        //ELIMIANR LA CLAVE DE GUIA DE UN PEDIDO
+        public void eliminarClaveGuia(string clavePedido)
+        {
+            try
+            {
+                using (SqlConnection nuevaConexion = Conexion.conexion())
+                {
+                    nuevaConexion.Open();
+
+                    //SE ACTUALIZAN LOS DATOS SIGUIENTES
+                    SqlCommand cmd = new SqlCommand("UPDATE p SET p.cve_guia = '-' FROM PEDIDO p  WHERE p.cve_pedido = @cve_pedidoIdentity;", nuevaConexion);
+                    cmd.Parameters.Add("@cve_pedidoIdentity", SqlDbType.Int);
+                    cmd.Parameters["@cve_pedidoIdentity"].Value = clavePedido;
+                    cmd.ExecuteNonQuery();
+
+
+                    nuevaConexion.Close();
+                }
+            }
+            catch (Exception EX)
+            {
+                MessageBox.Show("Error al eliminar clave de guia: " + EX.Message);
             }
         }
         //----------------------------------REGISTAR CAMBIO LOG ----------------------------------------------
