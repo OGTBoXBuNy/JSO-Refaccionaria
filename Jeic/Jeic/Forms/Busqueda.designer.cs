@@ -260,12 +260,12 @@
             this.btnEliminarCveGuia.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnEliminarCveGuia.Font = new System.Drawing.Font("Calibri", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEliminarCveGuia.ForeColor = System.Drawing.Color.Black;
-            this.btnEliminarCveGuia.Location = new System.Drawing.Point(248, 435);
+            this.btnEliminarCveGuia.Location = new System.Drawing.Point(352, 437);
             this.btnEliminarCveGuia.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnEliminarCveGuia.Name = "btnEliminarCveGuia";
-            this.btnEliminarCveGuia.Size = new System.Drawing.Size(132, 23);
+            this.btnEliminarCveGuia.Size = new System.Drawing.Size(63, 23);
             this.btnEliminarCveGuia.TabIndex = 50;
-            this.btnEliminarCveGuia.Text = "Eliminar # Guía";
+            this.btnEliminarCveGuia.Text = "Eliminar";
             this.btnEliminarCveGuia.UseVisualStyleBackColor = false;
             this.btnEliminarCveGuia.Visible = false;
             this.btnEliminarCveGuia.Click += new System.EventHandler(this.btnEliminarCveGuia_Click);
@@ -359,7 +359,8 @@
             this.txtCveGuia.Multiline = true;
             this.txtCveGuia.Name = "txtCveGuia";
             this.txtCveGuia.ReadOnly = true;
-            this.txtCveGuia.Size = new System.Drawing.Size(402, 31);
+            this.txtCveGuia.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.txtCveGuia.Size = new System.Drawing.Size(345, 31);
             this.txtCveGuia.TabIndex = 18;
             this.txtCveGuia.Text = "Cve guía:";
             // 
