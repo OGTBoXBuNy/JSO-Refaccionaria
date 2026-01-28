@@ -38,6 +38,7 @@
             this.btnGenerar = new System.Windows.Forms.Button();
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.bunifuGradientPanel1 = new Bunifu.Framework.UI.BunifuGradientPanel();
+            this.lblUsuario = new System.Windows.Forms.Label();
             this.rbtnOpcion2 = new System.Windows.Forms.RadioButton();
             this.rbtnOpcion1 = new System.Windows.Forms.RadioButton();
             this.chkvalesLiberados = new System.Windows.Forms.CheckBox();
@@ -48,7 +49,7 @@
             this.pbClose = new System.Windows.Forms.PictureBox();
             this.errorP = new System.Windows.Forms.ErrorProvider(this.components);
             this.moverFormulario = new Bunifu.Framework.UI.BunifuDragControl(this.components);
-            this.lblUsuario = new System.Windows.Forms.Label();
+            this.rbtnOpcion3 = new System.Windows.Forms.RadioButton();
             this.bunifuGradientPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbMinimize)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbClose)).BeginInit();
@@ -138,6 +139,7 @@
             this.bunifuGradientPanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
             this.bunifuGradientPanel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuGradientPanel1.BackgroundImage")));
             this.bunifuGradientPanel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.bunifuGradientPanel1.Controls.Add(this.rbtnOpcion3);
             this.bunifuGradientPanel1.Controls.Add(this.lblUsuario);
             this.bunifuGradientPanel1.Controls.Add(this.rbtnOpcion2);
             this.bunifuGradientPanel1.Controls.Add(this.rbtnOpcion1);
@@ -158,6 +160,15 @@
             this.bunifuGradientPanel1.Quality = 10;
             this.bunifuGradientPanel1.Size = new System.Drawing.Size(387, 251);
             this.bunifuGradientPanel1.TabIndex = 6;
+            // 
+            // lblUsuario
+            // 
+            this.lblUsuario.AutoSize = true;
+            this.lblUsuario.Location = new System.Drawing.Point(3, 11);
+            this.lblUsuario.Name = "lblUsuario";
+            this.lblUsuario.Size = new System.Drawing.Size(0, 16);
+            this.lblUsuario.TabIndex = 86;
+            this.lblUsuario.Visible = false;
             // 
             // rbtnOpcion2
             // 
@@ -274,14 +285,18 @@
             this.moverFormulario.TargetControl = this.bunifuGradientPanel1;
             this.moverFormulario.Vertical = true;
             // 
-            // lblUsuario
+            // rbtnOpcion3
             // 
-            this.lblUsuario.AutoSize = true;
-            this.lblUsuario.Location = new System.Drawing.Point(3, 11);
-            this.lblUsuario.Name = "lblUsuario";
-            this.lblUsuario.Size = new System.Drawing.Size(0, 16);
-            this.lblUsuario.TabIndex = 86;
-            this.lblUsuario.Visible = false;
+            this.rbtnOpcion3.AutoSize = true;
+            this.rbtnOpcion3.BackColor = System.Drawing.Color.Transparent;
+            this.rbtnOpcion3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold);
+            this.rbtnOpcion3.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.rbtnOpcion3.Location = new System.Drawing.Point(256, 60);
+            this.rbtnOpcion3.Name = "rbtnOpcion3";
+            this.rbtnOpcion3.Size = new System.Drawing.Size(89, 20);
+            this.rbtnOpcion3.TabIndex = 87;
+            this.rbtnOpcion3.Text = "Opción 3";
+            this.rbtnOpcion3.UseVisualStyleBackColor = false;
             // 
             // exportarExcel
             // 
@@ -333,5 +348,6 @@
         private System.Windows.Forms.RadioButton rbtnOpcion2;
         private System.Windows.Forms.RadioButton rbtnOpcion1;
         public System.Windows.Forms.Label lblUsuario;
+        private System.Windows.Forms.RadioButton rbtnOpcion3;
     }
 }

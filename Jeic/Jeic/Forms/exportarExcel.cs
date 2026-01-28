@@ -44,6 +44,8 @@ namespace Refracciones.Forms
                     Consulta.generarExcel(ruta, Fecha_inicio, Fecha_Final, decimal.Parse(txtcostoOperativo.Text, new CultureInfo("en-US")), lblcvePe.Text, valesLiberados);
                 else if (rbtnOpcion2.Checked)
                     reporteVentas.generarExcelTest(ruta, Fecha_inicio, Fecha_Final, decimal.Parse(txtcostoOperativo.Text, new CultureInfo("en-US")), lblcvePe.Text, valesLiberados);
+                else if (rbtnOpcion3.Checked)
+                    Consulta.generarExcelGPT(ruta, Fecha_inicio, Fecha_Final, decimal.Parse(txtcostoOperativo.Text, new CultureInfo("en-US")), lblcvePe.Text, valesLiberados);
                 else { }
 
                 string usuario = lblUsuario.Text;

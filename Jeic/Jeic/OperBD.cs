@@ -2948,6 +2948,386 @@ namespace Refracciones
            // }
         }
 
+        /// GENERAR REPORTE OPTIMIZADO INICIO
+
+        public void generarExcelGPT(string ruta, string fecha1, string fecha2, decimal costoOperativo, string cvePed, bool valesLiberados)
+        {
+            // ===== Helpers seguros (C# 7.3) =====
+            string S(SqlDataReader r, string col)
+            {
+                object o = r[col];
+                return (o == null || o == DBNull.Value) ? "" : o.ToString();
+            }
+
+            int I0(SqlDataReader r, string col)
+            {
+                int v;
+                return int.TryParse(S(r, col), out v) ? v : 0;
+            }
+
+            double D0(SqlDataReader r, string col)
+            {
+                double v;
+                return double.TryParse(S(r, col), NumberStyles.Any, CultureInfo.InvariantCulture, out v) ? v : 0;
+            }
+
+            DateTime? DT(SqlDataReader r, string col)
+            {
+                DateTime d;
+                return DateTime.TryParse(S(r, col), out d) ? (DateTime?)d : null;
+            }
+
+            // ===== Parse fechas =====
+            DateTime f1, f2;
+            if (!DateTime.TryParse(fecha1, out f1)) f1 = DateTime.MinValue;
+            if (!DateTime.TryParse(fecha2, out f2)) f2 = DateTime.MaxValue;
+
+            // ===== Crea plantilla =====
+            File.WriteAllBytes(ruta, Jeic.Properties.Resources.Plantilla);
+            SLDocument sl = new SLDocument(ruta);
+            sl.SetCellValue("M2", DateTime.Today.ToString("dd-MM-yyyy"));
+
+            // ===== SQL =====
+            string baseSql = @"
+SELECT
+    ven.cve_pedido AS 'PEDIDO',
+    ven.cve_siniestro AS 'SINIESTRO',
+    c.cve_nombre AS 'CLIENTE',
+    val.nombre AS 'VALUADOR',
+    t.nombre AS 'TALLER',
+    vh.modelo AS 'VHEICULO MODELO',
+    marca.marca AS 'MARCA',
+    vh.anio AS 'AÑO',
+    pro.nombre AS 'PROVEEDOR',
+    pie.nombre AS 'PIEZA',
+    ped.cve_producto AS 'CLAVE PRODUCTO',
+    ped.cantidad AS 'TOTAL DE PIEZAS',
+    ped.cve_guia AS 'GUÍA DE ENVIO',
+    opie.origen AS 'ORIGEN PIEZA',
+    por.nombre AS 'PORTAL',
+    ped.costoEnvio AS 'COSTO ENVÍO',
+    ped.costo_neto AS 'COSTO',
+    ped.precio_venta AS 'PRECIO VENTA',
+    dest.destino AS 'DESTINO',
+    vendedor.cve_vendedor AS 'NUMERO DE VENDEDOR',
+    vendedor.nombre AS 'VENDEDOR',
+    ven.fecha_asignacion AS 'FECHA DE ASIGNACIÓN',
+    ven.fecha_promesa AS 'FECHA PROMESA',
+    ent.fecha AS 'FECHA DE ENTREGA',
+    ped.pzas_entregadas AS 'PIEZAS ENTREGADAS',
+    ped.entrega_enTiempo AS 'ENTREGA EN TIEMPO',
+    ped.dias_entrega AS 'DÍAS DE ENTREGA',
+    ped.fecha_baja AS 'FECHA DE BAJA',
+    dev.fecha AS 'FECHA DEVOLUCIÓN',
+    ped.fechaRegNumGuia,
+    ped.pzas_devolucion AS 'CANTIDAD DE PIEZAS DEVUELTAS',
+    dev.penalizacion AS 'PENALIZACIÓN POR DEVOLUCIÓN',
+    ped.cve_factura AS 'FACTURA ACTUAL',
+    fact.cve_refactura AS 'FACTURA ANTERIOR',
+    fact.fecha_ingreso AS 'FECHA INGRESO FACTURA',
+    estfact.estado AS 'ESTADO DE LA FACTURA',
+    fact.fecha_revision AS 'FECHA DE REVISIÓN FACTURA',
+    fact.fecha_pago AS 'FECHA DE PAGO FACTURA',
+    ped.precio_venta AS 'FACTURA SIN IVA',
+    (ped.precio_venta * 1.16) AS 'FACTURA NETO',
+    si.comentario AS 'COMENTARIOS SINIESTRO',
+    fact.comentario AS 'COMENTARIOS FACTURA',
+    (ped.costoEnvio + ped.costo_neto) AS 'COSTO ADQUISICION',
+    (@costoOperativo) AS 'COSTO OPERATIVO',
+    (ped.gasto + ped.precio_reparacion) AS 'GASTO',
+    ven.cve_venta,
+    pie.cve_pieza,
+    ess.estado AS 'ESTADO',
+    ped.conductorMod AS 'CHOFER',
+    ped.ubicacion AS 'UBICACION',
+    ped.vale_liberado AS 'VALE LIBERADO',
+    ent.realizo AS 'REALIZO BAJA',
+
+    ISNULL(dev2.PiezasDevueltasAntesEntrega, 0) AS 'PIEZAS DEVUELTAS ANTES DE ENTREGA',
+    ISNULL(pen2.PenalizacionUltima, 0) / 100.0 AS 'PENALIZACION DEVOLUCION CALC'
+
+FROM VENTAS ven
+INNER JOIN VALUADOR val ON ven.cve_valuador = val.cve_valuador
+INNER JOIN CLIENTE c ON c.cve_nombre = val.cve_cliente
+INNER JOIN TALLER t ON ven.cve_taller = t.cve_taller
+INNER JOIN SINIESTRO si ON ven.cve_siniestro = si.cve_siniestro
+INNER JOIN VEHICULO vh ON si.cve_vehiculo = vh.cve_vehiculo
+INNER JOIN PEDIDO ped ON ven.cve_venta = ped.cve_venta
+INNER JOIN PROVEEDOR pro ON ped.cve_proveedor = pro.cve_proveedor
+INNER JOIN PIEZA pie ON ped.cve_pieza = pie.cve_pieza
+INNER JOIN ORIGEN_PIEZA opie ON ped.cve_origen = opie.cve_origen
+INNER JOIN PORTAL por ON ped.cve_portal = por.cve_portal
+INNER JOIN DESTINO dest ON ven.cve_destino = dest.cve_destino
+LEFT OUTER JOIN FACTURA fact ON ped.cve_factura = fact.cve_factura
+FULL JOIN ESTADO_FACTURA estfact ON fact.cve_estado = estfact.cve_estado
+INNER JOIN VENDEDOR vendedor ON ven.cve_vendedor = vendedor.cve_vendedor
+INNER JOIN MARCA marca ON vh.cve_marca = marca.cve_marca
+FULL JOIN ENTREGA ent ON ped.cve_entrega = ent.cve_entrega
+FULL JOIN DEVOLUCION dev ON ped.cve_devolucion = dev.cve_devolucion
+INNER JOIN Estado_Siniestro ess ON ped.estado = ess.cve_estado
+
+OUTER APPLY (
+    SELECT SUM(pn.cantidad) AS PiezasDevueltasAntesEntrega
+    FROM PENALIZACION pn
+    WHERE pn.cve_venta = ven.cve_venta AND pn.cve_pieza = pie.cve_pieza
+) dev2
+
+OUTER APPLY (
+    SELECT TOP 1 pn.porcentaje AS PenalizacionUltima
+    FROM PENALIZACION pn
+    WHERE pn.cve_venta = ven.cve_venta AND pn.cve_pieza = pie.cve_pieza
+    ORDER BY pn.cve_penalizacion DESC
+) pen2
+
+WHERE
+    ven.fecha_asignacion BETWEEN @fecha1 AND @fecha2
+    AND ven.cve_pedido LIKE @cvePed
+";
+
+            if (valesLiberados) baseSql += " AND ped.vale_liberado = 1 ";
+            baseSql += " ORDER BY ven.fecha_asignacion;";
+
+            string sqlCount = @"
+SELECT COUNT(ven.cve_venta)
+FROM VENTAS ven
+INNER JOIN PEDIDO ped ON ven.cve_venta = ped.cve_venta
+WHERE ven.fecha_asignacion BETWEEN @fecha1 AND @fecha2
+  AND ven.cve_pedido LIKE @cvePed
+";
+            if (valesLiberados) sqlCount += " AND ped.vale_liberado = 1;";
+
+            using (SqlConnection nuevaConexion = Conexion.conexion())
+            {
+                nuevaConexion.Open();
+
+                int totalRegistrosExportar = 0;
+                using (SqlCommand cmdCount = new SqlCommand(sqlCount, nuevaConexion))
+                {
+                    cmdCount.Parameters.Add("@fecha1", SqlDbType.DateTime).Value = f1;
+                    cmdCount.Parameters.Add("@fecha2", SqlDbType.DateTime).Value = f2;
+                    cmdCount.Parameters.Add("@cvePed", SqlDbType.VarChar, 50).Value = (cvePed ?? "") + "%";
+
+                    object obj = cmdCount.ExecuteScalar();
+                    totalRegistrosExportar = (obj == null || obj == DBNull.Value) ? 0 : Convert.ToInt32(obj);
+                }
+
+                MessageBox.Show(
+                    "El número de registros encontrados son: " + totalRegistrosExportar +
+                    "\nAntes de dar clic en Aceptar revisa que tu conexión a internet sea estable, para evitar error a la hora de generar",
+                    "Generar Reporte",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Warning
+                );
+
+                using (SqlCommand cmd = new SqlCommand(baseSql, nuevaConexion))
+                {
+                    cmd.CommandTimeout = 0;
+                    cmd.Parameters.Add("@fecha1", SqlDbType.DateTime).Value = f1;
+                    cmd.Parameters.Add("@fecha2", SqlDbType.DateTime).Value = f2;
+                    cmd.Parameters.Add("@costoOperativo", SqlDbType.Decimal).Value = costoOperativo;
+                    cmd.Parameters.Add("@cvePed", SqlDbType.VarChar, 50).Value = (cvePed ?? "") + "%";
+
+                    using (SqlDataReader lector = cmd.ExecuteReader(CommandBehavior.CloseConnection))
+                    {
+                        int celdaContenido = 9;
+                        double costoOperativoD = (double)costoOperativo;
+
+                        while (lector.Read())
+                        {
+                            string tempSAE = DescSAE(S(lector, "VHEICULO MODELO"), S(lector, "PIEZA"), S(lector, "MARCA"), S(lector, "AÑO"));
+
+                            // A - PEDIDO
+                            int tmpInt;
+                            if (int.TryParse(S(lector, "PEDIDO"), out tmpInt)) sl.SetCellValue("A" + celdaContenido, tmpInt);
+                            else sl.SetCellValue("A" + celdaContenido, S(lector, "PEDIDO"));
+
+                            // B - SINIESTRO
+                            if (int.TryParse(S(lector, "SINIESTRO"), out tmpInt)) sl.SetCellValue("B" + celdaContenido, tmpInt);
+                            else sl.SetCellValue("B" + celdaContenido, S(lector, "SINIESTRO"));
+
+                            sl.SetCellValue("C" + celdaContenido, S(lector, "CLIENTE"));
+                            sl.SetCellValue("D" + celdaContenido, S(lector, "VALUADOR"));
+                            sl.SetCellValue("E" + celdaContenido, S(lector, "TALLER"));
+
+                            // F - MODELO
+                            if (int.TryParse(S(lector, "VHEICULO MODELO"), out tmpInt)) sl.SetCellValue("F" + celdaContenido, tmpInt);
+                            else sl.SetCellValue("F" + celdaContenido, S(lector, "VHEICULO MODELO"));
+
+                            sl.SetCellValue("G" + celdaContenido, S(lector, "MARCA"));
+
+                            // H - AÑO (CORREGIDO: sin ternario mixto)
+                            string anioStr = S(lector, "AÑO");
+                            if (string.IsNullOrWhiteSpace(anioStr))
+                            {
+                                sl.SetCellValue("H" + celdaContenido, "");
+                            }
+                            else
+                            {
+                                if (int.TryParse(anioStr, out tmpInt)) sl.SetCellValue("H" + celdaContenido, tmpInt);
+                                else sl.SetCellValue("H" + celdaContenido, anioStr);
+                            }
+
+                            sl.SetCellValue("I" + celdaContenido, S(lector, "PROVEEDOR"));
+                            sl.SetCellValue("J" + celdaContenido, S(lector, "PIEZA"));
+                            sl.SetCellValue("K" + celdaContenido, S(lector, "CLAVE PRODUCTO"));
+                            sl.SetCellValue("L" + celdaContenido, tempSAE);
+                            sl.SetCellValue("M" + celdaContenido, I0(lector, "TOTAL DE PIEZAS"));
+
+                            // N - GUIA
+                            if (int.TryParse(S(lector, "GUÍA DE ENVIO"), out tmpInt)) sl.SetCellValue("N" + celdaContenido, tmpInt);
+                            else sl.SetCellValue("N" + celdaContenido, S(lector, "GUÍA DE ENVIO"));
+
+                            sl.SetCellValue("O" + celdaContenido, S(lector, "ORIGEN PIEZA"));
+                            sl.SetCellValue("P" + celdaContenido, S(lector, "PORTAL"));
+
+                            sl.SetCellValue("Q" + celdaContenido, D0(lector, "COSTO ENVÍO"));
+                            sl.SetCellValue("R" + celdaContenido, D0(lector, "COSTO"));
+                            sl.SetCellValue("S" + celdaContenido, D0(lector, "PRECIO VENTA"));
+
+                            sl.SetCellValue("T" + celdaContenido, S(lector, "DESTINO"));
+                            sl.SetCellValue("U" + celdaContenido, I0(lector, "NUMERO DE VENDEDOR"));
+                            sl.SetCellValue("V" + celdaContenido, S(lector, "VENDEDOR"));
+
+                            DateTime? d = DT(lector, "FECHA DE ASIGNACIÓN");
+                            sl.SetCellValue("W" + celdaContenido, d.HasValue ? d.Value.ToString("dd/M/yyyy", CultureInfo.InvariantCulture) : S(lector, "FECHA DE ASIGNACIÓN"));
+
+                            d = DT(lector, "FECHA PROMESA");
+                            sl.SetCellValue("X" + celdaContenido, d.HasValue ? d.Value.ToString("dd/M/yyyy", CultureInfo.InvariantCulture) : S(lector, "FECHA PROMESA"));
+
+                            d = DT(lector, "FECHA DE ENTREGA");
+                            sl.SetCellValue("Y" + celdaContenido, d.HasValue ? d.Value.ToString("dd/M/yyyy", CultureInfo.InvariantCulture) : S(lector, "FECHA DE ENTREGA"));
+
+                            sl.SetCellValue("Z" + celdaContenido, I0(lector, "PIEZAS ENTREGADAS"));
+                            sl.SetCellValue("AA" + celdaContenido, S(lector, "REALIZO BAJA"));
+
+                            string diasStr = S(lector, "DÍAS DE ENTREGA");
+                            if (string.IsNullOrWhiteSpace(diasStr)) sl.SetCellValue("AB" + celdaContenido, "");
+                            else sl.SetCellValue("AB" + celdaContenido, I0(lector, "DÍAS DE ENTREGA"));
+
+                            d = DT(lector, "FECHA DE BAJA");
+                            sl.SetCellValue("AC" + celdaContenido, d.HasValue ? d.Value.ToString("dd/M/yyyy", CultureInfo.InvariantCulture) : S(lector, "FECHA DE BAJA"));
+
+                            d = DT(lector, "FECHA DEVOLUCIÓN");
+                            sl.SetCellValue("AD" + celdaContenido, d.HasValue ? d.Value.ToString("dd/M/yyyy", CultureInfo.InvariantCulture) : S(lector, "FECHA DEVOLUCIÓN"));
+
+                            sl.SetCellValue("AE" + celdaContenido, S(lector, "fechaRegNumGuia"));
+                            sl.SetCellValue("AF" + celdaContenido, I0(lector, "CANTIDAD DE PIEZAS DEVUELTAS"));
+
+                            // Penalizaciones
+                            double penDev = 0;
+                            string penDevStr = S(lector, "PENALIZACIÓN POR DEVOLUCIÓN");
+                            double penPct;
+                            if (!string.IsNullOrWhiteSpace(penDevStr) && double.TryParse(penDevStr, NumberStyles.Any, CultureInfo.InvariantCulture, out penPct))
+                                penDev = penPct / 100.0; // 10 => 0.10
+
+                            double penCalc = D0(lector, "PENALIZACION DEVOLUCION CALC"); // ya es 0.10
+
+                            if (penDev > 0) sl.SetCellValue("AG" + celdaContenido, penDev);
+                            else sl.SetCellValue("AG" + celdaContenido, "");
+
+                            sl.SetCellValue("AH" + celdaContenido, I0(lector, "PIEZAS DEVUELTAS ANTES DE ENTREGA"));
+
+                            if (penDev == 0 && penCalc > 0) sl.SetCellValue("AI" + celdaContenido, penCalc);
+                            else sl.SetCellValue("AI" + celdaContenido, "");
+
+                            // Facturas
+                            if (int.TryParse(S(lector, "FACTURA ACTUAL"), out tmpInt)) sl.SetCellValue("AJ" + celdaContenido, tmpInt);
+                            else sl.SetCellValue("AJ" + celdaContenido, S(lector, "FACTURA ACTUAL").Contains("S F") ? "S F" : S(lector, "FACTURA ACTUAL"));
+
+                            if (int.TryParse(S(lector, "FACTURA ANTERIOR"), out tmpInt)) sl.SetCellValue("AK" + celdaContenido, tmpInt);
+                            else sl.SetCellValue("AK" + celdaContenido, S(lector, "FACTURA ANTERIOR"));
+
+                            d = DT(lector, "FECHA INGRESO FACTURA");
+                            sl.SetCellValue("AL" + celdaContenido, d.HasValue ? d.Value.ToString("dd/M/yyyy", CultureInfo.InvariantCulture) : S(lector, "FECHA INGRESO FACTURA"));
+
+                            sl.SetCellValue("AM" + celdaContenido, S(lector, "ESTADO DE LA FACTURA"));
+
+                            d = DT(lector, "FECHA DE REVISIÓN FACTURA");
+                            sl.SetCellValue("AN" + celdaContenido, d.HasValue ? d.Value.ToString("dd/M/yyyy", CultureInfo.InvariantCulture) : S(lector, "FECHA DE REVISIÓN FACTURA"));
+
+                            d = DT(lector, "FECHA DE PAGO FACTURA");
+                            if (d.HasValue && d.Value > DateTime.MinValue) sl.SetCellValue("AO" + celdaContenido, d.Value.ToString("dd/M/yyyy", CultureInfo.InvariantCulture));
+                            else sl.SetCellValue("AO" + celdaContenido, "");
+
+                            sl.SetCellValue("AP" + celdaContenido, D0(lector, "FACTURA SIN IVA"));
+                            sl.SetCellValue("AQ" + celdaContenido, D0(lector, "FACTURA NETO"));
+
+                            sl.SetCellValue("AR" + celdaContenido, S(lector, "COMENTARIOS SINIESTRO"));
+                            sl.SetCellValue("AS" + celdaContenido, S(lector, "ESTADO"));
+                            sl.SetCellValue("AT" + celdaContenido, S(lector, "COMENTARIOS FACTURA"));
+
+                            // COSTO ADQ con penalización
+                            double costoBase = D0(lector, "COSTO ADQUISICION");
+                            double penFinal = penDev > 0 ? penDev : (penCalc > 0 ? penCalc : 0);
+                            double costoAdq = (penFinal > 0) ? (costoBase + (costoBase * penFinal)) : costoBase;
+
+                            sl.SetCellValue("AU" + celdaContenido, costoAdq);
+
+                            double precioV = D0(lector, "PRECIO VENTA");
+                            sl.SetCellValue("AV" + celdaContenido, precioV - costoAdq);
+                            sl.SetCellValue("AW" + celdaContenido, costoOperativoD);
+
+                            double gasto = D0(lector, "GASTO");
+                            sl.SetCellValue("AX" + celdaContenido, gasto);
+
+                            sl.SetCellValue("AY" + celdaContenido, precioV - (costoAdq + gasto + costoOperativoD));
+
+                            // AZ ubicación
+                            string ubic = S(lector, "UBICACION");
+                            if (string.IsNullOrWhiteSpace(ubic) || ubic == "-1") sl.SetCellValue("AZ" + celdaContenido, "-");
+                            else if (ubic == "0") sl.SetCellValue("AZ" + celdaContenido, "Proveedor");
+                            else if (ubic == "1") sl.SetCellValue("AZ" + celdaContenido, "Jeic Almacén");
+                            else sl.SetCellValue("AZ" + celdaContenido, ubic);
+
+                            sl.SetCellValue("BA" + celdaContenido, S(lector, "CHOFER"));
+
+                            // BB vale liberado (CORREGIDO para BIT 0/1)
+                            bool valeLib = false;
+                            object valeObj = lector["VALE LIBERADO"];
+                            if (valeObj != null && valeObj != DBNull.Value)
+                                valeLib = Convert.ToBoolean(valeObj);
+
+                            sl.SetCellValue("BB" + celdaContenido, valeLib ? "LIBERADO" : "NO LIBERADO");
+
+                            celdaContenido++;
+                        }
+
+                        int lastRow = celdaContenido - 1;
+                        if (lastRow >= 9)
+                        {
+                            SLStyle estiloMoneda = new SLStyle();
+                            estiloMoneda.FormatCode = "$ #,###.00";
+                            sl.SetCellStyle("Q9", "S" + lastRow, estiloMoneda);
+                            sl.SetCellStyle("AP9", "AQ" + lastRow, estiloMoneda);
+                            sl.SetCellStyle("AV9", "AZ" + lastRow, estiloMoneda);
+
+                            SLStyle estiloPct = new SLStyle();
+                            estiloPct.FormatCode = "0.00%";
+                            sl.SetCellStyle("AG9", "AG" + lastRow, estiloPct);
+                            sl.SetCellStyle("AI9", "AI" + lastRow, estiloPct);
+                        }
+
+                        sl.AutoFitColumn("A", "AZ");
+                    }
+                }
+
+                SaveFileDialog guarda = new SaveFileDialog();
+                guarda.Filter = "Libro de Excel|*.xlsx";
+                guarda.Title = "Guardar Reporte";
+                guarda.InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
+
+                if (guarda.ShowDialog() == DialogResult.OK)
+                {
+                    sl.SaveAs(guarda.FileName);
+                    MessageBOX.SHowDialog(3, "Archivo Guardado");
+                }
+            }
+        }
+
+
+        /// GENERAR REPORTE OPTIMIZADO FIN
+
+
         //--------------------LLENAR DATAGRID BUSCAR TALLERES--------------------
         public DataTable buscarTalleres(string taller)
         {
