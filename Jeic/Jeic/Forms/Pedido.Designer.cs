@@ -750,6 +750,7 @@
             // 
             this.chbModificarFechaAsignacion.AutoSize = true;
             this.chbModificarFechaAsignacion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(33)))), ((int)(((byte)(38)))));
+            this.chbModificarFechaAsignacion.Enabled = false;
             this.chbModificarFechaAsignacion.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.chbModificarFechaAsignacion.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chbModificarFechaAsignacion.ForeColor = System.Drawing.Color.White;

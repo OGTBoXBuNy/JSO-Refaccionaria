@@ -114,10 +114,10 @@ namespace Refracciones.Forms
 
                 string userName = lblUsuario.Text.Substring(9, lblUsuario.Text.Length - 9);
 
-                if (userName != "Emilio.99" || userName != "Maximiliano.1" || userName != "Erick.60" || userName != "JEICJ" || userName != "JEICI")
+                if (userName == "Emilio.99" || userName == "Maximiliano.1" || userName == "Erick.60" || userName == "JEICJ" || userName == "JEICI")
                 {
-                    dtpFechaAsignacion.Enabled = false;
-                    chbModificarFechaAsignacion.Enabled = false;
+                    //dtpFechaAsignacion.Enabled = false;
+                    chbModificarFechaAsignacion.Enabled = true;
                 }
                 //
             }
