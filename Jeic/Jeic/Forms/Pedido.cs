@@ -109,6 +109,17 @@ namespace Refracciones.Forms
                 ///Se comentó esta línea para poder dar nombres diferentes de acuerdo a las condiciones que se evalúen
                 //penaltyButton.UseColumnTextForButtonValue = true;;
                 this.dgvPedido.Columns.Add(penaltyButton);
+
+                //FECHA DE ASIGNACION HABILITADA SOLO PARA Emilio.99, Maximiliano.1 y Erick.60
+
+                string userName = lblUsuario.Text.Substring(9, lblUsuario.Text.Length - 9);
+
+                if (userName != "Emilio.99" || userName != "Maximiliano.1" || userName != "Erick.60" || userName != "JEICJ" || userName != "JEICI")
+                {
+                    dtpFechaAsignacion.Enabled = false;
+                    chbModificarFechaAsignacion.Enabled = false;
+                }
+                //
             }
 
             var editButton = new DataGridViewButtonColumn();
