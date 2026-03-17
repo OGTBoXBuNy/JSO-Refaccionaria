@@ -4551,7 +4551,8 @@ WHERE ven.fecha_asignacion BETWEEN @fecha1 AND @fecha2
                 {
                     nuevaConexion.Open();
                     //SqlDataAdapter dataAdapter = new SqlDataAdapter("SELECT pie.nombre AS Pieza, ped.cantidad AS Cantidad, ped.cve_producto AS 'Clave de producto', ped.cve_guia AS 'Número de guía', por.nombre AS Portal, ori.origen AS Origen, pro.nombre AS Proveedor, ped.fecha_costo AS 'Fecha costo', ped.costo_neto AS 'Costo neto\n($)', coen.costo AS 'Costo de envío\n($)', ped.precio_venta AS 'Precio de venta\n($)', ped.precio_reparacion AS 'Precio de reparación\n($)' FROM VENTAS ven INNER JOIN PEDIDO ped ON ven.cve_venta = ped.cve_venta INNER JOIN PIEZA pie ON ped.cve_pieza = pie.cve_pieza INNER JOIN PORTAL por ON ped.cve_portal = por.cve_portal INNER JOIN ORIGEN_PIEZA ori ON ped.cve_origen = ori.cve_origen INNER JOIN PROVEEDOR pro ON ped.cve_proveedor = pro.cve_proveedor INNER JOIN COSTO_ENVIO coen ON ped.costo_envio = coen.cve_costoEnvio WHERE ven.cve_pedido = @cve_pedido AND ven.cve_siniestro = @cve_siniestro ORDER BY ped.ordenCaptura ASC", nuevaConexion);//TESTING
-                    SqlDataAdapter dataAdapter = new SqlDataAdapter("SELECT pie.nombre AS Pieza, ped.cantidad AS Cantidad, ped.cve_producto AS 'Clave de producto', ped.cve_guia AS 'Número de guía', por.nombre AS Portal, ori.origen AS Origen, pro.nombre AS Proveedor, ped.fecha_costo AS 'Fecha costo', ped.costo_neto AS 'Costo neto\n($)', ped.costoEnvio AS 'Costo de envío\n($)', ped.precio_venta AS 'Precio de venta\n($)', ped.precio_reparacion AS 'Precio de reparación\n($)', ped.cambios_precio AS 'Intentos' FROM VENTAS ven INNER JOIN PEDIDO ped ON ven.cve_venta = ped.cve_venta INNER JOIN PIEZA pie ON ped.cve_pieza = pie.cve_pieza INNER JOIN PORTAL por ON ped.cve_portal = por.cve_portal INNER JOIN ORIGEN_PIEZA ori ON ped.cve_origen = ori.cve_origen INNER JOIN PROVEEDOR pro ON ped.cve_proveedor = pro.cve_proveedor  WHERE ven.cve_pedido = @cve_pedido AND ven.cve_siniestro = @cve_siniestro ORDER BY ped.ordenCaptura ASC", nuevaConexion);
+                    SqlDataAdapter dataAdapter = new SqlDataAdapter("SELECT pie.nombre AS Pieza, ped.cantidad AS Cantidad, ped.cve_producto AS 'Clave de producto', ped.cve_guia AS 'Número de guía', por.nombre AS Portal, ori.origen AS Origen, pro.nombre AS Proveedor, ped.fecha_costo AS 'Fecha costo', ped.costo_neto AS 'Costo neto\n($)', ped.costoEnvio AS 'Costo de envío\n($)', ped.precio_venta AS 'Precio de venta\n($)', ped.precio_reparacion AS 'Precio de reparación\n($)', ped.cambios_precio AS 'Intentos' FROM VENTAS ven INNER JOIN PEDIDO ped ON ven.cve_venta = ped.cve_venta INNER JOIN PIEZA pie ON ped.cve_pieza = pie.cve_pieza INNER JOIN PORTAL por ON ped.cve_portal = por.cve_portal INNER JOIN ORIGEN_PIEZA ori ON ped.cve_origen = ori.cve_origen INNER JOIN PROVEEDOR pro ON ped.cve_proveedor = pro.cve_proveedor  WHERE ven.cve_pedido = @cve_pedido AND ven.cve_siniestro = @cve_siniestro ORDER BY ped.ordenCaptura ASC", nuevaConexion); //MIO
+                    //SqlDataAdapter dataAdapter = new SqlDataAdapter("SELECT pie.nombre AS Pieza, ped.cantidad AS Cantidad, ped.cve_producto AS 'Clave de producto', ped.cve_guia AS 'Número de guía', por.nombre AS Portal, ori.origen AS Origen, pro.nombre AS Proveedor, ped.fecha_costo AS 'Fecha costo', ped.costo_neto AS 'Costo neto\n($)', ped.costoEnvio AS 'Costo de envío\n($)', ped.precio_venta AS 'Precio de venta\n($)', ped.precio_reparacion AS 'Precio de reparación\n($)', ped.cambios_precio AS 'Intentos', ped.cve_pedido, ped.ordenCaptura, ped.estado FROM VENTAS ven INNER JOIN PEDIDO ped ON ven.cve_venta = ped.cve_venta INNER JOIN PIEZA pie ON ped.cve_pieza = pie.cve_pieza INNER JOIN PORTAL por ON ped.cve_portal = por.cve_portal INNER JOIN ORIGEN_PIEZA ori ON ped.cve_origen = ori.cve_origen INNER JOIN PROVEEDOR pro ON ped.cve_proveedor = pro.cve_proveedor  WHERE ven.cve_pedido = @cve_pedido AND ven.cve_siniestro = @cve_siniestro ORDER BY ped.ordenCaptura ASC", nuevaConexion);//CHAT GPT
                     dataAdapter.SelectCommand.Parameters.AddWithValue("@cve_pedido", clavePedido);
                     dataAdapter.SelectCommand.Parameters.AddWithValue("@cve_siniestro", claveSiniestro);
                     dataAdapter.Fill(dt);
@@ -8187,34 +8188,79 @@ WHERE ven.fecha_asignacion BETWEEN @fecha1 AND @fecha2
         }
 
         //----------------------------------REGISTAR CAMBIO LOG ----------------------------------------------
+        //public void Log(string usuario, string idPedido, string descripcion, string cveCambio)
+        //{
+        //    int x = 0;
+        //    DateTime hoy = DateTime.Today;
+        //    hoy.Date.Year.ToString();
+        //    string fecha =hoy.Date.Year.ToString() + "-" + hoy.Date.Month.ToString() + "-" + hoy.Date.Date.Day.ToString();
+        //    //hoy.ToString("dd-MM-yyyy");
+        //    try
+        //    {
+        //        using (SqlConnection nuevacon = Conexion.conexion())
+        //        {
+        //            nuevacon.Open();
+
+        //            this.Comando = new SqlCommand(string.Format("SELECT * FROM USUARIOS WHERE usuario = '{0}';", usuario), nuevacon);
+        //            Lector = this.Comando.ExecuteReader();
+        //            while (Lector.Read()) { x = Int32.Parse(Lector["cve_Administrador"].ToString()); }
+        //            Lector.Close();
+
+
+        //            this.Comando = new SqlCommand("INSERT INTO LOG (descripcion, cve_pedido, cve_Administrador, cveCambio, fecha) VALUES (@descripcion, @cve_pedido, @cve_Administrador, @cveCambio, @fecha);", nuevacon);
+
+        //            this.Comando.Parameters.AddWithValue("@descripcion", descripcion);
+        //            this.Comando.Parameters.AddWithValue("@cve_pedido", idPedido);
+        //            this.Comando.Parameters.AddWithValue("@cve_Administrador", x);
+        //            this.Comando.Parameters.AddWithValue("@cveCambio", Convert.ToInt32(cveCambio));
+        //            this.Comando.Parameters.AddWithValue("@fecha", fecha);
+        //            this.Comando.ExecuteNonQuery();
+        //            //MessageBOX.SHowDialog(3, "Se registro Log");
+        //            nuevacon.Close();
+        //        }
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        MessageBox.Show(ex.Message);
+        //    }
+        //}
+
         public void Log(string usuario, string idPedido, string descripcion, string cveCambio)
         {
             int x = 0;
-            DateTime hoy = DateTime.Today;
-            hoy.Date.Year.ToString();
-            string fecha =hoy.Date.Year.ToString() + "-" + hoy.Date.Month.ToString() + "-" + hoy.Date.Date.Day.ToString();
-            //hoy.ToString("dd-MM-yyyy");
+
             try
             {
                 using (SqlConnection nuevacon = Conexion.conexion())
                 {
                     nuevacon.Open();
-                    
-                    this.Comando = new SqlCommand(string.Format("SELECT * FROM USUARIOS WHERE usuario = '{0}';", usuario), nuevacon);
+
+                    this.Comando = new SqlCommand(
+                        "SELECT cve_Administrador FROM USUARIOS WHERE usuario = @usuario;",
+                        nuevacon
+                    );
+                    this.Comando.Parameters.AddWithValue("@usuario", usuario);
+
                     Lector = this.Comando.ExecuteReader();
-                    while (Lector.Read()) { x = Int32.Parse(Lector["cve_Administrador"].ToString()); }
+                    while (Lector.Read())
+                    {
+                        x = Convert.ToInt32(Lector["cve_Administrador"]);
+                    }
                     Lector.Close();
 
-                    
-                    this.Comando = new SqlCommand("INSERT INTO LOG (descripcion, cve_pedido, cve_Administrador, cveCambio, fecha) VALUES (@descripcion, @cve_pedido, @cve_Administrador, @cveCambio, @fecha);", nuevacon);
+                    this.Comando = new SqlCommand(
+                        @"INSERT INTO LOG (descripcion, cve_pedido, cve_Administrador, cveCambio, fecha)
+                  VALUES (@descripcion, @cve_pedido, @cve_Administrador, @cveCambio, @fecha);",
+                        nuevacon
+                    );
 
                     this.Comando.Parameters.AddWithValue("@descripcion", descripcion);
                     this.Comando.Parameters.AddWithValue("@cve_pedido", idPedido);
                     this.Comando.Parameters.AddWithValue("@cve_Administrador", x);
                     this.Comando.Parameters.AddWithValue("@cveCambio", Convert.ToInt32(cveCambio));
-                    this.Comando.Parameters.AddWithValue("@fecha", fecha);
+                    this.Comando.Parameters.AddWithValue("@fecha", DateTime.Now);
+
                     this.Comando.ExecuteNonQuery();
-                    //MessageBOX.SHowDialog(3, "Se registro Log");
                     nuevacon.Close();
                 }
             }
@@ -8254,9 +8300,9 @@ WHERE ven.fecha_asignacion BETWEEN @fecha1 AND @fecha2
                 using (SqlConnection nuevacon = Conexion.conexion())
                 {
                     if(tipo != "Mostrar Todo")
-                        da = new SqlDataAdapter(string.Format("SELECT l.cveLog AS 'ID DE CAMBIO',l.descripcion AS 'DESCRIPCIÓN',l.cve_pedido AS 'PEDIDO', us.usuario AS 'USUARIO', clog.tipo AS 'TIPO DE MOVIMIENTO',l.fecha AS 'FECHA' FROM LOG l LEFT OUTER JOIN USUARIOS us ON us.cve_Administrador = l.cve_Administrador LEFT OUTER JOIN CAMBIOSLOG clog ON clog.cveCambio = l.cveCambio WHERE l.cve_pedido LIKE '%{0}%' AND us.usuario LIKE '%{1}%' AND clog.tipo = '{2}';", cvePedido, usuario, tipo), nuevacon);
+                        da = new SqlDataAdapter(string.Format("SELECT l.cveLog AS 'ID DE CAMBIO',l.descripcion AS 'DESCRIPCIÓN',l.cve_pedido AS 'PEDIDO', us.usuario AS 'USUARIO', clog.tipo AS 'TIPO DE MOVIMIENTO',l.fecha AS 'FECHA' FROM LOG l LEFT OUTER JOIN USUARIOS us ON us.cve_Administrador = l.cve_Administrador LEFT OUTER JOIN CAMBIOSLOG clog ON clog.cveCambio = l.cveCambio WHERE l.cve_pedido LIKE '%{0}%' AND us.usuario LIKE '%{1}%' AND clog.tipo = '{2}' ORDER BY l.cveLog ASC;", cvePedido, usuario, tipo), nuevacon);
                     else
-                        da = new SqlDataAdapter(string.Format("SELECT l.cveLog AS 'ID DE CAMBIO',l.descripcion AS 'DESCRIPCIÓN',l.cve_pedido AS 'PEDIDO', us.usuario AS 'USUARIO', clog.tipo AS 'TIPO DE MOVIMIENTO',l.fecha AS 'FECHA' FROM LOG l LEFT OUTER JOIN USUARIOS us ON us.cve_Administrador = l.cve_Administrador LEFT OUTER JOIN CAMBIOSLOG clog ON clog.cveCambio = l.cveCambio WHERE l.cve_pedido LIKE '%{0}%' AND us.usuario LIKE '%{1}%';", cvePedido, usuario), nuevacon);
+                        da = new SqlDataAdapter(string.Format("SELECT l.cveLog AS 'ID DE CAMBIO',l.descripcion AS 'DESCRIPCIÓN',l.cve_pedido AS 'PEDIDO', us.usuario AS 'USUARIO', clog.tipo AS 'TIPO DE MOVIMIENTO',l.fecha AS 'FECHA' FROM LOG l LEFT OUTER JOIN USUARIOS us ON us.cve_Administrador = l.cve_Administrador LEFT OUTER JOIN CAMBIOSLOG clog ON clog.cveCambio = l.cveCambio WHERE l.cve_pedido LIKE '%{0}%' AND us.usuario LIKE '%{1}%' ORDER BY l.cveLog ASC;", cvePedido, usuario), nuevacon);
                     nuevacon.Open();
                     dt = new DataTable();
                     da.Fill(dt);
@@ -8278,9 +8324,9 @@ WHERE ven.fecha_asignacion BETWEEN @fecha1 AND @fecha2
                 using (SqlConnection nuevacon = Conexion.conexion())
                 {
                     if(tipo != "Mostrar Todo")
-                        da = new SqlDataAdapter(string.Format("SELECT l.cveLog AS 'ID DE CAMBIO',l.descripcion AS 'DESCRIPCIÓN',l.cve_pedido AS 'PEDIDO', us.usuario AS 'USUARIO', clog.tipo AS 'TIPO DE MOVIMIENTO',l.fecha AS 'FECHA' FROM LOG l LEFT OUTER JOIN USUARIOS us ON us.cve_Administrador = l.cve_Administrador LEFT OUTER JOIN CAMBIOSLOG clog ON clog.cveCambio = l.cveCambio WHERE l.cve_pedido LIKE '%{0}%' AND us.usuario LIKE '%{1}%' AND clog.tipo = '{2}' AND fecha BETWEEN '{3}' AND '{4}';", cvePedido, usuario, tipo, fechaInicial, fechaFinal), nuevacon);
+                        da = new SqlDataAdapter(string.Format("SELECT l.cveLog AS 'ID DE CAMBIO',l.descripcion AS 'DESCRIPCIÓN',l.cve_pedido AS 'PEDIDO', us.usuario AS 'USUARIO', clog.tipo AS 'TIPO DE MOVIMIENTO',l.fecha AS 'FECHA' FROM LOG l LEFT OUTER JOIN USUARIOS us ON us.cve_Administrador = l.cve_Administrador LEFT OUTER JOIN CAMBIOSLOG clog ON clog.cveCambio = l.cveCambio WHERE l.cve_pedido LIKE '%{0}%' AND us.usuario LIKE '%{1}%' AND clog.tipo = '{2}' AND fecha BETWEEN '{3}' AND '{4}' ORDER BY l.cveLog ASC;", cvePedido, usuario, tipo, fechaInicial, fechaFinal), nuevacon);
                     else
-                        da = new SqlDataAdapter(string.Format("SELECT l.cveLog AS 'ID DE CAMBIO',l.descripcion AS 'DESCRIPCIÓN',l.cve_pedido AS 'PEDIDO', us.usuario AS 'USUARIO', clog.tipo AS 'TIPO DE MOVIMIENTO',l.fecha AS 'FECHA' FROM LOG l LEFT OUTER JOIN USUARIOS us ON us.cve_Administrador = l.cve_Administrador LEFT OUTER JOIN CAMBIOSLOG clog ON clog.cveCambio = l.cveCambio WHERE l.cve_pedido LIKE '%{0}%' AND us.usuario LIKE '%{1}%' AND fecha BETWEEN '{2}' AND '{3}';", cvePedido, usuario, fechaInicial, fechaFinal), nuevacon);
+                        da = new SqlDataAdapter(string.Format("SELECT l.cveLog AS 'ID DE CAMBIO',l.descripcion AS 'DESCRIPCIÓN',l.cve_pedido AS 'PEDIDO', us.usuario AS 'USUARIO', clog.tipo AS 'TIPO DE MOVIMIENTO',l.fecha AS 'FECHA' FROM LOG l LEFT OUTER JOIN USUARIOS us ON us.cve_Administrador = l.cve_Administrador LEFT OUTER JOIN CAMBIOSLOG clog ON clog.cveCambio = l.cveCambio WHERE l.cve_pedido LIKE '%{0}%' AND us.usuario LIKE '%{1}%' AND fecha BETWEEN '{2}' AND '{3}' ORDER BY l.cveLog ASC;", cvePedido, usuario, fechaInicial, fechaFinal), nuevacon);
                     nuevacon.Open();
                     dt = new DataTable();
                     da.Fill(dt);

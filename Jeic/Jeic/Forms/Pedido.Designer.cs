@@ -1008,6 +1008,7 @@
             this.btnPDF.TabIndex = 88;
             this.btnPDF.Text = "Generar PDF";
             this.btnPDF.UseVisualStyleBackColor = false;
+            this.btnPDF.ClientSizeChanged += new System.EventHandler(this.btnPDF_ClientSizeChanged);
             this.btnPDF.Click += new System.EventHandler(this.btnPDF_Click);
             // 
             // txtHorario

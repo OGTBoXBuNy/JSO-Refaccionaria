@@ -35,6 +35,14 @@ namespace Refracciones.Forms
         private DataTable dt;
         private DataSet dsPiezas;
         private int actualizar = 0;
+        private string vendedorOriginal = "";
+        private string clienteOriginal = "";
+        private string valuadorOriginal = "";
+        private string tallerOriginal = "";
+        private string destinoOriginal = "";
+        private string fechaAsignacionOriginal = "";
+        private string fechaPromesaOriginal = "";
+        private string comentarioOriginal = "";
 
         public Pedido(int i)
         {
@@ -119,7 +127,9 @@ namespace Refracciones.Forms
                     //dtpFechaAsignacion.Enabled = false;
                     chbModificarFechaAsignacion.Enabled = true;
                 }
-                //
+                //CHAT GPT
+
+                //END CHAT GPT
             }
 
             var editButton = new DataGridViewButtonColumn();
@@ -262,6 +272,18 @@ namespace Refracciones.Forms
                 chbModificarFechaPromesa.Visible = true;
                 dtpFechaPromesa.Text = operacion.fechaPromesa(txtClavePedido.Text.Trim(), lblClaveSiniestro.Text.Trim());
 
+                //CHAT GPT
+                vendedorOriginal = txtVendedor.Text.Trim();
+                clienteOriginal = txtAseguradora.Text.Trim();
+                valuadorOriginal = txtValuador.Text.Trim();
+                tallerOriginal = txtTaller.Text.Trim();
+                destinoOriginal = txtDestino.Text.Trim();
+                fechaAsignacionOriginal = dtpFechaAsignacion.Value.ToString("yyyy-MM-dd");
+                fechaPromesaOriginal = dtpFechaPromesa.Value.ToString("yyyy-MM-dd");
+                comentarioOriginal = txtComentarioSiniestro.Text.Trim();
+                //END CHAT GPT
+
+
                 dt = operacion.piezasPedidoActualizar(txtClavePedido.Text.Trim(), lblClaveSiniestro.Text.Trim());
                 dgvPedido.DataSource = dt;
 
@@ -299,6 +321,8 @@ namespace Refracciones.Forms
                 }
                 lblPrecioTotal.Text = "$" + precioTotal.ToString();
                 lblCantidadTotal.Text = piezasTotal.ToString();
+
+                
             }
             else
             {
@@ -855,6 +879,164 @@ namespace Refracciones.Forms
             get { return txtClavePedido.Text.Trim(); }
         }
 
+
+
+        //CHAT GPT
+        private string NormalizarValor(object valor)
+        {
+            if (valor == null || valor == DBNull.Value)
+                return "";
+
+            return valor.ToString().Trim();
+        }
+
+        private string AgregarCambioSiDiferente(string campo, object valorAnterior, object valorNuevo)
+        {
+            string anterior = NormalizarValor(valorAnterior);
+            string nuevo = NormalizarValor(valorNuevo);
+
+            if (anterior == nuevo)
+                return "";
+
+            return $"{campo}: '{anterior}' -> '{nuevo}'";
+        }
+
+        private string ConstruirDescripcionCambioPedido(string usuario, string idPedido)
+        {
+            List<string> cambios = new List<string>();
+            string cambio;
+
+            if(cbVendedor.Enabled == true && cbVendedor.Visible == true)
+            {
+                cambio = AgregarCambioSiDiferente("Vendedor", vendedorOriginal, cbVendedor.Text.Trim());
+                if (!string.IsNullOrEmpty(cambio)) cambios.Add(cambio);
+            }
+            else
+            {
+                cambio = AgregarCambioSiDiferente("Vendedor", vendedorOriginal, txtVendedor.Text.Trim());
+                if (!string.IsNullOrEmpty(cambio)) cambios.Add(cambio);
+            }
+
+            if(cbAseguradora.Enabled == true && cbAseguradora.Visible)
+            {
+                cambio = AgregarCambioSiDiferente("Cliente", clienteOriginal, cbAseguradora.Text.Trim());
+                if (!string.IsNullOrEmpty(cambio)) cambios.Add(cambio);
+            }
+            else
+            {
+                cambio = AgregarCambioSiDiferente("Cliente", clienteOriginal, txtAseguradora.Text.Trim());
+                if (!string.IsNullOrEmpty(cambio)) cambios.Add(cambio);
+            }
+
+            if(cbValuador.Enabled == true && cbValuador.Visible == true)
+            {
+                cambio = AgregarCambioSiDiferente("Valuador", valuadorOriginal, cbValuador.Text.Trim());
+                if (!string.IsNullOrEmpty(cambio)) cambios.Add(cambio);
+            }
+            else
+            {
+                cambio = AgregarCambioSiDiferente("Valuador", valuadorOriginal, txtValuador.Text.Trim());
+                if (!string.IsNullOrEmpty(cambio)) cambios.Add(cambio);
+            }
+
+            if(cbTaller.Enabled == true && cbTaller.Visible == true)
+            {
+                cambio = AgregarCambioSiDiferente("Taller", tallerOriginal, cbTaller.Text.Trim());
+                if (!string.IsNullOrEmpty(cambio)) cambios.Add(cambio);
+            }
+            else
+            {
+                cambio = AgregarCambioSiDiferente("Taller", tallerOriginal, txtTaller.Text.Trim());
+                if (!string.IsNullOrEmpty(cambio)) cambios.Add(cambio);
+            }
+
+            if(cbDestino.Enabled == true && cbDestino.Visible == true)
+            {
+                cambio = AgregarCambioSiDiferente("Destino", destinoOriginal, cbDestino.Text.Trim());
+                if (!string.IsNullOrEmpty(cambio)) cambios.Add(cambio);
+            }
+            else
+            {
+                cambio = AgregarCambioSiDiferente("Destino", destinoOriginal, txtDestino.Text.Trim());
+                if (!string.IsNullOrEmpty(cambio)) cambios.Add(cambio);
+            }
+
+
+
+            cambio = AgregarCambioSiDiferente("Fecha asignación", fechaAsignacionOriginal, dtpFechaAsignacion.Value.ToString("yyyy-MM-dd"));
+            if (!string.IsNullOrEmpty(cambio)) cambios.Add(cambio);
+
+            cambio = AgregarCambioSiDiferente("Fecha promesa", fechaPromesaOriginal, dtpFechaPromesa.Value.ToString("yyyy-MM-dd"));
+            if (!string.IsNullOrEmpty(cambio)) cambios.Add(cambio);
+
+            cambio = AgregarCambioSiDiferente("Comentario", comentarioOriginal, txtComentarioSiniestro.Text.Trim());
+            if (!string.IsNullOrEmpty(cambio)) cambios.Add(cambio);
+
+            if (cambios.Count == 0)
+            {
+                return $"El usuario: {usuario} actualizó el pedido: {idPedido}, pero no hubo cambios en los datos generales. Fecha: {DateTime.Now:dd/MM/yyyy HH:mm:ss}";
+            }
+
+            return $"El usuario: {usuario} actualizó el pedido: {idPedido}. Cambios generales: {string.Join(" | ", cambios)}. Fecha: {DateTime.Now:dd/MM/yyyy HH:mm:ss}";
+        }
+
+        private string ConstruirDescripcionCambioPieza(string usuario, string idPedido, string[] valoresAnteriores, string[] valoresNuevos)
+        {
+            List<string> cambios = new List<string>();
+            string cambio;
+
+            string nombrePiezaAnterior = NormalizarValor(valoresAnteriores[0]);
+
+            cambio = AgregarCambioSiDiferente("Pieza", valoresAnteriores[0], valoresNuevos[0]);
+            if (!string.IsNullOrEmpty(cambio)) cambios.Add(cambio);
+
+            cambio = AgregarCambioSiDiferente("Cantidad", valoresAnteriores[1], valoresNuevos[1]);
+            if (!string.IsNullOrEmpty(cambio)) cambios.Add(cambio);
+
+            cambio = AgregarCambioSiDiferente("Clave de producto", valoresAnteriores[2], valoresNuevos[2]);
+            if (!string.IsNullOrEmpty(cambio)) cambios.Add(cambio);
+
+            cambio = AgregarCambioSiDiferente("Número de guía", valoresAnteriores[3], valoresNuevos[3]);
+            if (!string.IsNullOrEmpty(cambio)) cambios.Add(cambio);
+
+            cambio = AgregarCambioSiDiferente("Portal", valoresAnteriores[4], valoresNuevos[4]);
+            if (!string.IsNullOrEmpty(cambio)) cambios.Add(cambio);
+
+            cambio = AgregarCambioSiDiferente("Origen", valoresAnteriores[5], valoresNuevos[5]);
+            if (!string.IsNullOrEmpty(cambio)) cambios.Add(cambio);
+
+            cambio = AgregarCambioSiDiferente("Proveedor", valoresAnteriores[6], valoresNuevos[6]);
+            if (!string.IsNullOrEmpty(cambio)) cambios.Add(cambio);
+
+            cambio = AgregarCambioSiDiferente("Fecha costo", valoresAnteriores[7], valoresNuevos[7]);
+            if (!string.IsNullOrEmpty(cambio)) cambios.Add(cambio);
+
+            cambio = AgregarCambioSiDiferente("Costo neto", valoresAnteriores[8], valoresNuevos[8]);
+            if (!string.IsNullOrEmpty(cambio)) cambios.Add(cambio);
+
+            cambio = AgregarCambioSiDiferente("Costo de envío", valoresAnteriores[9], valoresNuevos[9]);
+            if (!string.IsNullOrEmpty(cambio)) cambios.Add(cambio);
+
+            cambio = AgregarCambioSiDiferente("Precio de reparación", valoresAnteriores[10], valoresNuevos[11]);
+            if (!string.IsNullOrEmpty(cambio)) cambios.Add(cambio);
+
+            cambio = AgregarCambioSiDiferente("Precio de venta", valoresAnteriores[11], valoresNuevos[10]);
+            if (!string.IsNullOrEmpty(cambio)) cambios.Add(cambio);
+
+            cambio = AgregarCambioSiDiferente("Intentos", valoresAnteriores[12], valoresNuevos[12]);
+            if (!string.IsNullOrEmpty(cambio)) cambios.Add(cambio);
+
+            if (cambios.Count == 0)
+            {
+                return $"El usuario: {usuario} abrió edición de la pieza: {nombrePiezaAnterior} del pedido: {idPedido}, pero no realizó cambios. Fecha: {DateTime.Now:dd/MM/yyyy HH:mm:ss}";
+            }
+
+            return $"El usuario: {usuario} modificó la pieza: {nombrePiezaAnterior} del pedido: {idPedido}. Cambios: {string.Join(" | ", cambios)}. Fecha: {DateTime.Now:dd/MM/yyyy HH:mm:ss}";
+        }
+        //END CHAT GPT
+
+
+
         private void btnFinalizarPedido_Click(object sender, EventArgs e)
         {
             try
@@ -921,11 +1103,18 @@ namespace Refracciones.Forms
                             operacion.actualizarVenta(txtClavePedido.Text.Trim().ToUpper(), lblClaveSiniestro.Text.Trim(), taller, vendedor, valuador, destino, totalCosto, subtotalPrecio, totalPrecio, dtFechaAsignacion, dtFechaPromesa, utilidad, cliente);//, utilidad
 
                             actualizarPedido();
+                            //string usuario = lblUsuario.Text.Substring(9, lblUsuario.Text.Length - 9);
+                            //string idPedido = txtClavePedido.Text.Trim();
+                            //string descripcionLog = "El usuario: " + usuario + " realizó cambios al pedido: " + idPedido + " el día: " + DateTime.Now.ToString();
+
+                            //operacion.Log(usuario, idPedido, descripcionLog, "8");
+                            //CHAT GPT
                             string usuario = lblUsuario.Text.Substring(9, lblUsuario.Text.Length - 9);
                             string idPedido = txtClavePedido.Text.Trim();
-                            string descripcionLog = "El usuario: " + usuario + " realizó cambios al pedido: " + idPedido + " el día: " + DateTime.Now.ToString();
+                            string descripcionLog = ConstruirDescripcionCambioPedido(usuario, idPedido);
 
                             operacion.Log(usuario, idPedido, descripcionLog, "8");
+                            //END CHAT GPT
                             this.DialogResult = DialogResult.OK;
                         }
                     }
@@ -1111,9 +1300,12 @@ namespace Refracciones.Forms
                                         operacion.eliminarPiezaRegistradaPedido(txtClavePedido.Text, lblClaveSiniestro.Text, pieza, dgvPedido.CurrentRow.Index);
                                         filasIniciales -= 1;
                                         //Remueve la pieza de la fila seleccionada de la lista creada al cargar el formulario
-                                        nombresPiezas.Remove(pieza);
+                                        nombresPiezas.Remove(pieza); //MIO
+                                        //int idx = dgvPedido.CurrentRow.Index;//CHAT GPT
+                                        //nombresPiezas.RemoveAt(idx);//CHAT GPT
                                         //Remueve el índice de la lista que se llenó al cargar el formulario para ser utilizado correctamente al comparar el orden de captura
-                                        ordenCapturaIndice.Remove(dgvPedido.CurrentRow.Index);
+                                        ordenCapturaIndice.Remove(dgvPedido.CurrentRow.Index);//MIO
+                                        //ordenCapturaIndice.RemoveAt(idx);//CHAT GPT
                                         dgvPedido.Rows.RemoveAt(dgvPedido.CurrentRow.Index);
 
                                         //Actualizar orden de captura
@@ -1123,7 +1315,8 @@ namespace Refracciones.Forms
                                             if (!string.IsNullOrEmpty(operacion.existePiezaRegistradaPedido(txtClavePedido.Text, lblClaveSiniestro.Text, row.Cells["Pieza"].Value.ToString(), ordenCapturaIndice[j])))
                                             {
                                                 //Para reasignar correctamente el orden de captura a las piezas
-                                                operacion.actualizarOrdenCaptura(txtClavePedido.Text, lblClaveSiniestro.Text, row.Cells["Pieza"].Value.ToString(), i, ordenCapturaIndice[i], 0);
+                                                operacion.actualizarOrdenCaptura(txtClavePedido.Text, lblClaveSiniestro.Text, row.Cells["Pieza"].Value.ToString(), i, ordenCapturaIndice[i], 0);//mio
+                                                //operacion.actualizarOrdenCaptura(txtClavePedido.Text, lblClaveSiniestro.Text,row.Cells["Pieza"].Value.ToString(), i, ordenCapturaIndice[j], 0);//chatGPT
                                                 i += 1;
                                             }
                                             j++;
@@ -1204,6 +1397,16 @@ namespace Refracciones.Forms
                                     operacion.Log(usuario, idPedido, descripcionLog, "6");
 
                                     dt = operacion.piezasPedidoActualizar(txtClavePedido.Text.Trim(), lblClaveSiniestro.Text.Trim());
+                                    //CHAT GPT
+                                    /*if (dgvPedido.Columns.Contains("cve_pedido"))
+                                        dgvPedido.Columns["cve_pedido"].Visible = false;
+
+                                    if (dgvPedido.Columns.Contains("ordenCaptura"))
+                                        dgvPedido.Columns["ordenCaptura"].Visible = false;
+
+                                    if (dgvPedido.Columns.Contains("estado"))
+                                        dgvPedido.Columns["estado"].Visible = false;*/
+                                    //END CHAT GPT
                                     dgvPedido.DataSource = dt;
                                     cantidadPenalizada = penalizaciones.cantidadPenalizada;
                                     lblCantidadTotal.Text = (Convert.ToInt32(lblCantidadTotal.Text) - cantidadPenalizada).ToString();
@@ -1342,12 +1545,47 @@ namespace Refracciones.Forms
                     pieza.cbPiezaNombre.DataSource = dsPiezas.Tables[0].DefaultView;//TEST 26/02/2024
                     pieza.cbPiezaNombre.ValueMember = "nombre";
 
+                    //DialogResult respuesta = pieza.ShowDialog();
+                    //if (respuesta == DialogResult.OK)
+                    //{
+                    //    string usuario = lblUsuario.Text.Substring(9, lblUsuario.Text.Length - 9);
+                    //    string idPedido = txtClavePedido.Text.Trim();
+                    //    string descripcionLog = "El usuario: " + usuario + " realizó cambios a la pieza: " + datosPieza[0] + " del pedido: " + idPedido + " el día: " + DateTime.Now.ToString();
+
+                    //    operacion.Log(usuario, idPedido, descripcionLog, "19");
+
+                    //    int k = 0;
+                    //    if (actualizar == 1)
+                    //    {
+                    //        for (int j = 0; j < pieza.datosMandar.Length; j++)
+                    //        {
+                    //            dgvPedido[j + 5, index].Value = pieza.datosMandar[k];
+                    //            k++;
+                    //        }
+                    //        //EN caso de que se quiera dejar por default se descomenta la línea de abajo
+                    //        //dgvPedido.Rows[index].Cells["dataGridViewStatusCombobox"].Value = 1;
+                    //    }
+                    //    else
+                    //    {
+                    //        for (int j = 0; j < pieza.datosMandar.Length; j++)
+                    //        {
+                    //            dgvPedido[j + 3, index].Value = pieza.datosMandar[k];
+                    //            k++;
+                    //        }
+                    //    }
+                    //}
+
+                    //CHAT GPT
                     DialogResult respuesta = pieza.ShowDialog();
                     if (respuesta == DialogResult.OK)
                     {
                         string usuario = lblUsuario.Text.Substring(9, lblUsuario.Text.Length - 9);
                         string idPedido = txtClavePedido.Text.Trim();
-                        string descripcionLog = "El usuario: " + usuario + " realizó cambios a la pieza: " + datosPieza[0] + " del pedido: " + idPedido + " el día: " + DateTime.Now.ToString();
+
+                        string[] valoresAnteriores = (string[])datosPieza.Clone();
+                        string[] valoresNuevos = (string[])pieza.datosMandar.Clone();
+
+                        string descripcionLog = ConstruirDescripcionCambioPieza(usuario, idPedido, valoresAnteriores, valoresNuevos);
 
                         operacion.Log(usuario, idPedido, descripcionLog, "19");
 
@@ -1359,8 +1597,6 @@ namespace Refracciones.Forms
                                 dgvPedido[j + 5, index].Value = pieza.datosMandar[k];
                                 k++;
                             }
-                            //EN caso de que se quiera dejar por default se descomenta la línea de abajo
-                            //dgvPedido.Rows[index].Cells["dataGridViewStatusCombobox"].Value = 1;
                         }
                         else
                         {
@@ -1371,6 +1607,7 @@ namespace Refracciones.Forms
                             }
                         }
                     }
+                    //END CHAT GPT
                 }
                 //Check if click is on specific column
                 if (e.ColumnIndex == dgvPedido.Columns["dataGridViewStatusCombobox"].Index)
@@ -2275,11 +2512,18 @@ namespace Refracciones.Forms
                             //AGREGANDO DATOS A VENTA
                             operacion.actualizarVenta(txtClavePedido.Text.Trim().ToUpper(), lblClaveSiniestro.Text.Trim(), taller, vendedor, valuador, destino, totalCosto, subtotalPrecio, totalPrecio, dtFechaAsignacion, dtFechaPromesa, utilidad, cliente);//, utilidad
                             actualizarPedido();
+                            //string usuario = lblUsuario.Text.Substring(9, lblUsuario.Text.Length - 9);
+                            //string idPedido = txtClavePedido.Text.Trim();
+                            //string descripcionLog = "El usuario: " + usuario + " realizó cambios al pedido: " + idPedido + " el día: " + DateTime.Now.ToString();
+
+                            //operacion.Log(usuario, idPedido, descripcionLog, "3");
+                            //CHAT GPT
                             string usuario = lblUsuario.Text.Substring(9, lblUsuario.Text.Length - 9);
                             string idPedido = txtClavePedido.Text.Trim();
-                            string descripcionLog = "El usuario: " + usuario + " realizó cambios al pedido: " + idPedido + " el día: " + DateTime.Now.ToString();
+                            string descripcionLog = ConstruirDescripcionCambioPedido(usuario, idPedido);
 
-                            operacion.Log(usuario, idPedido, descripcionLog, "3");
+                            operacion.Log(usuario, idPedido, descripcionLog, "8");
+                            //END CHAT GPT
                             g = 1;
                             this.DialogResult = DialogResult.OK;
                         }
@@ -2516,6 +2760,11 @@ namespace Refracciones.Forms
         }
 
         private void Pedido_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnPDF_ClientSizeChanged(object sender, EventArgs e)
         {
 
         }

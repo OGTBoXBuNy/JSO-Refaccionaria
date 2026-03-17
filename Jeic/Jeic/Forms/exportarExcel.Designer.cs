@@ -38,6 +38,7 @@
             this.btnGenerar = new System.Windows.Forms.Button();
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.bunifuGradientPanel1 = new Bunifu.Framework.UI.BunifuGradientPanel();
+            this.rbtnOpcion3 = new System.Windows.Forms.RadioButton();
             this.lblUsuario = new System.Windows.Forms.Label();
             this.rbtnOpcion2 = new System.Windows.Forms.RadioButton();
             this.rbtnOpcion1 = new System.Windows.Forms.RadioButton();
@@ -49,7 +50,6 @@
             this.pbClose = new System.Windows.Forms.PictureBox();
             this.errorP = new System.Windows.Forms.ErrorProvider(this.components);
             this.moverFormulario = new Bunifu.Framework.UI.BunifuDragControl(this.components);
-            this.rbtnOpcion3 = new System.Windows.Forms.RadioButton();
             this.bunifuGradientPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbMinimize)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbClose)).BeginInit();
@@ -161,6 +161,21 @@
             this.bunifuGradientPanel1.Size = new System.Drawing.Size(387, 251);
             this.bunifuGradientPanel1.TabIndex = 6;
             // 
+            // rbtnOpcion3
+            // 
+            this.rbtnOpcion3.AutoSize = true;
+            this.rbtnOpcion3.BackColor = System.Drawing.Color.Transparent;
+            this.rbtnOpcion3.Checked = true;
+            this.rbtnOpcion3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold);
+            this.rbtnOpcion3.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.rbtnOpcion3.Location = new System.Drawing.Point(34, 60);
+            this.rbtnOpcion3.Name = "rbtnOpcion3";
+            this.rbtnOpcion3.Size = new System.Drawing.Size(89, 20);
+            this.rbtnOpcion3.TabIndex = 87;
+            this.rbtnOpcion3.TabStop = true;
+            this.rbtnOpcion3.Text = "Opción 3";
+            this.rbtnOpcion3.UseVisualStyleBackColor = false;
+            // 
             // lblUsuario
             // 
             this.lblUsuario.AutoSize = true;
@@ -174,6 +189,7 @@
             // 
             this.rbtnOpcion2.AutoSize = true;
             this.rbtnOpcion2.BackColor = System.Drawing.Color.Transparent;
+            this.rbtnOpcion2.Enabled = false;
             this.rbtnOpcion2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold);
             this.rbtnOpcion2.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.rbtnOpcion2.Location = new System.Drawing.Point(145, 60);
@@ -182,21 +198,22 @@
             this.rbtnOpcion2.TabIndex = 85;
             this.rbtnOpcion2.Text = "Opción 2";
             this.rbtnOpcion2.UseVisualStyleBackColor = false;
+            this.rbtnOpcion2.Visible = false;
             // 
             // rbtnOpcion1
             // 
             this.rbtnOpcion1.AutoSize = true;
             this.rbtnOpcion1.BackColor = System.Drawing.Color.Transparent;
-            this.rbtnOpcion1.Checked = true;
+            this.rbtnOpcion1.Enabled = false;
             this.rbtnOpcion1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold);
             this.rbtnOpcion1.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.rbtnOpcion1.Location = new System.Drawing.Point(33, 60);
+            this.rbtnOpcion1.Location = new System.Drawing.Point(252, 60);
             this.rbtnOpcion1.Name = "rbtnOpcion1";
             this.rbtnOpcion1.Size = new System.Drawing.Size(89, 20);
             this.rbtnOpcion1.TabIndex = 84;
-            this.rbtnOpcion1.TabStop = true;
             this.rbtnOpcion1.Text = "Opción 1";
             this.rbtnOpcion1.UseVisualStyleBackColor = false;
+            this.rbtnOpcion1.Visible = false;
             // 
             // chkvalesLiberados
             // 
@@ -284,19 +301,6 @@
             this.moverFormulario.Horizontal = true;
             this.moverFormulario.TargetControl = this.bunifuGradientPanel1;
             this.moverFormulario.Vertical = true;
-            // 
-            // rbtnOpcion3
-            // 
-            this.rbtnOpcion3.AutoSize = true;
-            this.rbtnOpcion3.BackColor = System.Drawing.Color.Transparent;
-            this.rbtnOpcion3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold);
-            this.rbtnOpcion3.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.rbtnOpcion3.Location = new System.Drawing.Point(256, 60);
-            this.rbtnOpcion3.Name = "rbtnOpcion3";
-            this.rbtnOpcion3.Size = new System.Drawing.Size(89, 20);
-            this.rbtnOpcion3.TabIndex = 87;
-            this.rbtnOpcion3.Text = "Opción 3";
-            this.rbtnOpcion3.UseVisualStyleBackColor = false;
             // 
             // exportarExcel
             // 

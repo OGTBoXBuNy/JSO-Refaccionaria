@@ -308,10 +308,11 @@
             // dtpFechaCosto
             // 
             this.dtpFechaCosto.Cursor = System.Windows.Forms.Cursors.Default;
-            this.dtpFechaCosto.Location = new System.Drawing.Point(152, 258);
+            this.dtpFechaCosto.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpFechaCosto.Location = new System.Drawing.Point(168, 258);
             this.dtpFechaCosto.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dtpFechaCosto.Name = "dtpFechaCosto";
-            this.dtpFechaCosto.Size = new System.Drawing.Size(265, 22);
+            this.dtpFechaCosto.Size = new System.Drawing.Size(128, 22);
             this.dtpFechaCosto.TabIndex = 11;
             // 
             // txtCostoSinIVA
