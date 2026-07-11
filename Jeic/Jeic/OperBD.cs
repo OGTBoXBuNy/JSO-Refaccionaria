@@ -7994,19 +7994,19 @@ WHERE ven.fecha_asignacion BETWEEN @fecha1 AND @fecha2
                 
                 string correoVendedor = CorreosVendedor(cvepedido);
 
-                string senderNombre = "JEIC Distribuidora";
-                string senderCorreo = "correos-jeic@jeic.com.mx";
-                string senderAppPass = "rdvwqnbybxxomypq";
+                string senderNombre = "JSO PARTS";
+                string senderCorreo = "info@jsoparts.com.mx";
+                string senderAppPass = "asbpcozeolmhvfni";
                 string responsableCorreoCopia = "";
 
                 if (clienteNombre == "GNP")
-                    responsableCorreoCopia = "jeic.admon4@gmail.com";//"colisionjeic.admon1@hotmail.com";
+                    responsableCorreoCopia = "bryan.rmz.dev@gmail.com";//"colisionjeic.admon1@hotmail.com";   jeic.admon4@gmail.com
                 else if (clienteNombre == "HDI SEGUROS")
-                    responsableCorreoCopia = "jeic.gvg@gmail.com";
+                    responsableCorreoCopia = "bryan.rmz.dev@gmail.com";//jeic.gvg@gmail.com
                 else if (clienteNombre == "AXA SEGUROS")
-                    responsableCorreoCopia = "jeic.admon3@hotmail.com";
+                    responsableCorreoCopia = "bryan.rmz.dev@gmail.com";//jeic.admon3@hotmail.com
 
-                string IsraCorreoCopia = "jeiccotizaciones@hotmail.com";
+                string IsraCorreoCopia = "bryan.rmz.dev@gmail.com";//jeiccotizaciones@hotmail.com
 
                 try
                 {
@@ -8084,17 +8084,17 @@ WHERE ven.fecha_asignacion BETWEEN @fecha1 AND @fecha2
                 taller = nombreTallerCorreo(cvepedido);
                 string correoVendedor = CorreosVendedor(cvepedido);
 
-                string senderNombre = "JEIC Distribuidora";
-                string senderCorreo = "correos-jeic@jeic.com.mx";
-                string senderAppPass = "rdvwqnbybxxomypq";//xldsjobozxjsrmpk
+                string senderNombre = "JSO PARTS";
+                string senderCorreo = "info@jsoparts.com.mx";
+                string senderAppPass = "asbpcozeolmhvfni";//xldsjobozxjsrmpk
                 string responsableCorreoCopia = "";
 
                 if (clienteNombre == "GNP")
-                    responsableCorreoCopia = "colisionjeic.admon1@hotmail.com";
+                    responsableCorreoCopia = "bryan.rmz.dev@gmail.com";//colisionjeic.admon1@hotmail.com
                 else if (clienteNombre == "HDI SEGUROS")
-                    responsableCorreoCopia = "jeic.gvg@gmail.com";
+                    responsableCorreoCopia = "bryan.rmz.dev@gmail.com";//jeic.gvg@gmail.com
 
-                string IsraCorreoCopia = "jeiccotizaciones@hotmail.com";
+                string IsraCorreoCopia = "bryan.rmz.dev@gmail.com";//jeiccotizaciones@hotmail.com
 
                 //REVISAMOS SI TENEMOS NUMEROS DE GUIA PARA ANEXAR
                 List<string> numerosGuia = this.numerosGuia(cvepedido);
