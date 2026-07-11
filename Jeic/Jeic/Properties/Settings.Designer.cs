@@ -12,7 +12,7 @@ namespace Jeic.Properties {
     
     
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "17.3.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "17.14.0.0")]
     internal sealed partial class Settings : global::System.Configuration.ApplicationSettingsBase {
         
         private static Settings defaultInstance = ((Settings)(global::System.Configuration.ApplicationSettingsBase.Synchronized(new Settings())));
@@ -25,7 +25,8 @@ namespace Jeic.Properties {
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=MSI\\SQLEXPRESS;Initial Catalog=JeicBKUPProd;Integrated Security=True")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=SQL5101.site4now.net;Initial Catalog=db_acbd5c_jsodist;User Id=db_acb" +
+            "d5c_jsodist_admin;Password=Bunny$27!;Encrypt=True;TrustServerCertificate=True;")]
         public string SecretMessage {
             get {
                 return ((string)(this["SecretMessage"]));
