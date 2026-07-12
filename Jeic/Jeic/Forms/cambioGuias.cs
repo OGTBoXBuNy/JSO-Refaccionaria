@@ -24,8 +24,9 @@ namespace Jeic.Forms
         private string[] datos = new string[8];
         private void cambioGuias_Load(object sender, EventArgs e)
         {
+            //Colocar ICONO
+            this.Icon = Resources.iconJSOLogo;
 
-            
             dgvEstatus.Columns["ColumnCvePedido"].Visible = false;
             dgvEstatus.Columns["ColumnCveVenta"].Visible = false;
             

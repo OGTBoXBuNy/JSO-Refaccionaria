@@ -25,7 +25,7 @@ namespace Refracciones.Forms
 
         private void buscarFacturas_Load(object sender, EventArgs e)
         {
-            this.Icon = Resources.iconJeic;
+            this.Icon = Resources.iconJSOLogo;
             dgvFacturas.DataSource =  factura.buscarFacturass();
             dgvFacturas.Columns["CVE"].Visible = false; //INDEX 17 CVE
             cmbEstadoFactura.SelectedIndex = 0;

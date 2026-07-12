@@ -35,6 +35,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.pbClose = new System.Windows.Forms.PictureBox();
             this.bunifuGradientPanel1 = new Bunifu.Framework.UI.BunifuGradientPanel();
+            this.lblUsuario = new System.Windows.Forms.Label();
             this.lblScan = new System.Windows.Forms.Label();
             this.txtCveGuia = new System.Windows.Forms.TextBox();
             this.lblCveGuia = new Bunifu.Framework.UI.BunifuCustomLabel();
@@ -52,7 +53,6 @@
             this.rbtnPorPedido = new System.Windows.Forms.RadioButton();
             this.rbtnPorPieza = new System.Windows.Forms.RadioButton();
             this.lblTitle = new Bunifu.Framework.UI.BunifuCustomLabel();
-            this.lblUsuario = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pbClose)).BeginInit();
             this.bunifuGradientPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEstatus)).BeginInit();
@@ -95,6 +95,15 @@
             this.bunifuGradientPanel1.Quality = 10;
             this.bunifuGradientPanel1.Size = new System.Drawing.Size(997, 422);
             this.bunifuGradientPanel1.TabIndex = 22;
+            // 
+            // lblUsuario
+            // 
+            this.lblUsuario.AutoSize = true;
+            this.lblUsuario.Location = new System.Drawing.Point(4, 4);
+            this.lblUsuario.Name = "lblUsuario";
+            this.lblUsuario.Size = new System.Drawing.Size(0, 16);
+            this.lblUsuario.TabIndex = 23;
+            this.lblUsuario.Visible = false;
             // 
             // lblScan
             // 
@@ -325,15 +334,6 @@
             this.lblTitle.TabIndex = 18;
             this.lblTitle.Text = "CAMBIAR NUMERO DE GUÍA POR PIEZA O PEDIDO";
             // 
-            // lblUsuario
-            // 
-            this.lblUsuario.AutoSize = true;
-            this.lblUsuario.Location = new System.Drawing.Point(4, 4);
-            this.lblUsuario.Name = "lblUsuario";
-            this.lblUsuario.Size = new System.Drawing.Size(0, 16);
-            this.lblUsuario.TabIndex = 23;
-            this.lblUsuario.Visible = false;
-            // 
             // cambioGuias
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -344,6 +344,7 @@
             this.Controls.Add(this.bunifuGradientPanel1);
             this.Controls.Add(this.pbClose);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "cambioGuias";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "cambioGuias";

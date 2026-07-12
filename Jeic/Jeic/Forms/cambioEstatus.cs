@@ -1,4 +1,9 @@
-﻿using System;
+﻿using DocumentFormat.OpenXml.Drawing.Charts;
+using DocumentFormat.OpenXml.Spreadsheet;
+using Jeic.Properties;
+using Refracciones;
+using Refracciones.Forms;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -7,10 +12,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using DocumentFormat.OpenXml.Drawing.Charts;
-using DocumentFormat.OpenXml.Spreadsheet;
-using Refracciones;
-using Refracciones.Forms;
 
 namespace Jeic.Forms
 {
@@ -24,7 +25,9 @@ namespace Jeic.Forms
         private string[] datos = new string[7];
         private void cambioEstatus_Load(object sender, EventArgs e)
         {
-            
+            //Colocar ICONO
+            this.Icon = Resources.iconJSOLogo;
+
             cmbEstado.FlatStyle = FlatStyle.Popup;
             //cmbEstado.Name = "dataGridViewStatusCombobox";
             cmbEstado.DataSource = operacion.EstadoSiniestro().Tables[0].DefaultView;

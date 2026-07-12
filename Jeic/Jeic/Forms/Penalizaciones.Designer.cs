@@ -32,6 +32,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Penalizaciones));
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.bunifuGradientPanel1 = new Bunifu.Framework.UI.BunifuGradientPanel();
+            this.lblUsuario = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.cbCantidad = new System.Windows.Forms.ComboBox();
             this.btnCancelar = new System.Windows.Forms.Button();
@@ -44,7 +45,6 @@
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.bunifuDragControl1 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
             this.moverFormulario = new Bunifu.Framework.UI.BunifuDragControl(this.components);
-            this.lblUsuario = new System.Windows.Forms.Label();
             this.bunifuGradientPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
@@ -79,6 +79,16 @@
             this.bunifuGradientPanel1.Size = new System.Drawing.Size(365, 272);
             this.bunifuGradientPanel1.TabIndex = 0;
             // 
+            // lblUsuario
+            // 
+            this.lblUsuario.AutoSize = true;
+            this.lblUsuario.Location = new System.Drawing.Point(13, 9);
+            this.lblUsuario.Name = "lblUsuario";
+            this.lblUsuario.Size = new System.Drawing.Size(54, 16);
+            this.lblUsuario.TabIndex = 9;
+            this.lblUsuario.Text = "Usuario";
+            this.lblUsuario.Visible = false;
+            // 
             // label4
             // 
             this.label4.AutoSize = true;
@@ -86,7 +96,7 @@
             this.label4.ForeColor = System.Drawing.Color.White;
             this.label4.Location = new System.Drawing.Point(316, 78);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(20, 17);
+            this.label4.Size = new System.Drawing.Size(19, 16);
             this.label4.TabIndex = 8;
             this.label4.Text = "%";
             // 
@@ -165,7 +175,7 @@
             this.label3.ForeColor = System.Drawing.Color.White;
             this.label3.Location = new System.Drawing.Point(27, 124);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(49, 17);
+            this.label3.Size = new System.Drawing.Size(47, 16);
             this.label3.TabIndex = 2;
             this.label3.Text = "Motivo";
             // 
@@ -176,7 +186,7 @@
             this.label2.ForeColor = System.Drawing.Color.White;
             this.label2.Location = new System.Drawing.Point(27, 75);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(179, 17);
+            this.label2.Size = new System.Drawing.Size(170, 16);
             this.label2.TabIndex = 1;
             this.label2.Text = "Porcentaje de penalización";
             // 
@@ -187,7 +197,7 @@
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(24, 33);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(138, 17);
+            this.label1.Size = new System.Drawing.Size(130, 16);
             this.label1.TabIndex = 0;
             this.label1.Text = "Cantidad a penalizar";
             // 
@@ -209,16 +219,6 @@
             this.moverFormulario.TargetControl = this.bunifuGradientPanel1;
             this.moverFormulario.Vertical = true;
             // 
-            // lblUsuario
-            // 
-            this.lblUsuario.AutoSize = true;
-            this.lblUsuario.Location = new System.Drawing.Point(13, 9);
-            this.lblUsuario.Name = "lblUsuario";
-            this.lblUsuario.Size = new System.Drawing.Size(57, 17);
-            this.lblUsuario.TabIndex = 9;
-            this.lblUsuario.Text = "Usuario";
-            this.lblUsuario.Visible = false;
-            // 
             // Penalizaciones
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -227,6 +227,7 @@
             this.ClientSize = new System.Drawing.Size(365, 270);
             this.Controls.Add(this.bunifuGradientPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Penalizaciones";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;

@@ -1,4 +1,5 @@
-﻿using Refracciones;
+﻿using Jeic.Properties;
+using Refracciones;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -30,6 +31,8 @@ namespace Jeic.Forms
 
         private void Log_Load(object sender, EventArgs e)
         {
+            //Colocar ICONO
+            this.Icon = Resources.iconJSOLogo;
             //Carga los datos de los nombres de los tipos de cambios registrados
             cmbTipo.DataSource = Consulta.cLogTipo().Tables[0].DefaultView;
             cmbTipo.ValueMember = "tipo";

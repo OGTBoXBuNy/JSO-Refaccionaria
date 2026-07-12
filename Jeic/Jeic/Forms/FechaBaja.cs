@@ -1,4 +1,5 @@
 ﻿using DocumentFormat.OpenXml.Spreadsheet;
+using Jeic.Properties;
 using Refracciones;
 using Refracciones.Forms;
 using System;
@@ -22,6 +23,8 @@ namespace Jeic.Forms
 
         private void FechaBaja_Load(object sender, EventArgs e)
         {
+            //Colocar ICONO
+            this.Icon = Resources.iconJSOLogo;
             if (identificador == 1)
             {
                 OperBD operacion = new OperBD();

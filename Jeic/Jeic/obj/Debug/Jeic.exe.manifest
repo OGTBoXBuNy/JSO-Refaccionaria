@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <asmv1:assembly xsi:schemaLocation="urn:schemas-microsoft-com:asm.v1 assembly.adaptive.xsd" manifestVersion="1.0" xmlns:asmv1="urn:schemas-microsoft-com:asm.v1" xmlns="urn:schemas-microsoft-com:asm.v2" xmlns:asmv2="urn:schemas-microsoft-com:asm.v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:co.v1="urn:schemas-microsoft-com:clickonce.v1" xmlns:asmv3="urn:schemas-microsoft-com:asm.v3" xmlns:dsig="http://www.w3.org/2000/09/xmldsig#" xmlns:co.v2="urn:schemas-microsoft-com:clickonce.v2">
-  <asmv1:assemblyIdentity name="Jeic.exe" version="1.0.0.53" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="msil" type="win32" />
-  <description asmv2:iconFile="JSO Logo.ico" xmlns="urn:schemas-microsoft-com:asm.v1" />
+  <asmv1:assemblyIdentity name="Jeic.exe" version="1.0.0.54" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="msil" type="win32" />
+  <description asmv2:iconFile="iconJSOLogo.ico" xmlns="urn:schemas-microsoft-com:asm.v1" />
   <application />
   <entryPoint>
     <assemblyIdentity name="Jeic" version="2.3.2.0" language="neutral" processorArchitecture="msil" />
@@ -283,14 +283,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Jeic.exe" size="6838784">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Jeic.exe" size="9804288">
       <assemblyIdentity name="Jeic" version="2.3.2.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>GpwOOpHaYMaONDcp9G8QXGZhyQap4q5kz9OquX6pSr4=</dsig:DigestValue>
+        <dsig:DigestValue>6GGy9nvUcXwsBUd7ontEkW1JVoj9m8aI3t9gyVyMLUU=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -507,6 +507,15 @@
       <dsig:DigestValue>vf4uyWQiPSBVPsNmVdxZVN/9pNC17UKj9oBcaDNtTAY=</dsig:DigestValue>
     </hash>
   </file>
+  <file name="iconJSOLogo.ico" size="270398">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>ifNjloD9tyS+VDyB87MdjkDPCMEjbjjveYAPloCReyY=</dsig:DigestValue>
+    </hash>
+  </file>
   <file name="Jeic.exe.config" size="2513">
     <hash>
       <dsig:Transforms>
@@ -526,15 +535,6 @@
     </hash>
   </file>
   <file name="JSO Logo.ico" size="270398">
-    <hash>
-      <dsig:Transforms>
-        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
-      </dsig:Transforms>
-      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>ifNjloD9tyS+VDyB87MdjkDPCMEjbjjveYAPloCReyY=</dsig:DigestValue>
-    </hash>
-  </file>
-  <file name="Resources\JSO Logo.ico" size="270398">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />

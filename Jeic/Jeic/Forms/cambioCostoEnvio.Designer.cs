@@ -36,6 +36,7 @@
             this.lblTitle = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.pbClose = new System.Windows.Forms.PictureBox();
             this.bunifuGradientPanel1 = new Bunifu.Framework.UI.BunifuGradientPanel();
+            this.lblUsuario = new System.Windows.Forms.Label();
             this.lblScan = new System.Windows.Forms.Label();
             this.txtCveCosto = new System.Windows.Forms.TextBox();
             this.lblCveGuia = new Bunifu.Framework.UI.BunifuCustomLabel();
@@ -52,7 +53,6 @@
             this.btnGuardar = new System.Windows.Forms.Button();
             this.rbtnPorPedido = new System.Windows.Forms.RadioButton();
             this.rbtnPorPieza = new System.Windows.Forms.RadioButton();
-            this.lblUsuario = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pbClose)).BeginInit();
             this.bunifuGradientPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEstatus)).BeginInit();
@@ -107,6 +107,15 @@
             this.bunifuGradientPanel1.Quality = 10;
             this.bunifuGradientPanel1.Size = new System.Drawing.Size(997, 422);
             this.bunifuGradientPanel1.TabIndex = 23;
+            // 
+            // lblUsuario
+            // 
+            this.lblUsuario.AutoSize = true;
+            this.lblUsuario.Location = new System.Drawing.Point(3, 12);
+            this.lblUsuario.Name = "lblUsuario";
+            this.lblUsuario.Size = new System.Drawing.Size(0, 16);
+            this.lblUsuario.TabIndex = 23;
+            this.lblUsuario.Visible = false;
             // 
             // lblScan
             // 
@@ -326,15 +335,6 @@
             this.rbtnPorPieza.UseVisualStyleBackColor = true;
             this.rbtnPorPieza.CheckedChanged += new System.EventHandler(this.rbtnPorPieza_CheckedChanged);
             // 
-            // lblUsuario
-            // 
-            this.lblUsuario.AutoSize = true;
-            this.lblUsuario.Location = new System.Drawing.Point(3, 12);
-            this.lblUsuario.Name = "lblUsuario";
-            this.lblUsuario.Size = new System.Drawing.Size(0, 16);
-            this.lblUsuario.TabIndex = 23;
-            this.lblUsuario.Visible = false;
-            // 
             // cambioCostoEnvio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -345,6 +345,7 @@
             this.Controls.Add(this.pbClose);
             this.Controls.Add(this.lblTitle);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "cambioCostoEnvio";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Costos de Envio";

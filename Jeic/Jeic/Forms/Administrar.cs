@@ -23,7 +23,7 @@ namespace Refracciones.Forms
         private void Administrar_Load(object sender, EventArgs e)
         {
             //Colocar ICONO
-            this.Icon = Resources.iconJeic;
+            this.Icon = Resources.iconJSOLogo;
             rbtnRegistrar.Checked = true; 
         }
 

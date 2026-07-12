@@ -191,6 +191,16 @@ namespace Jeic.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Icon similar to (Icon).
+        /// </summary>
+        internal static System.Drawing.Icon iconJSOLogo {
+            get {
+                object obj = ResourceManager.GetObject("iconJSOLogo", resourceCulture);
+                return ((System.Drawing.Icon)(obj));
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap JEIC_Login {

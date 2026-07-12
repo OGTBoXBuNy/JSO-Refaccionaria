@@ -128,5 +128,10 @@ namespace Refracciones.Forms
             mes.ShowDialog();
         }
 
+        private void MessageBOX_Load(object sender, EventArgs e)
+        {
+            //Colocar ICONO
+            this.Icon = Resources.iconJSOLogo;
+        }
     }
 }

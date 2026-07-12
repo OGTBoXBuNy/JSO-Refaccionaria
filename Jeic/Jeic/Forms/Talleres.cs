@@ -32,7 +32,7 @@ namespace Jeic.Forms
 
         private void Talleres_Load(object sender, EventArgs e)
         {
-            this.Icon = Resources.iconJeic;
+            this.Icon = Resources.iconJSOLogo;
             dgvTalleres.DataSource = taller.buscarTalleres();
         }
 

@@ -1,4 +1,5 @@
-﻿using Refracciones;
+﻿using Jeic.Properties;
+using Refracciones;
 using Refracciones.Forms;
 using System;
 using System.Collections.Generic;
@@ -21,7 +22,9 @@ namespace Jeic.Forms
 
         private void Factura_Load(object sender, EventArgs e)
         {
-            
+            //Colocar ICONO
+            this.Icon = Resources.iconJSOLogo;
+
             OperBD fact = new OperBD();
             if (lblFoRF.Text == "0")
             {

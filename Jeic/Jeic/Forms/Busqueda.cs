@@ -55,7 +55,7 @@ namespace Refracciones.Forms
             //-------------------------------------
 
             this.ActiveControl = TxtClavePed;
-            this.Icon = Resources.iconJeic;
+            this.Icon = Resources.iconJSOLogo;
             llenarDefaultDGV.defaultDGV(dvgPedido,lblcvePe.Text);
             dvgPedido.Columns["VENTA"].Visible = false;// VENTA INDEX 9
             dvgPedido.Columns["CVE"].Visible = false;// CVE INDEX 10

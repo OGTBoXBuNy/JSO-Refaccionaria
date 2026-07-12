@@ -196,7 +196,7 @@ namespace Refracciones.Forms
             }
 
             //Colocar ICONO
-            this.Icon = Resources.iconJeic;
+            this.Icon = Resources.iconJSOLogo;
             Eleccion eleccion = new Eleccion();
             if (actualizar == 1)
             {

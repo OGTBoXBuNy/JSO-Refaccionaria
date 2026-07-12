@@ -34,6 +34,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.bunifuGradientPanel1 = new Bunifu.Framework.UI.BunifuGradientPanel();
+            this.lblUsuario = new System.Windows.Forms.Label();
             this.lblScan = new System.Windows.Forms.Label();
             this.lblFecha = new System.Windows.Forms.Label();
             this.Fecha_in = new System.Windows.Forms.DateTimePicker();
@@ -52,7 +53,6 @@
             this.rbtnPorPieza = new System.Windows.Forms.RadioButton();
             this.lblTitle = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.pbClose = new System.Windows.Forms.PictureBox();
-            this.lblUsuario = new System.Windows.Forms.Label();
             this.bunifuGradientPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEstatus)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbClose)).BeginInit();
@@ -84,6 +84,15 @@
             this.bunifuGradientPanel1.Size = new System.Drawing.Size(1001, 422);
             this.bunifuGradientPanel1.TabIndex = 18;
             this.bunifuGradientPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.bunifuGradientPanel1_Paint);
+            // 
+            // lblUsuario
+            // 
+            this.lblUsuario.AutoSize = true;
+            this.lblUsuario.Location = new System.Drawing.Point(13, 11);
+            this.lblUsuario.Name = "lblUsuario";
+            this.lblUsuario.Size = new System.Drawing.Size(0, 16);
+            this.lblUsuario.TabIndex = 23;
+            this.lblUsuario.Visible = false;
             // 
             // lblScan
             // 
@@ -330,15 +339,6 @@
             this.pbClose.TabIndex = 19;
             this.pbClose.TabStop = false;
             this.pbClose.Click += new System.EventHandler(this.pbClose_Click);
-            // 
-            // lblUsuario
-            // 
-            this.lblUsuario.AutoSize = true;
-            this.lblUsuario.Location = new System.Drawing.Point(13, 11);
-            this.lblUsuario.Name = "lblUsuario";
-            this.lblUsuario.Size = new System.Drawing.Size(0, 16);
-            this.lblUsuario.TabIndex = 23;
-            this.lblUsuario.Visible = false;
             // 
             // cambioEstatus
             // 

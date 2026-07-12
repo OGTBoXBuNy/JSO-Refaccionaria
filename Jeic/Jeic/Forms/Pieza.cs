@@ -31,7 +31,7 @@
             
             OperBD operacion = new OperBD();
             //Colocar ICONO
-            this.Icon = Resources.iconJeic;
+            this.Icon = Resources.iconJSOLogo;
 
             this.ActiveControl = label1;
 

@@ -27,7 +27,7 @@
     <InstallUrl>https://raw.githubusercontent.com/OGTBoXBuNy/JSO-Refaccionaria/refs/heads/main/published/</InstallUrl>
     <CreateWebPageOnPublish>true</CreateWebPageOnPublish>
     <WebPage>publish.htm</WebPage>
-    <ApplicationRevision>54</ApplicationRevision>
+    <ApplicationRevision>55</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <CreateDesktopShortcut>true</CreateDesktopShortcut>
@@ -61,7 +61,7 @@
   </PropertyGroup>
   <PropertyGroup />
   <PropertyGroup>
-    <ApplicationIcon>JSO Logo.ico</ApplicationIcon>
+    <ApplicationIcon>iconJSOLogo.ico</ApplicationIcon>
   </PropertyGroup>
   <PropertyGroup>
     <ManifestCertificateThumbprint>A708E06F518D713D29ED7E10263F20F392F595D9</ManifestCertificateThumbprint>
@@ -556,9 +556,10 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="iconJeic.ico" />
+    <Content Include="iconJSOLogo.ico" />
     <Content Include="Jeic.ico" />
     <Content Include="JSO Logo.ico" />
-    <Content Include="Resources\JSO Logo.ico" />
+    <None Include="Resources\iconJSOLogo.ico" />
     <Content Include="Resources\JSO Logo.png" />
     <None Include="Resources\OjoCerrado.png" />
     <None Include="Resources\ojo.png" />

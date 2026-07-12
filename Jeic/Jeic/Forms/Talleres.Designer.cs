@@ -35,13 +35,13 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.bunifuGradientPanel1 = new Bunifu.Framework.UI.BunifuGradientPanel();
+            this.lblUsuario = new System.Windows.Forms.Label();
             this.txtTaller = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.dgvTalleres = new System.Windows.Forms.DataGridView();
             this.pbMinimize = new System.Windows.Forms.PictureBox();
             this.pbClose = new System.Windows.Forms.PictureBox();
             this.moverFormulario = new Bunifu.Framework.UI.BunifuDragControl(this.components);
-            this.lblUsuario = new System.Windows.Forms.Label();
             this.bunifuGradientPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTalleres)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbMinimize)).BeginInit();
@@ -69,19 +69,33 @@
             this.bunifuGradientPanel1.GradientTopLeft = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
             this.bunifuGradientPanel1.GradientTopRight = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
             this.bunifuGradientPanel1.Location = new System.Drawing.Point(0, -2);
+            this.bunifuGradientPanel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.bunifuGradientPanel1.Name = "bunifuGradientPanel1";
             this.bunifuGradientPanel1.Quality = 10;
-            this.bunifuGradientPanel1.Size = new System.Drawing.Size(799, 452);
+            this.bunifuGradientPanel1.Size = new System.Drawing.Size(1065, 556);
             this.bunifuGradientPanel1.TabIndex = 2;
+            // 
+            // lblUsuario
+            // 
+            this.lblUsuario.AutoSize = true;
+            this.lblUsuario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(27)))), ((int)(((byte)(28)))));
+            this.lblUsuario.ForeColor = System.Drawing.Color.White;
+            this.lblUsuario.Location = new System.Drawing.Point(4, 6);
+            this.lblUsuario.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblUsuario.Name = "lblUsuario";
+            this.lblUsuario.Size = new System.Drawing.Size(57, 16);
+            this.lblUsuario.TabIndex = 82;
+            this.lblUsuario.Text = "Usuario:";
             // 
             // txtTaller
             // 
             this.txtTaller.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
             this.txtTaller.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtTaller.ForeColor = System.Drawing.Color.White;
-            this.txtTaller.Location = new System.Drawing.Point(117, 40);
+            this.txtTaller.Location = new System.Drawing.Point(156, 49);
+            this.txtTaller.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtTaller.Name = "txtTaller";
-            this.txtTaller.Size = new System.Drawing.Size(273, 20);
+            this.txtTaller.Size = new System.Drawing.Size(363, 22);
             this.txtTaller.TabIndex = 81;
             this.txtTaller.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtTaller_KeyUp);
             // 
@@ -91,9 +105,10 @@
             this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(28)))), ((int)(((byte)(31)))));
             this.label1.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(3, 43);
+            this.label1.Location = new System.Drawing.Point(4, 53);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(108, 14);
+            this.label1.Size = new System.Drawing.Size(123, 18);
             this.label1.TabIndex = 80;
             this.label1.Text = "Nombre del Taller:";
             // 
@@ -117,7 +132,8 @@
             this.dgvTalleres.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvTalleres.EnableHeadersVisualStyles = false;
             this.dgvTalleres.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(51)))), ((int)(((byte)(65)))));
-            this.dgvTalleres.Location = new System.Drawing.Point(0, 77);
+            this.dgvTalleres.Location = new System.Drawing.Point(0, 95);
+            this.dgvTalleres.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dgvTalleres.Name = "dgvTalleres";
             this.dgvTalleres.ReadOnly = true;
             this.dgvTalleres.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
@@ -130,6 +146,7 @@
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgvTalleres.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvTalleres.RowHeadersVisible = false;
+            this.dgvTalleres.RowHeadersWidth = 51;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
             dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
@@ -137,16 +154,16 @@
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
             this.dgvTalleres.RowsDefaultCellStyle = dataGridViewCellStyle3;
             this.dgvTalleres.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvTalleres.Size = new System.Drawing.Size(799, 375);
+            this.dgvTalleres.Size = new System.Drawing.Size(1065, 462);
             this.dgvTalleres.TabIndex = 78;
             // 
             // pbMinimize
             // 
             this.pbMinimize.Image = global::Jeic.Properties.Resources.Minimize_Window_2_48px;
-            this.pbMinimize.Location = new System.Drawing.Point(765, 2);
-            this.pbMinimize.Margin = new System.Windows.Forms.Padding(2);
+            this.pbMinimize.Location = new System.Drawing.Point(1020, 2);
+            this.pbMinimize.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pbMinimize.Name = "pbMinimize";
-            this.pbMinimize.Size = new System.Drawing.Size(15, 16);
+            this.pbMinimize.Size = new System.Drawing.Size(20, 20);
             this.pbMinimize.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbMinimize.TabIndex = 77;
             this.pbMinimize.TabStop = false;
@@ -155,10 +172,10 @@
             // pbClose
             // 
             this.pbClose.Image = global::Jeic.Properties.Resources.Close_Window__2_48px;
-            this.pbClose.Location = new System.Drawing.Point(784, 2);
-            this.pbClose.Margin = new System.Windows.Forms.Padding(2);
+            this.pbClose.Location = new System.Drawing.Point(1045, 2);
+            this.pbClose.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pbClose.Name = "pbClose";
-            this.pbClose.Size = new System.Drawing.Size(15, 16);
+            this.pbClose.Size = new System.Drawing.Size(20, 20);
             this.pbClose.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbClose.TabIndex = 76;
             this.pbClose.TabStop = false;
@@ -171,24 +188,15 @@
             this.moverFormulario.TargetControl = this.bunifuGradientPanel1;
             this.moverFormulario.Vertical = true;
             // 
-            // lblUsuario
-            // 
-            this.lblUsuario.AutoSize = true;
-            this.lblUsuario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(27)))), ((int)(((byte)(28)))));
-            this.lblUsuario.ForeColor = System.Drawing.Color.White;
-            this.lblUsuario.Location = new System.Drawing.Point(3, 5);
-            this.lblUsuario.Name = "lblUsuario";
-            this.lblUsuario.Size = new System.Drawing.Size(46, 13);
-            this.lblUsuario.TabIndex = 82;
-            this.lblUsuario.Text = "Usuario:";
-            // 
             // Talleres
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1067, 554);
             this.Controls.Add(this.bunifuGradientPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Talleres";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Talleres";

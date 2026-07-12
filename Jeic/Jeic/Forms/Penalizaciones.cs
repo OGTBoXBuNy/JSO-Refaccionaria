@@ -1,4 +1,5 @@
 ﻿using DocumentFormat.OpenXml.Office.CoverPageProps;
+using Jeic.Properties;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -20,7 +21,9 @@ namespace Refracciones.Forms
 
         private void Penalizaciones_Load(object sender, EventArgs e)
         {
-            if(penalizarPedido == 1)
+            //Colocar ICONO
+            this.Icon = Resources.iconJSOLogo;
+            if (penalizarPedido == 1)
             {
                 label1.Visible = false;
                 cbCantidad.Visible = false;

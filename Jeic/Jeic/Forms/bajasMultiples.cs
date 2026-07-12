@@ -30,7 +30,7 @@ namespace Jeic.Forms
         private void bajasMultiples_Load(object sender, EventArgs e)
         {
 
-            this.Icon = Resources.iconJeic;
+            this.Icon = Resources.iconJSOLogo;
             dgvEstatus.Columns["ColumnCvePedido"].Visible = false;
             dgvEstatus.Columns["ColumnCveVenta"].Visible = false;
             dgvEstatus.Columns["ColumnCvePieza"].Visible = false;

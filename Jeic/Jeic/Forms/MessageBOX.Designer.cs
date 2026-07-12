@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MessageBOX));
             this.bunifuDragControl1 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.GifHecho = new System.Windows.Forms.PictureBox();
@@ -175,10 +176,12 @@
             this.Controls.Add(this.btnOK);
             this.Controls.Add(this.GifHecho);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "MessageBOX";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Dialog";
+            this.Load += new System.EventHandler(this.MessageBOX_Load);
             ((System.ComponentModel.ISupportInitialize)(this.GifHecho)).EndInit();
             this.ResumeLayout(false);
 

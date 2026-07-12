@@ -28,7 +28,7 @@ namespace Refracciones
 
         private void InicioSesion_Load(object sender, EventArgs e)
         {
-            this.Icon = Resources.iconJeic;
+            this.Icon = Resources.iconJSOLogo;
             btnEntrar.BackColor = Color.Transparent;
             this.ActiveControl = pictureBox1;
 

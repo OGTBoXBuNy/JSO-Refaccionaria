@@ -1,4 +1,5 @@
 ﻿using DocumentFormat.OpenXml.Drawing.Charts;
+using Jeic.Properties;
 using Refracciones;
 using Refracciones.Forms;
 using System;
@@ -24,6 +25,8 @@ namespace Jeic.Forms
 
         private void cambioCostoEnvio_Load(object sender, EventArgs e)
         {
+            //Colocar ICONO
+            this.Icon = Resources.iconJSOLogo;
             dgvEstatus.Columns["ColumnCvePedido"].Visible = false;
             dgvEstatus.Columns["ColumnCveVenta"].Visible = false;
         }

@@ -1,4 +1,5 @@
-﻿using Refracciones;
+﻿using Jeic.Properties;
+using Refracciones;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -44,6 +45,12 @@ namespace Jeic.Forms
         private void pbClose_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void GeneradorClave_Load(object sender, EventArgs e)
+        {
+            //Colocar ICONO
+            this.Icon = Resources.iconJSOLogo;
         }
     }
 }

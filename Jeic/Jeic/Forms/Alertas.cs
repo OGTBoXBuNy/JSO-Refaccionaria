@@ -22,7 +22,7 @@ namespace Refracciones.Forms
         private void Alertas_Load(object sender, EventArgs e)
         {
             //Colocar ICONO
-            this.Icon = Resources.iconJeic;
+            this.Icon = Resources.iconJSOLogo;
             DateTime fecha_sys = DateTime.Parse((DateTime.Now.ToShortDateString()));
             dgvAlertas.DataSource = oper.Alertass(fecha_sys);
         }

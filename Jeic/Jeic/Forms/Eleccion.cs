@@ -156,7 +156,7 @@ namespace Refracciones
             //End Permisos
 
             //Colocar ICONO
-            this.Icon = Resources.iconJeic;
+            this.Icon = Resources.iconJSOLogo;
             cve_factura = oper.Clave_Fact(dato_1.Text, dato_2.Text,lblPieza.Text, int.Parse(lblcvePedidoidentity.Text));
             if (cve_factura != "0")
                 cve_refactura = oper.Clave_Refact(cve_factura);

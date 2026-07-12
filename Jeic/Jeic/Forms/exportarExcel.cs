@@ -28,7 +28,7 @@ namespace Refracciones.Forms
         private void exportarExcel_Load(object sender, EventArgs e)
         {
             //Colocar ICONO
-            this.Icon = Resources.iconJeic;
+            this.Icon = Resources.iconJSOLogo;
         }
 
         private void btnGenerar_Click(object sender, EventArgs e)

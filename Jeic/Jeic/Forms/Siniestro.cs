@@ -33,7 +33,7 @@ namespace Refracciones.Forms
         private void Siniestro_Load(object sender, EventArgs e)
         {
             //Colocar ICONO
-            this.Icon = Resources.iconJeic;
+            this.Icon = Resources.iconJSOLogo;
 
             //Carga los datos de las marcas de vehículos en el combobox
             cbMarca.DataSource = operacion.MarcasRegistradas(1).Tables[0].DefaultView;

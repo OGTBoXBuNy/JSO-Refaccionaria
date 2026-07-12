@@ -47,7 +47,7 @@ namespace Refracciones.Forms
         private void Devolucion_Load(object sender, EventArgs e)
         {
             //Colocar ICONO
-            this.Icon = Resources.iconJeic;
+            this.Icon = Resources.iconJSOLogo;
 
             cve_pedido = dato2.Text.Substring(8, (dato2.Text.Length - 8));
             cve_siniestro = dato1.Text.Substring(11, dato1.Text.Length - 11);

@@ -30,6 +30,8 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GeneradorClave));
             this.bunifuGradientPanel1 = new Bunifu.Framework.UI.BunifuGradientPanel();
+            this.label3 = new System.Windows.Forms.Label();
+            this.lblUsuario = new System.Windows.Forms.Label();
             this.Fecha_Fin = new System.Windows.Forms.DateTimePicker();
             this.Fecha_in = new System.Windows.Forms.DateTimePicker();
             this.lblTitle = new System.Windows.Forms.Label();
@@ -39,8 +41,6 @@
             this.btnGenerar = new System.Windows.Forms.Button();
             this.pbMinimize = new System.Windows.Forms.PictureBox();
             this.pbClose = new System.Windows.Forms.PictureBox();
-            this.lblUsuario = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
             this.bunifuGradientPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbMinimize)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbClose)).BeginInit();
@@ -67,16 +67,34 @@
             this.bunifuGradientPanel1.GradientTopLeft = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
             this.bunifuGradientPanel1.GradientTopRight = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
             this.bunifuGradientPanel1.Location = new System.Drawing.Point(-3, -4);
-            this.bunifuGradientPanel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bunifuGradientPanel1.Margin = new System.Windows.Forms.Padding(4);
             this.bunifuGradientPanel1.Name = "bunifuGradientPanel1";
             this.bunifuGradientPanel1.Quality = 10;
             this.bunifuGradientPanel1.Size = new System.Drawing.Size(397, 261);
             this.bunifuGradientPanel1.TabIndex = 7;
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(378, 232);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(44, 16);
+            this.label3.TabIndex = 89;
+            this.label3.Text = "label3";
+            // 
+            // lblUsuario
+            // 
+            this.lblUsuario.AutoSize = true;
+            this.lblUsuario.Location = new System.Drawing.Point(3, 7);
+            this.lblUsuario.Name = "lblUsuario";
+            this.lblUsuario.Size = new System.Drawing.Size(0, 16);
+            this.lblUsuario.TabIndex = 88;
+            this.lblUsuario.Visible = false;
+            // 
             // Fecha_Fin
             // 
             this.Fecha_Fin.Location = new System.Drawing.Point(89, 107);
-            this.Fecha_Fin.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Fecha_Fin.Margin = new System.Windows.Forms.Padding(4);
             this.Fecha_Fin.Name = "Fecha_Fin";
             this.Fecha_Fin.Size = new System.Drawing.Size(265, 22);
             this.Fecha_Fin.TabIndex = 87;
@@ -84,7 +102,7 @@
             // Fecha_in
             // 
             this.Fecha_in.Location = new System.Drawing.Point(89, 69);
-            this.Fecha_in.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Fecha_in.Margin = new System.Windows.Forms.Padding(4);
             this.Fecha_in.Name = "Fecha_in";
             this.Fecha_in.Size = new System.Drawing.Size(265, 22);
             this.Fecha_in.TabIndex = 86;
@@ -147,7 +165,7 @@
             this.btnGenerar.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGenerar.ForeColor = System.Drawing.Color.White;
             this.btnGenerar.Location = new System.Drawing.Point(145, 192);
-            this.btnGenerar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnGenerar.Margin = new System.Windows.Forms.Padding(4);
             this.btnGenerar.Name = "btnGenerar";
             this.btnGenerar.Size = new System.Drawing.Size(100, 28);
             this.btnGenerar.TabIndex = 5;
@@ -181,24 +199,6 @@
             this.pbClose.TabStop = false;
             this.pbClose.Click += new System.EventHandler(this.pbClose_Click);
             // 
-            // lblUsuario
-            // 
-            this.lblUsuario.AutoSize = true;
-            this.lblUsuario.Location = new System.Drawing.Point(3, 7);
-            this.lblUsuario.Name = "lblUsuario";
-            this.lblUsuario.Size = new System.Drawing.Size(0, 16);
-            this.lblUsuario.TabIndex = 88;
-            this.lblUsuario.Visible = false;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(378, 232);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(44, 16);
-            this.label3.TabIndex = 89;
-            this.label3.Text = "label3";
-            // 
             // GeneradorClave
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -207,10 +207,11 @@
             this.Controls.Add(this.bunifuGradientPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "GeneradorClave";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "GeneradorClave";
+            this.Load += new System.EventHandler(this.GeneradorClave_Load);
             this.bunifuGradientPanel1.ResumeLayout(false);
             this.bunifuGradientPanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbMinimize)).EndInit();
