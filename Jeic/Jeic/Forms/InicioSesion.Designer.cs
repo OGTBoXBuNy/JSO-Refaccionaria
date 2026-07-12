@@ -211,7 +211,7 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::Jeic.Properties.Resources.JEIC_Login;
+            this.pictureBox1.Image = global::Jeic.Properties.Resources.JSO_Logo;
             this.pictureBox1.Location = new System.Drawing.Point(75, 33);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox1.Name = "pictureBox1";

@@ -3,11 +3,15 @@
   "WorkspaceRootPath": "C:\\Users\\bryan\\source\\repos\\JSO-Refaccionaria\\Jeic\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{B67C3104-50DA-4D29-A490-80181AED493C}|Jeic\\Jeic.csproj|c:\\users\\bryan\\source\\repos\\jso-refaccionaria\\jeic\\jeic\\operbd.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{B67C3104-50DA-4D29-A490-80181AED493C}|Jeic\\Jeic.csproj|c:\\users\\bryan\\source\\repos\\jso-refaccionaria\\jeic\\jeic\\forms\\iniciosesion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{B67C3104-50DA-4D29-A490-80181AED493C}|Jeic\\Jeic.csproj|solutionrelative:jeic\\forms\\iniciosesion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B67C3104-50DA-4D29-A490-80181AED493C}|Jeic\\Jeic.csproj|C:\\Users\\bryan\\source\\repos\\JSO-Refaccionaria\\Jeic\\jeic\\operbd.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B67C3104-50DA-4D29-A490-80181AED493C}|Jeic\\Jeic.csproj|solutionrelative:jeic\\operbd.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B67C3104-50DA-4D29-A490-80181AED493C}|Jeic\\Jeic.csproj|c:\\users\\bryan\\source\\repos\\jso-refaccionaria\\jeic\\jeic\\packages.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "AbsoluteMoniker": "D:0:0:{B67C3104-50DA-4D29-A490-80181AED493C}|Jeic\\Jeic.csproj|C:\\Users\\bryan\\source\\repos\\JSO-Refaccionaria\\Jeic\\jeic\\packages.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
       "RelativeMoniker": "D:0:0:{B67C3104-50DA-4D29-A490-80181AED493C}|Jeic\\Jeic.csproj|solutionrelative:jeic\\packages.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
     },
     {
@@ -15,12 +19,8 @@
       "RelativeMoniker": "D:0:0:{B67C3104-50DA-4D29-A490-80181AED493C}|Jeic\\Jeic.csproj|solutionrelative:jeic\\conexion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B67C3104-50DA-4D29-A490-80181AED493C}|Jeic\\Jeic.csproj|c:\\users\\bryan\\source\\repos\\jso-refaccionaria\\jeic\\jeic\\app.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "AbsoluteMoniker": "D:0:0:{B67C3104-50DA-4D29-A490-80181AED493C}|Jeic\\Jeic.csproj|C:\\Users\\bryan\\source\\repos\\JSO-Refaccionaria\\Jeic\\jeic\\app.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
       "RelativeMoniker": "D:0:0:{B67C3104-50DA-4D29-A490-80181AED493C}|Jeic\\Jeic.csproj|solutionrelative:jeic\\app.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B67C3104-50DA-4D29-A490-80181AED493C}|Jeic\\Jeic.csproj|C:\\Users\\bryan\\source\\repos\\JSO-Refaccionaria\\Jeic\\jeic\\forms\\iniciosesion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{B67C3104-50DA-4D29-A490-80181AED493C}|Jeic\\Jeic.csproj|solutionrelative:jeic\\forms\\iniciosesion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{B67C3104-50DA-4D29-A490-80181AED493C}|Jeic\\Jeic.csproj|C:\\Users\\bryan\\source\\repos\\JSO-Refaccionaria\\Jeic\\jeic\\forms\\iniciosesion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -34,11 +34,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "OperBD.cs",
               "DocumentMoniker": "C:\\Users\\bryan\\source\\repos\\JSO-Refaccionaria\\Jeic\\Jeic\\OperBD.cs",
               "RelativeDocumentMoniker": "Jeic\\OperBD.cs",
@@ -46,12 +46,11 @@
               "RelativeToolTip": "Jeic\\OperBD.cs",
               "ViewState": "AgIAAPYfAAAAAAAAAAAawKAfAABhAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-11T05:34:28.583Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-07-11T05:34:28.583Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "packages.config",
               "DocumentMoniker": "C:\\Users\\bryan\\source\\repos\\JSO-Refaccionaria\\Jeic\\Jeic\\packages.config",
               "RelativeDocumentMoniker": "Jeic\\packages.config",
@@ -59,12 +58,11 @@
               "RelativeToolTip": "Jeic\\packages.config",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
-              "WhenOpened": "2026-07-11T05:34:10.721Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-07-11T05:34:10.721Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "App.config",
               "DocumentMoniker": "C:\\Users\\bryan\\source\\repos\\JSO-Refaccionaria\\Jeic\\Jeic\\App.config",
               "RelativeDocumentMoniker": "Jeic\\App.config",
@@ -85,22 +83,24 @@
               "RelativeToolTip": "Jeic\\Forms\\InicioSesion.cs",
               "ViewState": "AgIAAAoAAAAAAAAAAAApwCIAAAAgAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-09T04:46:30.256Z"
+              "WhenOpened": "2026-07-09T04:46:30.256Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 0,
               "Title": "InicioSesion.cs [Design]",
               "DocumentMoniker": "C:\\Users\\bryan\\source\\repos\\JSO-Refaccionaria\\Jeic\\Jeic\\Forms\\InicioSesion.cs",
               "RelativeDocumentMoniker": "Jeic\\Forms\\InicioSesion.cs",
               "ToolTip": "C:\\Users\\bryan\\source\\repos\\JSO-Refaccionaria\\Jeic\\Jeic\\Forms\\InicioSesion.cs [Design]",
               "RelativeToolTip": "Jeic\\Forms\\InicioSesion.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-09T04:46:27.244Z"
+              "WhenOpened": "2026-07-09T04:46:27.244Z",
+              "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "Conexion.cs",
               "DocumentMoniker": "C:\\Users\\bryan\\source\\repos\\JSO-Refaccionaria\\Jeic\\Jeic\\Conexion.cs",
               "RelativeDocumentMoniker": "Jeic\\Conexion.cs",
@@ -108,8 +108,7 @@
               "RelativeToolTip": "Jeic\\Conexion.cs",
               "ViewState": "AgIAAAkAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-08T22:12:10.136Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-07-08T22:12:10.136Z"
             }
           ]
         }

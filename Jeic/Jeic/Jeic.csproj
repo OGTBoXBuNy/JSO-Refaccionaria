@@ -557,6 +557,7 @@
   <ItemGroup>
     <Content Include="iconJeic.ico" />
     <Content Include="Jeic.ico" />
+    <Content Include="Resources\JSO Logo.png" />
     <None Include="Resources\OjoCerrado.png" />
     <None Include="Resources\ojo.png" />
     <None Include="Resources\Loading1.gif" />
