@@ -1,5 +1,5 @@
 ﻿using DocumentFormat.OpenXml.Office.CoverPageProps;
-using Jeic.Properties;
+using JSO.Properties;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;

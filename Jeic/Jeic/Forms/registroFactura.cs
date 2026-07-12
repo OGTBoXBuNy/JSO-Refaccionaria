@@ -10,7 +10,7 @@ using System.Windows.Forms;
 using System.IO;
 using System.Diagnostics;
 using System.Globalization;
-using Jeic.Properties;
+using JSO.Properties;
 using System.Text.RegularExpressions;
 
 namespace Refracciones.Forms

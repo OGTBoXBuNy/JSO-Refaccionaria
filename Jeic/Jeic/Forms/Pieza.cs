@@ -2,7 +2,7 @@
 {
     using DocumentFormat.OpenXml.EMMA;
     using DocumentFormat.OpenXml.Office2010.PowerPoint;
-    using Jeic.Properties;
+    using JSO.Properties;
     using System;
     using System.Collections.Generic;
     using System.ComponentModel;

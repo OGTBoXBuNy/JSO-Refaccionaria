@@ -1,6 +1,6 @@
 ﻿using DocumentFormat.OpenXml.Drawing.Charts;
 using DocumentFormat.OpenXml.Spreadsheet;
-using Jeic.Properties;
+using JSO.Properties;
 using Refracciones;
 using Refracciones.Forms;
 using System;
@@ -13,7 +13,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Jeic.Forms
+namespace JSO.Forms
 {
     public partial class cambioEstatus : Form
     {

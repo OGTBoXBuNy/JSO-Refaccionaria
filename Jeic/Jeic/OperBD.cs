@@ -22,7 +22,7 @@ using iText.Kernel.Font;
 using iText.Kernel.Pdf;
 using iText.Kernel.Pdf.Canvas;
 using iText.Kernel.Colors;
-using Jeic.Forms;
+using JSO.Forms;
 using DocumentFormat.OpenXml.Vml;
 
 //librerias para envio correo
@@ -1647,7 +1647,7 @@ namespace Refracciones
                         //iText.Kernel.Pdf.PdfReader pdfReader = new iText.Kernel.Pdf.PdfReader(Application.StartupPath + "\\VALE JEIC.pdf");
 
                         string ruta = Application.StartupPath + "\\VALE JEIC.pdf";
-                        File.WriteAllBytes(ruta, Jeic.Properties.Resources.VALE_JEIC);
+                        File.WriteAllBytes(ruta, JSO.Properties.Resources.VALE_JEIC);
 
 
                         iText.Kernel.Pdf.PdfReader pdfReader = new iText.Kernel.Pdf.PdfReader(Application.StartupPath + "\\VALE JEIC.pdf");
@@ -1781,7 +1781,7 @@ namespace Refracciones
                         //iText.Kernel.Pdf.PdfReader pdfReader = new iText.Kernel.Pdf.PdfReader(Application.StartupPath + "\\VALE JEIC.pdf");
                         
                         string ruta = Application.StartupPath + "\\VALE JEIC.pdf";
-                        File.WriteAllBytes(ruta, Jeic.Properties.Resources.VALE_JEIC);
+                        File.WriteAllBytes(ruta, JSO.Properties.Resources.VALE_JEIC);
                         iText.Kernel.Pdf.PdfReader pdfReader = new iText.Kernel.Pdf.PdfReader(Application.StartupPath + "\\VALE JEIC.pdf");
 
                         iText.Kernel.Pdf.PdfDocument pdfdoc = new iText.Kernel.Pdf.PdfDocument(pdfReader, pdfWriter);
@@ -2417,7 +2417,7 @@ namespace Refracciones
 
 
                 
-                File.WriteAllBytes(ruta, Jeic.Properties.Resources.Plantilla);
+                File.WriteAllBytes(ruta, JSO.Properties.Resources.Plantilla);
                 SLDocument sl = new SLDocument(ruta);
                 DateTime hoy = DateTime.Today;
                 sl.SetCellValue("M2", hoy.ToString("dd-MM-yyyy"));//Se agrega la fecha al excel
@@ -2711,7 +2711,7 @@ namespace Refracciones
                         }
                         else if (Lector["UBICACION"].ToString() == "1")
                         {
-                        sl.SetCellValue("AZ" + celdaContenido, "Jeic Almacén");
+                        sl.SetCellValue("AZ" + celdaContenido, "JSO Almacén");
                         }
                         sl.SetCellValue("BA" + celdaContenido, Lector["CHOFER"].ToString());//Chofer 11 sep 2023
 
@@ -2983,7 +2983,7 @@ namespace Refracciones
             if (!DateTime.TryParse(fecha2, out f2)) f2 = DateTime.MaxValue;
 
             // ===== Crea plantilla =====
-            File.WriteAllBytes(ruta, Jeic.Properties.Resources.Plantilla);
+            File.WriteAllBytes(ruta, JSO.Properties.Resources.Plantilla);
             SLDocument sl = new SLDocument(ruta);
             sl.SetCellValue("M2", DateTime.Today.ToString("dd-MM-yyyy"));
 
@@ -3276,7 +3276,7 @@ WHERE ven.fecha_asignacion BETWEEN @fecha1 AND @fecha2
                             string ubic = S(lector, "UBICACION");
                             if (string.IsNullOrWhiteSpace(ubic) || ubic == "-1") sl.SetCellValue("AZ" + celdaContenido, "-");
                             else if (ubic == "0") sl.SetCellValue("AZ" + celdaContenido, "Proveedor");
-                            else if (ubic == "1") sl.SetCellValue("AZ" + celdaContenido, "Jeic Almacén");
+                            else if (ubic == "1") sl.SetCellValue("AZ" + celdaContenido, "JSO Almacén");
                             else sl.SetCellValue("AZ" + celdaContenido, ubic);
 
                             sl.SetCellValue("BA" + celdaContenido, S(lector, "CHOFER"));
@@ -7503,7 +7503,7 @@ WHERE ven.fecha_asignacion BETWEEN @fecha1 AND @fecha2
                 int temp = 0;
 
                 
-                File.WriteAllBytes(ruta, Jeic.Properties.Resources.generadorClave);
+                File.WriteAllBytes(ruta, JSO.Properties.Resources.generadorClave);
 
                 SLDocument sl = new SLDocument(ruta);
                 //DateTime hoy = DateTime.Today;

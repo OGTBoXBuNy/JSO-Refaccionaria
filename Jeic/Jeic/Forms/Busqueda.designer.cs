@@ -503,7 +503,7 @@
             // pbFactura
             // 
             this.pbFactura.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pbFactura.Image = global::Jeic.Properties.Resources.file;
+            this.pbFactura.Image = global::JSO.Properties.Resources.file;
             this.pbFactura.Location = new System.Drawing.Point(369, 540);
             this.pbFactura.Margin = new System.Windows.Forms.Padding(4);
             this.pbFactura.Name = "pbFactura";

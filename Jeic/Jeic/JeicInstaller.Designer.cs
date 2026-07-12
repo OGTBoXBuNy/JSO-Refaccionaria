@@ -1,4 +1,4 @@
-﻿namespace Jeic
+﻿namespace JSO
 {
     partial class JeicInstaller
     {

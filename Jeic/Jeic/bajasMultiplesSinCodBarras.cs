@@ -10,7 +10,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Jeic
+namespace JSO
 {
     public partial class bajasMultiplesSinCodBarras : Form
     {

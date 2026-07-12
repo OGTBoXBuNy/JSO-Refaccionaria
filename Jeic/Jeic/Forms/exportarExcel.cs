@@ -1,6 +1,6 @@
-﻿using Jeic;
-using Jeic.Forms;
-using Jeic.Properties;
+﻿using JSO;
+using JSO.Forms;
+using JSO.Properties;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;

@@ -1,6 +1,6 @@
-﻿using Jeic;
-using Jeic.Forms;
-using Jeic.Properties;
+﻿using JSO;
+using JSO.Forms;
+using JSO.Properties;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -169,7 +169,7 @@ namespace Refracciones.Forms
                 if (ubicacion == "0")
                     ubicacion = "Proveedor";
                 else if (ubicacion == "1")
-                    ubicacion = "Jeic Almacén";
+                    ubicacion = "JSO Almacén";
                 else if (ubicacion == "-1")
                     ubicacion = "-";
 
@@ -384,7 +384,7 @@ namespace Refracciones.Forms
                 if (ubicacion == "0")
                     ubicacion = "Proveedor";
                 else if (ubicacion == "1")
-                    ubicacion = "Jeic Almacén";
+                    ubicacion = "JSO Almacén";
                 else if (ubicacion == "-1")
                     ubicacion = "-";
 

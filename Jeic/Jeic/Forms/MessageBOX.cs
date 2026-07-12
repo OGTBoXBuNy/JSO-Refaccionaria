@@ -9,7 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using DocumentFormat.OpenXml.Presentation;
-using Jeic.Properties;
+using JSO.Properties;
 
 namespace Refracciones.Forms
 {

@@ -1,4 +1,4 @@
-﻿namespace Jeic.Forms
+﻿namespace JSO.Forms
 {
     partial class FechaBaja
     {
@@ -83,7 +83,7 @@
             // 
             this.pbClose.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
             this.pbClose.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pbClose.Image = global::Jeic.Properties.Resources.Close_Window__2_48px;
+            this.pbClose.Image = global::JSO.Properties.Resources.Close_Window__2_48px;
             this.pbClose.Location = new System.Drawing.Point(315, 4);
             this.pbClose.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pbClose.Name = "pbClose";

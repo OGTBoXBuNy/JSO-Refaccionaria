@@ -7,7 +7,7 @@ using System.Configuration.Install;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Jeic
+namespace JSO
 {
     [RunInstaller(true)]
     public partial class JeicInstaller : System.Configuration.Install.Installer

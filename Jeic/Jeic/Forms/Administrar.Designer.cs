@@ -130,7 +130,7 @@
             // 
             // pbMinimize
             // 
-            this.pbMinimize.Image = global::Jeic.Properties.Resources.Minimize_Window_2_48px;
+            this.pbMinimize.Image = global::JSO.Properties.Resources.Minimize_Window_2_48px;
             this.pbMinimize.Location = new System.Drawing.Point(607, 2);
             this.pbMinimize.Margin = new System.Windows.Forms.Padding(2);
             this.pbMinimize.Name = "pbMinimize";
@@ -142,7 +142,7 @@
             // 
             // pbClose
             // 
-            this.pbClose.Image = global::Jeic.Properties.Resources.Close_Window__2_48px;
+            this.pbClose.Image = global::JSO.Properties.Resources.Close_Window__2_48px;
             this.pbClose.Location = new System.Drawing.Point(626, 2);
             this.pbClose.Margin = new System.Windows.Forms.Padding(2);
             this.pbClose.Name = "pbClose";
@@ -155,7 +155,7 @@
             // btnPortal
             // 
             this.btnPortal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(72)))), ((int)(((byte)(126)))));
-            this.btnPortal.Image = global::Jeic.Properties.Resources.Portal;
+            this.btnPortal.Image = global::JSO.Properties.Resources.Portal;
             this.btnPortal.ImageActive = null;
             this.btnPortal.Location = new System.Drawing.Point(13, 396);
             this.btnPortal.Name = "btnPortal";
@@ -181,7 +181,7 @@
             // btnVendedor
             // 
             this.btnVendedor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(67)))), ((int)(((byte)(116)))));
-            this.btnVendedor.Image = global::Jeic.Properties.Resources.seller;
+            this.btnVendedor.Image = global::JSO.Properties.Resources.seller;
             this.btnVendedor.ImageActive = null;
             this.btnVendedor.Location = new System.Drawing.Point(13, 352);
             this.btnVendedor.Name = "btnVendedor";
@@ -633,7 +633,7 @@
             // btnPieza
             // 
             this.btnPieza.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(62)))), ((int)(((byte)(104)))));
-            this.btnPieza.Image = global::Jeic.Properties.Resources.carPart;
+            this.btnPieza.Image = global::JSO.Properties.Resources.carPart;
             this.btnPieza.ImageActive = null;
             this.btnPieza.Location = new System.Drawing.Point(13, 302);
             this.btnPieza.Name = "btnPieza";
@@ -647,7 +647,7 @@
             // btnVehiculo
             // 
             this.btnVehiculo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(55)))), ((int)(((byte)(90)))));
-            this.btnVehiculo.Image = global::Jeic.Properties.Resources.car;
+            this.btnVehiculo.Image = global::JSO.Properties.Resources.car;
             this.btnVehiculo.ImageActive = null;
             this.btnVehiculo.Location = new System.Drawing.Point(13, 250);
             this.btnVehiculo.Name = "btnVehiculo";
@@ -661,7 +661,7 @@
             // btnTaller
             // 
             this.btnTaller.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(50)))), ((int)(((byte)(79)))));
-            this.btnTaller.Image = global::Jeic.Properties.Resources.Workshop;
+            this.btnTaller.Image = global::JSO.Properties.Resources.Workshop;
             this.btnTaller.ImageActive = null;
             this.btnTaller.Location = new System.Drawing.Point(13, 202);
             this.btnTaller.Name = "btnTaller";
@@ -675,7 +675,7 @@
             // btnProveedor
             // 
             this.btnProveedor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(45)))), ((int)(((byte)(67)))));
-            this.btnProveedor.Image = global::Jeic.Properties.Resources.provider;
+            this.btnProveedor.Image = global::JSO.Properties.Resources.provider;
             this.btnProveedor.ImageActive = null;
             this.btnProveedor.Location = new System.Drawing.Point(13, 154);
             this.btnProveedor.Name = "btnProveedor";
@@ -689,7 +689,7 @@
             // btnClientes
             // 
             this.btnClientes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(39)))), ((int)(((byte)(55)))));
-            this.btnClientes.Image = global::Jeic.Properties.Resources.cliente;
+            this.btnClientes.Image = global::JSO.Properties.Resources.cliente;
             this.btnClientes.ImageActive = null;
             this.btnClientes.Location = new System.Drawing.Point(13, 107);
             this.btnClientes.Name = "btnClientes";
@@ -703,7 +703,7 @@
             // btnUsuario
             // 
             this.btnUsuario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(33)))), ((int)(((byte)(42)))));
-            this.btnUsuario.Image = global::Jeic.Properties.Resources.user;
+            this.btnUsuario.Image = global::JSO.Properties.Resources.user;
             this.btnUsuario.ImageActive = null;
             this.btnUsuario.Location = new System.Drawing.Point(13, 56);
             this.btnUsuario.Name = "btnUsuario";

@@ -112,7 +112,7 @@
             // pictureBox5
             // 
             this.pictureBox5.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox5.Image = global::Jeic.Properties.Resources.herramientas_y_utensilios;
+            this.pictureBox5.Image = global::JSO.Properties.Resources.herramientas_y_utensilios;
             this.pictureBox5.Location = new System.Drawing.Point(33, 225);
             this.pictureBox5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox5.Name = "pictureBox5";
@@ -124,7 +124,7 @@
             // pictureBox4
             // 
             this.pictureBox4.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox4.Image = global::Jeic.Properties.Resources.Businessman_48px;
+            this.pictureBox4.Image = global::JSO.Properties.Resources.Businessman_48px;
             this.pictureBox4.Location = new System.Drawing.Point(33, 161);
             this.pictureBox4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox4.Name = "pictureBox4";
@@ -211,7 +211,7 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::Jeic.Properties.Resources.JSO_Logo;
+            this.pictureBox1.Image = global::JSO.Properties.Resources.JSO_Logo;
             this.pictureBox1.Location = new System.Drawing.Point(75, 33);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox1.Name = "pictureBox1";
@@ -248,7 +248,7 @@
             // PicOJO
             // 
             this.PicOJO.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.PicOJO.Image = global::Jeic.Properties.Resources.ojo;
+            this.PicOJO.Image = global::JSO.Properties.Resources.ojo;
             this.PicOJO.Location = new System.Drawing.Point(303, 226);
             this.PicOJO.Margin = new System.Windows.Forms.Padding(4);
             this.PicOJO.Name = "PicOJO";

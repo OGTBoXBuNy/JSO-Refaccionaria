@@ -14,7 +14,7 @@ using System.Windows.Forms;
 using SpreadsheetLight;
 using Refracciones.Forms;
 
-namespace Jeic
+namespace JSO
 {
     internal class ReporteVentas
     {
@@ -49,7 +49,7 @@ namespace Jeic
             double gasto = 0;
             string tempSAE;
             DateTime datevalue;
-            File.WriteAllBytes(ruta, Jeic.Properties.Resources.Plantilla);
+            File.WriteAllBytes(ruta, JSO.Properties.Resources.Plantilla);
             DateTime hoy = DateTime.Today;
 
             Excel.Application excelApp = new Excel.Application();
@@ -261,7 +261,7 @@ namespace Jeic
                     }
                     else if (Lector["UBICACION"].ToString() == "1")
                     {
-                        worksheet.Cells[celdaContenido, 52] = "Jeic Almacén";//AZ
+                        worksheet.Cells[celdaContenido, 52] = "JSO Almacén";//AZ
                     }
 
                     worksheet.Cells[celdaContenido, 53] = Lector["CHOFER"].ToString();//BA

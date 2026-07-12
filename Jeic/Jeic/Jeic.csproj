@@ -6,8 +6,8 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{B67C3104-50DA-4D29-A490-80181AED493C}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>Jeic</RootNamespace>
-    <AssemblyName>Jeic</AssemblyName>
+    <RootNamespace>JSO</RootNamespace>
+    <AssemblyName>JSO</AssemblyName>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>false</AutoGenerateBindingRedirects>
@@ -27,7 +27,7 @@
     <InstallUrl>https://raw.githubusercontent.com/OGTBoXBuNy/JSO-Refaccionaria/refs/heads/main/published/</InstallUrl>
     <CreateWebPageOnPublish>true</CreateWebPageOnPublish>
     <WebPage>publish.htm</WebPage>
-    <ApplicationRevision>55</ApplicationRevision>
+    <ApplicationRevision>56</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <CreateDesktopShortcut>true</CreateDesktopShortcut>

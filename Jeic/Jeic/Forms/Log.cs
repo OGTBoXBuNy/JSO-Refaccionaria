@@ -1,4 +1,4 @@
-﻿using Jeic.Properties;
+﻿using JSO.Properties;
 using Refracciones;
 using System;
 using System.Collections.Generic;
@@ -10,7 +10,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Jeic.Forms
+namespace JSO.Forms
 {
     public partial class Log : Form
     {
