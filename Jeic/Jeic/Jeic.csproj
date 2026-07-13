@@ -27,7 +27,7 @@
     <InstallUrl>https://raw.githubusercontent.com/OGTBoXBuNy/JSO-Refaccionaria/refs/heads/main/published/</InstallUrl>
     <CreateWebPageOnPublish>true</CreateWebPageOnPublish>
     <WebPage>publish.htm</WebPage>
-    <ApplicationRevision>57</ApplicationRevision>
+    <ApplicationRevision>58</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <CreateDesktopShortcut>true</CreateDesktopShortcut>
@@ -473,6 +473,7 @@
     <None Include="App.config" />
     <None Include="Jeic_1_TemporaryKey.pfx" />
     <None Include="Resources\VALE JEIC.pdf" />
+    <None Include="Resources\VALE JSO.pdf" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Jeic_TemporaryKey.pfx" />

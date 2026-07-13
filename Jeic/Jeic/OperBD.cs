@@ -1646,11 +1646,11 @@ namespace Refracciones
                         iText.Kernel.Pdf.PdfWriter pdfWriter = new iText.Kernel.Pdf.PdfWriter(fileRoute.FileName);
                         //iText.Kernel.Pdf.PdfReader pdfReader = new iText.Kernel.Pdf.PdfReader(Application.StartupPath + "\\VALE JEIC.pdf");
 
-                        string ruta = Application.StartupPath + "\\VALE JEIC.pdf";
-                        File.WriteAllBytes(ruta, JSO.Properties.Resources.VALE_JEIC);
+                        string ruta = Application.StartupPath + "\\VALE JSO.pdf";
+                        File.WriteAllBytes(ruta, JSO.Properties.Resources.VALE_JSO);
 
 
-                        iText.Kernel.Pdf.PdfReader pdfReader = new iText.Kernel.Pdf.PdfReader(Application.StartupPath + "\\VALE JEIC.pdf");
+                        iText.Kernel.Pdf.PdfReader pdfReader = new iText.Kernel.Pdf.PdfReader(Application.StartupPath + "\\VALE JSO.pdf");
                         
                         
                         
@@ -1780,9 +1780,9 @@ namespace Refracciones
 
                         //iText.Kernel.Pdf.PdfReader pdfReader = new iText.Kernel.Pdf.PdfReader(Application.StartupPath + "\\VALE JEIC.pdf");
                         
-                        string ruta = Application.StartupPath + "\\VALE JEIC.pdf";
-                        File.WriteAllBytes(ruta, JSO.Properties.Resources.VALE_JEIC);
-                        iText.Kernel.Pdf.PdfReader pdfReader = new iText.Kernel.Pdf.PdfReader(Application.StartupPath + "\\VALE JEIC.pdf");
+                        string ruta = Application.StartupPath + "\\VALE JSO.pdf";
+                        File.WriteAllBytes(ruta, JSO.Properties.Resources.VALE_JSO);
+                        iText.Kernel.Pdf.PdfReader pdfReader = new iText.Kernel.Pdf.PdfReader(Application.StartupPath + "\\VALE JSO.pdf");
 
                         iText.Kernel.Pdf.PdfDocument pdfdoc = new iText.Kernel.Pdf.PdfDocument(pdfReader, pdfWriter);
 

@@ -1,12 +1,86 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\bryan\\source\\repos\\JSO-Refaccionaria\\Jeic\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{B67C3104-50DA-4D29-A490-80181AED493C}|Jeic\\Jeic.csproj|c:\\users\\bryan\\source\\repos\\jso-refaccionaria\\jeic\\jeic\\operbd.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B67C3104-50DA-4D29-A490-80181AED493C}|Jeic\\Jeic.csproj|solutionrelative:jeic\\operbd.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B67C3104-50DA-4D29-A490-80181AED493C}|Jeic\\Jeic.csproj|c:\\users\\bryan\\source\\repos\\jso-refaccionaria\\jeic\\jeic\\forms\\pedido.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B67C3104-50DA-4D29-A490-80181AED493C}|Jeic\\Jeic.csproj|solutionrelative:jeic\\forms\\pedido.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B67C3104-50DA-4D29-A490-80181AED493C}|Jeic\\Jeic.csproj|c:\\users\\bryan\\source\\repos\\jso-refaccionaria\\jeic\\jeic\\forms\\pedido.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{B67C3104-50DA-4D29-A490-80181AED493C}|Jeic\\Jeic.csproj|solutionrelative:jeic\\forms\\pedido.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B67C3104-50DA-4D29-A490-80181AED493C}|Jeic\\Jeic.csproj|c:\\users\\bryan\\source\\repos\\jso-refaccionaria\\jeic\\jeic\\forms\\iniciosesion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{B67C3104-50DA-4D29-A490-80181AED493C}|Jeic\\Jeic.csproj|solutionrelative:jeic\\forms\\iniciosesion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": []
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Pedido.cs",
+              "DocumentMoniker": "C:\\Users\\bryan\\source\\repos\\JSO-Refaccionaria\\Jeic\\Jeic\\Forms\\Pedido.cs",
+              "RelativeDocumentMoniker": "Jeic\\Forms\\Pedido.cs",
+              "ToolTip": "C:\\Users\\bryan\\source\\repos\\JSO-Refaccionaria\\Jeic\\Jeic\\Forms\\Pedido.cs",
+              "RelativeToolTip": "Jeic\\Forms\\Pedido.cs",
+              "ViewState": "AgIAAMQJAAAAAAAAAAAmwO0JAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-12T16:05:12.747Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Pedido.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\bryan\\source\\repos\\JSO-Refaccionaria\\Jeic\\Jeic\\Forms\\Pedido.cs",
+              "RelativeDocumentMoniker": "Jeic\\Forms\\Pedido.cs",
+              "ToolTip": "C:\\Users\\bryan\\source\\repos\\JSO-Refaccionaria\\Jeic\\Jeic\\Forms\\Pedido.cs [Design]",
+              "RelativeToolTip": "Jeic\\Forms\\Pedido.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-12T16:04:12.274Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "OperBD.cs",
+              "DocumentMoniker": "C:\\Users\\bryan\\source\\repos\\JSO-Refaccionaria\\Jeic\\Jeic\\OperBD.cs",
+              "RelativeDocumentMoniker": "Jeic\\OperBD.cs",
+              "ToolTip": "C:\\Users\\bryan\\source\\repos\\JSO-Refaccionaria\\Jeic\\Jeic\\OperBD.cs",
+              "RelativeToolTip": "Jeic\\OperBD.cs",
+              "ViewState": "AgIAAFUHAAAAAAAAAAAmwPgGAACKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-12T15:59:28.87Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "InicioSesion.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\bryan\\source\\repos\\JSO-Refaccionaria\\Jeic\\Jeic\\Forms\\InicioSesion.cs",
+              "RelativeDocumentMoniker": "Jeic\\Forms\\InicioSesion.cs",
+              "ToolTip": "C:\\Users\\bryan\\source\\repos\\JSO-Refaccionaria\\Jeic\\Jeic\\Forms\\InicioSesion.cs [Design]",
+              "RelativeToolTip": "Jeic\\Forms\\InicioSesion.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-12T15:58:26.18Z",
+              "EditorCaption": " [Design]"
+            }
+          ]
+        }
+      ]
     }
   ]
 }

@@ -451,7 +451,7 @@ namespace Refracciones.Forms
                         txtComentarioSiniestro.Visible = false;
 
                         Siniestro siniestro = new Siniestro();
-                        siniestro.claveNOSiniestro = "JEIC-" + operacion.TotalSiniestro().ToString();
+                        siniestro.claveNOSiniestro = "JSO-" + operacion.TotalSiniestro().ToString();
                         DialogResult respuesta = siniestro.ShowDialog();
 
                         if (respuesta == DialogResult.OK)
